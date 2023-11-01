@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+$c-primary:blue;
+$c-secondary:yellow;
+$c-white:#fff;
+$c-black:#000;
+$f-normal:400;
+$f-bold:700;  
+
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* btn */
+.btn {
+    $root: &;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding:1rem; 
+    border-radius: 2rem;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    &.primary {
+        background-color:$c-primary;
+        color:$c-white;
+    }
+    &.secondary {
+        background-color:$c-secondary;
+        color:$c-black;
+    }
+    &.underline {
+        width:auto;  
+        text-decoration: underline;
+    }
+    &-group {
+        display:flex;  
+        flex-direction: column;
+        #{$root}+#{$root} {
+            margin-top:1rem;
+        }
+    }
+}      
+
+
+/* skipNavigation */
+#skipNavigation {
+    width: 100%;
+    position: absolute;
+    top: -200px;
+    left: 0;
+    margin: 0 auto;
+    z-index: 9999;
+  }
+  #skipNavigation a {
+    display: block;
+    height: 35px;
+    color: #fff;
+    text-align: center;
+    background-color: #705d58;
+  }
+  #skipNavigation a:active, #skipNavigation a:focus-visible {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 200px;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+    background: #705d58;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+/* TITLE */
+.tit {
+    $root: &;
+    &-wrap {
+        padding:2rem;
+    }  
+    &-page {
+        font-size: 3.4rem;
+        font-weight:$f-bold;  
+    }  
+}
+
+/* TEXT */
+.text {
+    font-size:1.5rem;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    height:5rem;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: pink;
+}
+
+/* CONTAINER */
+#container {
+    padding:5rem 0;
+    // background-color: aqua;
+}
+
+/* ALLMENU */
+.all-menu {
+    $root: &;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: pink;
+    transform:translateX(100%);
+    transition: all .5s;
+    z-index: 10;
+    display:none;
+    overflow: hidden;
+    &.is-active {
+        transform:translateX(0);
+    }
+}
+
+.section {
+    padding:0 2rem;
+}
+
+/* POPUP */
+.layer {
+    $root: &;
+    &-popup {
+        display:none;
+        position: absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        background-color:$c-white;
+        &::before {
+            display:block;
+            content:"";
+            width:100%;
+            height:100vh;
+            background-color: #000;
+            opacity:.3;
+            z-index: -100;
+        }
+    }
+    &-inner { 
+        display:flex;
+        flex-direction: column;
+        position: relative;
+        border:1px solid red;
+        border-radius: 2rem 2rem 0 0;
+        .section {
+            min-height: 30rem;
+        }
+    }
+    &-head {
+        padding:2rem;  
+        font-size: 1.5rem;  
+    }
+    &-close {
+        position:absolute;
+        top:0;
+        right:0;
+    }
+}
+
+/* TAB */
+.tab {
+    $root: &;
+    &-list {
+        display:flex;
+        justify-content: space-around;
+    }
+    &-panel {
+        display:none;
+        &.is-active{
+            display:block;
+        }
+    }
+
+}
+
+/* NAV */
+.nav {
+    display:flex;
+    align-items: center;
+    justify-content: space-around ;   
+    width:100%;
+    height:5rem;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background-color: pink;
+    > a {  
+        font-size:1.5rem;
+    }
+}
+
+/* INTRO */    
+.intro {
+    $root: &;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100vh;
+    margin:-5rem 0;
+}
+
+/* MAIN */
+
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    $root: &;
+    &-item {
+        flex:50%;
+        height:10rem;
+        padding:1rem;
+        border-radius: 3rem;
+        >a {
+            display: block;
+            width:100%;
+            height:100%;
+            background-color: aqua;
+        }
+    }
+}
+  
+
