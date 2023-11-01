@@ -1,0 +1,22 @@
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    height:5rem;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: pink;
+}
+
+/* CONTAINER */
+#container {
+    padding:5rem 0;
+    // background-color: aqua;
+}
+
+.section {  
+    padding:0 2rem;
+}      

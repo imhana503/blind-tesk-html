@@ -1,0 +1,238 @@
+/* HEADER */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: pink;
+}
+
+/* CONTAINER */
+#container {
+  padding: 5rem 0;
+}
+
+.section {
+  padding: 0 2rem;
+}
+
+/* BUTTON */
+.btn {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  border-radius: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn.secondary {
+  background-color: yellow;
+  color: #000;
+}
+
+.btn.underline {
+  width: auto;
+  text-decoration: underline;
+}
+
+.btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.btn-group .btn + .btn {
+  margin-top: 1rem;
+}
+
+/* TITLE */
+.tit-wrap {
+  padding: 2rem;
+}
+
+.tit-page {
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+
+/* TEXT */
+.text {
+  font-size: 1.5rem;
+}
+
+/* ALLMENU */
+.all-menu {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: pink;
+  -webkit-transform: translateX(100vh);
+          transform: translateX(100vh);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 10;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.all-menu.is-active {
+  visibility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+/* TAB */
+.tab-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.is-active {
+  display: block;
+}
+
+/* NAV */
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: pink;
+}
+
+.nav > a {
+  font-size: 1.5rem;
+}
+
+/* INTRO */
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+  margin: -5rem 0;
+}
+
+/* MAIN */
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-item {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  height: 10rem;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+.card-item > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+
+/* POPUP */
+.layer-popup {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.layer-popup::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  opacity: .3;
+  z-index: -100;
+}
+
+.layer-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  border: 1px solid red;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.layer-inner .section {
+  min-height: 30rem;
+}
+
+.layer-head {
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.layer-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
