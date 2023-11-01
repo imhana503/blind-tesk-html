@@ -293,3 +293,46 @@ input[type=password]::-moz-placeholder {
 input[type=password]:-ms-input-placeholder {
   font-family: "Spoqa Han Sans Neo";
 }
+
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+}
+
+
+
+/* skipNavigation */
+#skipNavigation {
+    width: 100%;
+    position: absolute;
+    top: -200px;
+    left: 0;
+    margin: 0 auto;
+    z-index: 9999;
+  }
+  #skipNavigation a {
+    display: block;
+    height: 35px;
+    color: #fff;
+    text-align: center;
+    background-color: #705d58;
+  }
+  #skipNavigation a:active, #skipNavigation a:focus-visible {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 200px;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+    background: #705d58;
+    border-bottom: 1px solid #d8d8d8;
+}

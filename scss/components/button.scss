@@ -1,0 +1,32 @@
+/* BUTTON */
+.btn {
+    $root: &;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding:1rem; 
+    border-radius: 2rem;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    &.primary {
+        // background-color:$c-primary;
+        color:$c-white;
+    }
+    &.secondary {
+        // background-color:$c-secondary;  
+        color:$c-black;
+    }
+    &.underline {
+        width:auto;     
+        text-decoration: underline;
+    }
+    &-group {
+        display:flex;  
+        flex-direction: column;
+        #{$root}+#{$root} {
+            margin-top:1rem;     
+        }
+    }  
+}      
