@@ -1,0 +1,106 @@
+
+
+
+/* TITLE */
+.tit {
+    $root: &;
+    &-wrap {
+        padding:2rem;
+    }  
+    &-page {
+        font-size: 3.4rem;
+        font-weight:$f-bold;  
+    }  
+}
+
+/* TEXT */
+.text {
+    font-size:1.5rem;
+}
+
+
+/* ALLMENU */
+.all-menu {
+    $root: &;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: pink;
+    transform:translateX(100%);
+    transition: all .5s;
+    z-index: 10;
+    display:none;
+    overflow: hidden;
+    &.is-active {
+        transform:translateX(0);
+    }
+}
+
+
+
+/* TAB */
+.tab {
+    $root: &;
+    &-list {
+        display:flex;
+        justify-content: space-around;
+    }
+    &-panel {
+        display:none;
+        &.is-active{
+            display:block;
+        }
+    }
+
+}
+
+/* NAV */
+.nav {
+    display:flex;
+    align-items: center;
+    justify-content: space-around ;   
+    width:100%;
+    height:5rem;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background-color: pink;
+    > a {  
+        font-size:1.5rem;
+    }
+}
+
+/* INTRO */    
+.intro {
+    $root: &;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100vh;
+    margin:-5rem 0;
+}
+
+/* MAIN */
+
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    $root: &;
+    &-item {
+        flex:50%;
+        height:10rem;
+        padding:1rem;
+        border-radius: 3rem;
+        >a {
+            display: block;
+            width:100%;
+            height:100%;
+            background-color: aqua;
+        }
+    }
+}
+  
+
