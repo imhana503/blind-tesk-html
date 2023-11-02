@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="시각장애인 폼페이지" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
     <title>시각장애인 홈페이지</title>
     <link rel="stylesheet" href="./../css/style.css" />
     <script src="./../js/ui.js"></script>
-</head>
+   
+</head>  
 <body>
     <!-- #skipNavigation -->
     <div id="skipNavigation">
@@ -18,14 +27,16 @@
     <div id="wrap">
         <!-- #header -->
         <header id="header" class="header">
-            <h1 class="logo"><a href="javascript:;">로고!!!!!!</a></h1>
-            <button type="button" class="btn-allmenu">전체메뉴</button>
+            <h1 class="logo"><a href="javascript:;"><span class="blind">로고</span></a></h1>
+            <button type="button" class="btn-allmenu" aria-expanded="false"><span class="blind">전체메뉴 열기</span></button>
         </header>
         <!--// #header -->
 
-        <div class="all-menu" aria-expanded="false" aria-hidden="true">
+        <nav class="all-menu" aria-hidden="true">
+            <h2 class="blind">전체메뉴</h2>
             전체뉴영역입니다
-        </div>
+            <button type="type" class="btn-close"><span class="blind">닫기</span></button>
+        </nav>
 
         <!-- #container -->
         <main id="container">
@@ -38,17 +49,16 @@
                             <p class="text">서브메세지</p>
                         </h2>
                     </div>
-        
-                    <div class="card">
-                        <div class="card-item"><a href="javascript:;">직접 상품을 찾아볼게요</a></div>
-                        <div class="card-item"><a href="javascript:;">상품 추천이 필요해요</a></div>
-                        <div class="card-item"><a href="javascript:;">상품/이미지 정보 확인이 필요해요</a></div>
-                        <div class="card-item"><a href="javascript:;">사용법 알아보기</a></div>
+                    <div class="menu">
+                        <div class="menu-item"><a href="javascript:;" id="aa">직접 상품을 찾아볼게요</a></div>
+                        <div class="menu-item"><a href="javascript:;">상품 추천이 필요해요</a></div>
+                        <div class="menu-item"><a href="javascript:;">상품/이미지 정보 확인이 필요해요</a></div>
+                        <div class="menu-item"><a href="javascript:;">사용법 알아보기</a></div>
                     </div>
                 </div>
                 <nav class="nav">
                     <a href="javascript:;"><span>홈</span></a>
-                    <a href="javascript:;"><span>검색</span></a>
+                    <a href="javascript:;" id="openLayerPoup" class="openLayerPoup"><span>검색</span></a>
                     <a href="javascript:;"><span>요청</span></a>
                     <a href="javascript:;"><span>마이페이지</span></a>
                     <a href="javascript:;"><span>장바구니</span></a>

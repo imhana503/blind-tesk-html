@@ -1,0 +1,16 @@
+/* TITLE */
+.tit {
+    $root: &;
+    &-wrap {
+        padding:2rem;
+    }  
+    &-page {
+        font-size: 3.4rem;
+        font-weight:$f-bold;  
+    }  
+}
+
+/* TEXT */
+.text {
+    font-size:1.5rem;
+}        

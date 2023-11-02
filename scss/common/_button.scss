@@ -8,9 +8,8 @@
     padding:1rem; 
     border-radius: 2rem;  
     box-sizing: border-box;  
-    position: relative;
+    position: relative;             
     overflow: hidden;
-    
     &.secondary {
         background-color:$c-secondary;  
         color:$c-black;
