@@ -1,3 +1,11 @@
+@charset "UTF-8";
+/* color */
+/* font-weight */
+/* boxshadow */
+body.is-fixed #container {
+  padding-bottom: 10.2rem;
+}
+
 /* HEADER */
 .header {
   display: flex;
@@ -10,17 +18,17 @@
   left: 0;
   background-color: pink;
 }
-.header .logo {
-  display: flex;
-  width: 30px;
-  height: 30px;
-  background-color: red;
+.header-tit {
+  font-size: 2.6rem;
+  font-weight: 600;
 }
-.header .btn-allmenu {
+.header-left {
   display: flex;
-  width: 30px;
-  height: 30px;
-  background-color: red;
+  align-items: center;
+}
+.header-right {
+  display: flex;
+  align-items: center;
 }
 
 /* CONTAINER */
@@ -29,35 +37,6 @@
 }
 
 /* ALLMENU */
-.all-menu {
-  width: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: pink;
-  transform: translateX(100vh);
-  transition: all 0.5s;
-  z-index: 10;
-  overflow: hidden;
-  visibility: hidden;
-}
-.all-menu.is-active {
-  visibility: visible;
-  width: 100%;
-  transform: translateX(0);
-}
-.all-menu .btn-close {
-  display: block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: red;
-}
-
 /* NAV */
 .nav {
   display: flex;
@@ -77,33 +56,162 @@
 .section {
   padding: 0 2rem;
 }
+.section.option-bg {
+  background-color: #0EB200;
+  color: #fff;
+}
+
+/* 하단고정 */
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 3.6rem 4.2rem;
+  background-color: #fff;
+}
+.fixed-bottom .btn-wrap .btn + .btn {
+  margin-top: 1.8rem;
+}
 
 /* BUTTON */
 .btn {
-  width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  border-radius: 2rem;
-  box-sizing: border-box;
+  width: 100%;
   position: relative;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  border-radius: 1.6rem;
+  box-sizing: border-box;
   overflow: hidden;
 }
-.btn.secondary {
-  background-color: yellow;
-  color: #000;
+.btn.primary {
+  background-color: #0EB200;
 }
-.btn.underline {
+.btn.secondary {
+  background-color: #FDE500;
+  color: #111;
+}
+.btn.tertiary {
+  background-color: #2C00DE;
+}
+.btn.default {
+  background-color: #fff;
+  color: #111;
+}
+.btn.disabled {
+  background-color: #D5DDE0;
+}
+.btn.text-box {
   width: auto;
-  text-decoration: underline;
+  background-color: #F7F8F9;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #D5DDE0;
+  border: 1px solid #D5DDE0;
+  border-radius: 0.7rem;
+}
+.btn.ico-back {
+  width: 2rem;
+  height: 2rem;
+  background-color: pink;
+  border: 1px solid red;
+}
+.btn.ico-basket {
+  width: 2rem;
+  height: 2rem;
+  background-color: pink;
+  border: 1px solid red;
+}
+.btn.ico-search {
+  width: 2rem;
+  height: 2rem;
+  background-color: pink;
+  border: 1px solid red;
+}
+.btn.ico-call {
+  width: 2rem;
+  height: 2rem;
+  background-color: pink;
+  border: 1px solid red;
+}
+.btn.text {
+  width: auto;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #3E4958;
+}
+.btn-wrap .btn {
+  height: 6rem;
+  border-radius: 1.4rem;
+}
+.btn-wrap .or {
+  display: block;
+  position: relative;
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+.btn-wrap .or:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+  background-color: #D5DDE0;
+}
+.btn-wrap .or > span {
+  display: inline-flex;
+  padding: 0 1rem;
+  background-color: #fff;
+}
+.btn-wrap.option-ratio {
+  display: flex;
+  gap: 1.9rem;
+}
+.btn-wrap.option-ratio .btn + .btn {
+  margin: 0;
+}
+.btn-wrap.option-ratio .ico-camera {
+  width: 6rem;
+}
+.btn-wrap.option-ratio .ico-camera:after {
+  display: block;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-color: pink;
 }
 .btn-group {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.btn-group .btn + .btn {
-  margin-top: 1rem;
+.btn-group .btn {
+  width: 100%;
+}
+
+[class*=ico-] {
+  display: inline-flex;
+  width: auto;
+  border-radius: 0;
+}
+
+.ico-more {
+  width: 1.6rem;
+  height: 2.4rem;
+  background: url("./../img/ico-more.svg");
 }
 
 /* TAB */
@@ -120,6 +228,26 @@
 }
 .tab-panel.is-active {
   display: block;
+}
+
+.form input[type=text],
+.form input[type=tel] {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3E4958;
+  border-bottom: 1px solid #D5DDE0;
+}
+.form-item + .form-item {
+  margin-top: 3rem;
+}
+.form-item.option-flex {
+  display: flex;
+  gap: 1.9rem;
+  width: 100%;
+}
+.form-item.option-flex .item {
+  flex: 1;
 }
 
 /* POPUP */
@@ -154,8 +282,17 @@
   padding: 2rem;
 }
 .tit-page {
-  font-size: 3.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
+  line-height: 3.2rem;
+}
+.tit-page em {
+  color: #E9FD00;
+}
+.tit-sub {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 
 /* TEXT */
@@ -168,8 +305,29 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  min-height: 100vh;
   margin: -5rem 0;
+}
+.intro .card-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro .card-btns .btn {
+  width: 24rem;
+  height: 20rem;
+  font-size: 2.4rem;
+  box-shadow: 0px 14px 56px 0px rgba(0, 0, 0, 0.14);
+}
+.intro .card-btns .btn + .btn {
+  margin-top: 1.9rem;
+}
+.intro .card-btns.option-full .btn {
+  width: 100%;
+  height: 10rem;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  border-radius: 1.6rem;
 }
 
 /* MAIN */
@@ -188,4 +346,146 @@
   width: 100%;
   height: 100%;
   background-color: aqua;
+}
+
+/* 완료페이지 */
+.complete {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.complete:before {
+  display: inline-flex;
+  content: "";
+  width: 11rem;
+  height: 11rem;
+  background-color: pink;
+}
+.complete .tit-page {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.complete .tit-sub {
+  font-size: 1.4rem;
+}
+
+/* 검색창 */
+.search-input {
+  display: flex;
+  align-items: center;
+}
+.search-input .input {
+  height: 6rem;
+  position: relative;
+  padding: 2rem;
+  background-color: #F7F8F9;
+  border: 0.5px solid #D5DDE0;
+  border-radius: 1.4rem;
+  color: #D5DDE0;
+  flex: 1;
+}
+.search-input .input input[type=text]::placeholder {
+  color: #D5DDE0;
+}
+.search-input .ico-search {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.search-input .ico-back {
+  width: 5rem;
+}
+.search-list {
+  font-size: 1.4rem;
+  color: #3E4958;
+}
+.search-list .is-active {
+  font-weight: 700;
+}
+.search-list > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-bottom: 1px solid #D5DDE0;
+}
+
+/* 상품상세 */
+.text-box .tit {
+  margin-bottom: 2.4rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+.text-box .tit > span {
+  display: block;
+  margin-bottom: 2.4rem;
+  font-size: 1.6rem;
+  color: #0FA802;
+}
+.text-box .text {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.text-box-list > li + li {
+  margin-top: 4.8rem;
+}
+
+.box {
+  padding: 1.6rem 2rem;
+  border-radius: 1.6rem;
+  box-shadow: 0px 14px 56px 0px rgba(0, 0, 0, 0.14);
+}
+.price {
+  font-weight: 700;
+}
+.price-dicount {
+  font-size: 2rem;
+  color: #0EAD01;
+  text-decoration: line-through;
+}
+.price-txt {
+  position: relative;
+  font-size: 2.4rem;
+  color: #FF0707;
+}
+.price-txt::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 1.2rem;
+  background-color: #FDD500;
+  z-index: -1;
+}
+
+.card-link > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 2.4rem 2rem;
+  border-radius: 1.6rem;
+  box-shadow: 0px 14px 56px 0px rgba(0, 0, 0, 0.14);
+}
+.card-link .tit {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.card-link + .card-link {
+  margin-top: 1/6rem;
+}
+.card-link.option-detail dt {
+  font-size: 1.5rem;
+}
+.card-link.option-detail dd {
+  font-size: 2rem;
+  font-weight: 700;
 }

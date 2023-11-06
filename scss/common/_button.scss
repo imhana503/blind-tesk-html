@@ -1,29 +1,143 @@
 /* BUTTON */
 .btn {
     $root: &;
-    width: 100%;
     display: inline-flex;
     align-items: center;  
-    justify-content: center;       
+    justify-content: center;      
+    width: 100%; 
+    position: relative;          
     padding:1rem; 
-    border-radius: 2rem;  
+    font-size:1.6rem;
+    font-weight: 700;
+    text-align:center;
+    color:$c-default ;
+    border-radius: $b-raduius-md;  
     box-sizing: border-box;  
-    position: relative;             
     overflow: hidden;
-    &.secondary {
-        background-color:$c-secondary;  
-        color:$c-black;
+    &.primary {
+        background-color:$c-primary;    
     }
-    &.underline {      
-        width:auto;  
-        text-decoration: underline;         
+    &.secondary {
+        background-color:$c-secondary;    
+        color:$c-black ;
+    }
+    &.tertiary{
+        background-color:$c-tertiary;    
+    }
+    &.default {
+        background-color:$c-default;    
+        color:$c-black ;
+    }
+    &.disabled {
+        background-color:$c-gray;     
+    }
+    &.text-box{
+        width: auto;
+        background-color:$c-lightGray;  
+        font-size:1.2rem;
+        font-weight: 400;
+        color:$c-gray;
+        border:1px solid $c-gray;
+        border-radius: $b-raduius-xs;
+    }
+    &.ico-back {
+        width:2rem;
+        height:2rem;
+        background-color: pink;
+        border:1px solid red;
+    }
+    &.ico-basket {
+        width:2rem;
+        height:2rem;
+        background-color: pink;
+        border:1px solid red;
+    }
+    &.ico-search {
+        width:2rem;
+        height:2rem;
+        background-color: pink;
+        border:1px solid red;
+    }
+    &.ico-call {
+        width:2rem;
+        height:2rem;
+        background-color: pink;
+        border:1px solid red;
+    }
+    &.text{
+        width:auto;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color:$c-lightBlack;
+    }
+    &-wrap {  
+        .btn {  
+            height:6rem;
+            border-radius: $b-raduius-sm;
+        }
+        .or {
+            display:block;
+            position: relative;
+            margin:2rem 0;
+            font-size:1.4rem;
+            font-weight: 600;
+            text-align: center;
+            &:before{
+                display:block;
+                content:"";
+                width:100%;
+                height:.1rem;  
+                position:absolute;
+                top:50%;
+                left:0;
+                right:0;
+                transform: translateY(-50%);
+                z-index: -1;
+                background-color: $c-gray;
+            }
+            >span { 
+                display: inline-flex;
+                padding:0 1rem;
+                background-color: $c-default;
+            }
+        }
+        &.option-ratio {
+            display: flex;
+            gap:1.9rem;
+            .btn+.btn {
+                margin:0;
+            }
+            .ico-camera {
+                width:6rem;
+                &:after{
+                    display:block;
+                    content:"";
+                    width:2rem;
+                    height:2rem;
+                    background-color: pink;
+                }
+            }
+        }   
     }
     &-group {
-        display:flex;   
-        flex-direction: column;
-        #{$root}+#{$root} {  
-            margin-top:1rem;      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .btn {
+            width:100%;
         }
-    }  
+    }
 }      
  
+
+[class*="ico-"] {
+    display: inline-flex;
+    width:auto;
+    border-radius: 0;
+}
+
+.ico-more { 
+    width:1.6rem;
+    height:2.4rem;
+    background:url('./../img/ico-more.svg');
+}

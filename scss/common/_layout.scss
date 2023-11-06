@@ -1,3 +1,9 @@
+body.is-fixed {
+    #container{
+        padding-bottom:10.2rem; //높이값 설정
+    }
+}
+
 /* HEADER */
 .header {
     display: flex;
@@ -9,56 +15,67 @@
     top:0;
     left:0;
     background-color: pink;
-    .logo {
-        display:flex;
-        width:30px;
-        height:30px;
-        background-color:red;
+    &-tit {
+        font-size:2.6rem;
+        font-weight: 600;
     }
-    .btn-allmenu {
+    &-left {
         display:flex;
-        width:30px;
-        height:30px;
-        background-color:red;
+        align-items: center;
     }
+    &-right {
+        display:flex;
+        align-items: center;
+    }
+    // .logo {
+    //     display:flex;
+    //     width:30px;
+    //     height:30px;
+    //     background-color:red;
+    // }
+    // .btn-allmenu {
+    //     display:flex;
+    //     width:30px;
+    //     height:30px;
+    //     background-color:red;
+    // }
 }
 
 /* CONTAINER */
 #container {
     padding:5rem 0;
-    // background-color: aqua;
 }
 
 /* ALLMENU */
-.all-menu {
-    $root: &;  
-    width:0;  
-    position: absolute;
-    top:0;      
-    bottom:0;
-    left:0;   
-    right:0;
-    background-color: pink;
-    transform: translateX(100vh);     
-    transition: all .5s;
-    z-index: 10;       
-    overflow: hidden;
-    visibility: hidden;    
-    &.is-active {   
-        visibility: visible;
-        width: 100%;
-        transform:translateX(0);
-    }
-    .btn-close {
-        display:block;
-        width:30px;
-        height:30px;
-        position:absolute;
-        top:0;
-        right:0;
-        background-color: red;
-    }
-}
+// .all-menu {
+//     $root: &;  
+//     width:0;  
+//     position: absolute;
+//     top:0;      
+//     bottom:0;
+//     left:0;   
+//     right:0;
+//     background-color: pink;
+//     transform: translateX(100vh);     
+//     transition: all .5s;
+//     z-index: 10;       
+//     overflow: hidden;
+//     visibility: hidden;    
+//     &.is-active {   
+//         visibility: visible;
+//         width: 100%;
+//         transform:translateX(0);
+//     }
+//     .btn-close {
+//         display:block;
+//         width:30px;
+//         height:30px;
+//         position:absolute;
+//         top:0;
+//         right:0;
+//         background-color: red;
+//     }
+// }
 
 /* NAV */
 .nav {
@@ -77,5 +94,25 @@
 }
 
 .section {  
+    $root: &;  
     padding:0 2rem;
+    &.option-bg {
+        background-color:$c-primary;
+        color:$c-default;
+    }
 }      
+
+/* 하단고정 */
+.fixed-bottom {
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:0 3.6rem 4.2rem;
+    background-color:$c-default;
+    .btn-wrap {
+        .btn+.btn {
+            margin-top:1.8rem;
+        }
+    }
+}

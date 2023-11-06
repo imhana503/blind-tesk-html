@@ -48,9 +48,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
   }
 
-  allMenuAction(); //전체메뉴
-  layerPopup();//팝업
-  tabAction();//탭메뉴
+  const fixedBottom = () => {
+    console.log('fidxed');
+    const fixedBot = document.querySelector('.fixed-bottom');
+    const body = document.querySelector('body');
+
+    if( fixedBot ){
+      body.classList.add('is-fixed');
+    }
+    console.log(body);
+
+  }
+
+  //allMenuAction(); //전체메뉴
+  // layerPopup();//팝업
+  // tabAction();//탭메뉴
+
+
+  fixedBottom(); //하단 고정 영역시 높이 값 설정
   
 
 });

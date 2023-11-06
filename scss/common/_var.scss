@@ -1,8 +1,38 @@
 @charset "UTF-8";
 
-$c-primary:blue;
-$c-secondary:yellow;
-$c-white:#fff;
-$c-black:#000;
-$f-normal:400;
-$f-bold:700;   
+/* color */
+$c-primary:#0EB200;
+$c-secondary:#FDE500;
+$c-tertiary:#2C00DE;
+$c-default :#fff;
+$c-black:#111;
+$c-lightBlack:#3E4958;
+$c-gray :#D5DDE0;;
+$c-lightGray:#F7F8F9;
+$c-highlight:#E9FD00;
+$c-t:#0FA802;
+$c-t2:#0EAD01;;
+$c-red:#FF0707;
+
+
+/* font-weight */
+$f-normal:400;    
+$f-medium:500;    
+$f-bold:700;    
+
+/* boxshadow */
+$b-shadow:0px 14px 56px 0px rgba(0, 0, 0, 0.14);
+
+$b-raduius-xs:.7rem;
+$b-raduius-sm:1.4rem;
+$b-raduius-md:1.6rem;
+$b-raduius-lg:2.4rem;
+$b-raduius-xlg:10rem;
+
+
+
+
+
+
+
+

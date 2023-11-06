@@ -1,1 +1,27 @@
 @charset "UTF-8";
+
+.form {
+    $root: &;
+    input[type="text"],
+    input[type="tel"] {
+        padding:.8rem;
+        font-size:1.4rem;
+        font-weight: 600;
+        color:$c-lightBlack;
+        border-bottom:1px solid $c-gray;
+    }
+    &-item {
+        &+.form-item{  
+            margin-top:3rem;
+        }  
+        &.option-flex {
+            display: flex;  
+            gap:1.9rem;
+            width: 100%;
+            .item{
+                flex:1;
+            }
+        }  
+    }
+   
+}

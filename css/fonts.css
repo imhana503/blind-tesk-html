@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 400;
+    src: local('GmarketSansLight'),
+    url('./../fonts/GmarketSansLight.otf') format('otf'),
+    url('./../fonts/GmarketSansTTFLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    src: local('GmarketSansMedium'),
+    url('./../fonts/GmarketSansMedium.otf') format('otf'),
+    url('./../fonts/GmarketSansTTFMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    src: local('GmarketSansBold'),
+    url('./../fonts/GmarketSansBold.otf') format('otf'),
+    url('./../fonts/GmarketSansTTFBold.ttf') format('truetype');
+}
