@@ -1,0 +1,162 @@
+[class*=btn-] {
+    display:inline-flex;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+[class*="ico-"] {
+    display: inline-flex;
+}
+
+/* 금액 */
+.price {
+    $root: &;
+    font-size:2rem;
+    font-weight:$f-bold;
+    color:$c-price;
+    &-dicount {
+        margin-bottom:.5rem;
+        font-size:2rem;
+        font-weight:$f-bold;
+        color:$c-black;
+        text-decoration: line-through;
+    }
+    &-wrap {
+        margin:$space-24 0;
+    }
+}
+
+/* Flex */
+.flex {
+    $root: &;
+    display:flex;
+    align-items: center;
+    &.between {
+        justify-content: space-between;
+    }
+    &.top {
+        align-items: flex-start;
+    }
+    &-item {
+        flex:1; 
+    }
+    &-box {  
+       .flex+.flex{
+        margin-top:$space-16;
+       } 
+    }
+}
+
+/* 박스 */
+.box {
+    $root: &;
+    padding:$space-24;
+    margin:$space-24 0;
+    border-radius:$b-raduius-24;
+    box-shadow:$b-shadow;
+    &.option-gray {
+        border:1px solid $c-gray4;
+        background-color:$c-gray3;
+    }
+    .tit {
+        font-size:1.6rem;
+    }
+    .txt {
+        font-size:1.6rem;
+        font-weight: $f-medium;
+    }
+}
+
+
+/* 인풋 검색 */
+.search-input {
+    $root: &;
+    position: relative;
+    margin:$space-24 0;
+    .input {
+        display: flex;
+        height:5rem;
+        background-color: $c-gray2;
+        padding:1.3rem 1.7rem;
+        font-size:1.4rem;
+        font-weight: $f-medium;
+        border-radius: $b-raduius-15;
+        input{
+            padding:0 0 0 3.8rem;
+            &::placeholder{
+               color:$c-black;
+               opacity: .2;
+            }
+        }
+    }
+    [class*=btn-] {
+        width:2.4rem;
+        height:2.4rem;
+    }
+    .btn {  
+        &-search{
+            position:absolute;
+            top:1.3rem;
+            left:1.7rem;
+            background-image:url('../../img/ico-search-gray.svg');
+        }
+        &-sort {
+            background-image:url('../../img/ico-sort.svg');
+        }
+    }
+}
+
+.card {
+    $root: &;
+    &-item-link {
+        &+.card-item-link {
+            margin-top:$space-16;
+        }
+        >a{
+            display:flex;
+            position: relative;
+            padding:$space-24;
+            border-radius:$b-raduius-24;
+            box-shadow:$b-shadow;
+        }
+        .tit {
+            font-size:2rem;
+            font-weight: $f-medium;
+            &-sub{
+                font-size:2rem;
+                font-weight: $f-bold;
+                color:$c-primary;
+            }
+        }
+        .flex-item+.flex-item{
+            margin:0 $space-24 0 auto;
+        }
+        .ico-more { 
+            position: absolute;
+            top:50%;
+            right:2.4rem;
+            transform: translateY(-50%);
+            width:1.6rem;
+            height:2.4rem;
+            background:url('./../img/ico-more.svg');
+        }
+        &.review {
+            .tit {
+                font-size:1.6rem;
+                font-weight: $f-bold;
+            }
+        }
+        &.info {
+         
+            .tit {
+                font-weight: $f-bold;
+            }
+            .txt {
+                margin-bottom:.8rem;
+                font-size: 1.5rem;
+                font-weight: $f-medium;
+            }
+        }
+    }
+}

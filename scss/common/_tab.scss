@@ -4,13 +4,31 @@
     &-list {
         display:flex;
         justify-content: space-around;
-        border:1px solid red;
+        gap:.8rem;
+        >li{
+            flex:1;
+            >a {
+                display: flex;
+                align-items: center;
+                height:4.8rem;
+                font-size:1.8rem;
+                border-radius: 100px;
+                background-color: $c-gray6;
+                color:$c-black;
+            }
+        }  
         li.is-active{
-            background-color: red;
+            >a {
+                background-color: $c-primary;
+                color:$c-default;
+            }
         }
     }
     &-panel {
-        display:none;     
+        display:none;  
+        &-wrap {
+            margin-top:3.8rem;
+        }   
         &.is-active{
             display:block;
         }

@@ -1,222 +1,380 @@
-/* INTRO */    
-.intro {
-    $root: &;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height:100vh;
-    margin:-5rem 0;
-    .card-btns {
-        display: flex;;
-        flex-direction: column;
-        align-items: center;
-        .btn { 
-            width:24rem;
-            height:20rem;
-            font-size: 2.4rem;
-            box-shadow: $b-shadow;
-            &+.btn{
-                margin-top:1.9rem;
-            }
-        }
-        &.option-full {
-            .btn {
-                width :100%;
-                height:10rem;
-                font-size:2rem;
-                line-height: 2.3rem;
-                border-radius:$b-raduius-md;
-            }
-        }
-    }
-}
-
-/* MAIN */
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    $root: &;
-    &-item {
-        flex:50%;
-        height:10rem;
-        padding:1rem; 
-        border-radius: 3rem;
-        >a {
-            display: block;
-            width:100%;
-            height:100%;
-            background-color: aqua;
-        }
-    }
-}
-
 /* 완료페이지 */
 .complete {
-    width:100%;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    $root: &;
     text-align: center;
     &:before{
         display:inline-flex;
         content:"";
-        width:11rem;
-        height:11rem;
-        background-color: pink;
-
+        width:17.2rem;
+        height:11.9rem;
+        margin-bottom: 3.8rem;
+        background-image:url('../../img/ico-complete.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
     }
-
-    .tit-page {
-        font-size:1.8rem;
-        font-weight: 700;
+    &-tit {
+        font-size:2.4rem;
+        font-weight: $f-bold;
     }
-    .tit-sub {
-        font-size:1.4rem;
+    &-sub {
+        margin-top:.8rem;
+        font-size:1.6rem;
+        font-weight: $f-medium;
     }
-}   
+}  
 
-
-
-/* 검색창 */
-.search {
+/* INTRO */    
+.section.intro {
     $root: &;
-    &-head{ 
-       
-    }
-    &-input {
-        display:flex;
+    display:flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    min-height:100vh;
+    margin:-6.4rem 0;
+    padding:3.2rem 3rem;
+    .page-tit-wrap {
+        padding:0 1rem;
+        margin-bottom:2.6rem;
+    } 
+    .card-btns {
+        display: flex;;
+        flex-direction: column;
         align-items: center;
-        .input {
-            height:6rem;
-            position: relative;
-            padding:2rem;
-            background-color:$c-lightGray;
-            border:.5px solid $c-gray;
-            border-radius: $b-raduius-sm;
-            color:$c-gray;
-            flex:1;
-            input[type="text"]::placeholder{
-                color:$c-gray;
+        padding-top:1rem;
+        .btn { 
+            width:24rem;
+            height:20rem;
+            font-size: 2.4rem;
+            border-radius:$b-raduius-lg;
+            box-shadow: $b-shadow;
+            &+.btn{
+                margin-top:$space-24;
             }
         }
-        .ico-search {
-            position:absolute;
-            top:50%; 
-            left:0;
-            transform: translateY(-50%);
+        .highlight{
+            color:$c-highlight;
         }
-        .ico-back {
-            width:5rem;
+        &.option-full {
+            padding-top:0;
+            .btn {
+                width :100%;
+                height:10rem;
+                font-size:2rem;
+                &+.btn{
+                    margin-top:$space-16;
+                }
+            }
         }
     }
-    &-list {
-        font-size:1.4rem;
-        color:#3E4958;
-        .is-active {
-            font-weight:700;
+}
+
+/* 상품페이지 */   
+.section.product {
+    $root: &;
+    .tit {
+        &-wrap {
+            margin-bottom:$space-16;
         }
-        &>li {
+        &-product{
+            font-size: 2.4rem;;
+        }
+    }
+
+    /* 상품평 */
+    .product-comment {
+        margin:4rem 0;
+        &-list {
+            &>li>a {
+                display:flex;
+                flex-direction: column;
+                padding:$space-16 0;  
+                border-top:1px solid $c-gray5;
+                font-size:1.6rem;
+                font-weight: $f-medium;
+            }
+            .txt {
+                margin-top:.8rem;
+                font-weight: $f-normal;
+            }
+            .date {
+                margin-left:.8rem;
+                font-size:1.4rem;
+                font-weight: $f-normal;
+            }
+        }
+    }
+
+    /* 연관추천상품 */
+    .product-recommend {
+        margin:4rem 0;
+        &-list {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: $space-16;
+            row-gap:$space-24;
+        }
+        &-visual {
+            width:100%;
+            height:9.6rem;
+            margin-bottom:1.4rem;
+            border-radius: $b-raduius-8;
+            overflow: hidden;  
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .tit {
+            font-size:1.4rem;
+            font-weight: $f-medium;
+        }
+        .price {
+            margin-top:.8rem;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+/* 상품목록 */   
+.product-list {
+    $root: &;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: $space-16;
+    row-gap:$space-24;
+    &-link {
+        &>a{
+            display:flex;
+            flex-direction: column;
+            position:relative;
+        }
+        &.is-active {
+            .btn-favor {
+                &:before {
+                    height:1.6rem;
+                    background-image:url('../../img/ico-heart-on.svg');
+                }
+            }
+        }
+    }
+    &-visual {
+        border-radius: $b-raduius-15;
+        height:15.2rem;
+        overflow: hidden;
+        img {
+            width:100%;
+            object-fit: cover;
+        }
+    }
+    &-txt {
+        margin-top:1.2rem;
+        .tit {
+            font-size:1.6rem;
+            font-weight:$f-medium;
+        }  
+        .price {
+            margin-top:.4rem;
+        }
+    }
+    .btn-favor {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width:4rem;
+        height:4rem;
+        position: absolute;
+        top:.8rem;
+        right:.8rem;
+        background-color:$c-default;
+        border-radius:$b-raduius;
+        z-index:100;
+        &:before {
             display:flex;
             align-items: center;
-            justify-content: space-between;
-            padding:2rem 0;
-            border-bottom:1px solid $c-gray;
+            content:"";
+            width:1.8rem;
+            height:1.8rem;
+            background-image:url('../../img/ico-heart.svg');
         }
     }
 }
 
 /* 상품상세 */
-.text-box {
+.product-detail {
     $root: &;
-    .tit {
-        margin-bottom:2.4rem;        
-        font-size:2.4rem;
-        font-weight: 700;;
-        text-align: center;
-        &>span {
-            display: block;
-            margin-bottom:2.4rem;        
-            font-size: 1.6rem;
-            color:$c-t;
+    margin-bottom: $space-24;
+    &-visual {
+        height:21.6rem;  
+        border-radius:$b-raduius-24;
+        overflow: hidden;
+        img {
+            width:100%;
+            object-fit: cover;
         }
-    }
-    .text {
-        font-size:1.6rem;
-        font-weight: 500;
-    }
-    &-list {
-        &>li+li {
-            margin-top:4.8rem;
-        }
-    }
-}
-
-.box {
-    padding:1.6rem 2rem;
-    border-radius: $b-raduius-md;
-    box-shadow: $b-shadow;
-    .tit {
-
-    }
-}
-
-.price {
-    $root: &;
-    font-weight: 700;
-    &-dicount {
-        font-size:2rem;
-        color:$c-t2;
-        text-decoration: line-through;
     }
     &-txt {
-        position: relative;
-        font-size:2.4rem;
-        color:$c-red;
-        &::after{
-            display:block;
-            content:"";
-            position: absolute;
-            bottom:0;
-            right:0;
-            left:0;
-            width:100%;
-            height:1.2rem;
-            background-color:#FDD500;
-            z-index: -1;
-        }
-    }
-}
-
-.card {
-    $root: &;
-    &-link {       
-        >a{
-            display:flex;
-            align-items: center;
-            justify-content: space-between;
-            position:relative;
-            padding:2.4rem 2rem;
-            border-radius: $b-raduius-md;
-            box-shadow: $b-shadow;
-        }
+        margin-top:$space-24;
         .tit {
+            font-size:3.2rem;
+        }
+        .txt {
+            margin-top:.8rem;
             font-size:1.6rem;
-           font-weight:700;
-        }
-        &+.card-link {
-            margin-top:1/6rem;
-        }
-        &.option-detail {
-            dt {
-                font-size:1.5rem;
-            }
-            dd {
-                font-size:2rem;
-                font-weight:700;
-            }
         }
     }
 }
 
-.section {}
+/* 검색 팝업 */
+.layer-popup {
+    .search-list {
+       
+    }
+}
+
+
+
+ 
+
+
+
+/* 검색창 */
+// .search {
+//     $root: &;
+//     &-head{ 
+       
+//     }
+//     &-input {
+//         display:flex;
+//         align-items: center;
+//         .input {
+//             height:6rem;
+//             position: relative;
+//             padding:2rem;
+//             background-color:$c-lightGray;
+//             border:.5px solid $c-gray;
+//             border-radius: $b-raduius-sm;
+//             color:$c-gray;
+//             flex:1;
+//             input[type="text"]::placeholder{
+//                 color:$c-gray;
+//             }
+//         }
+//         .ico-search {
+//             position:absolute;
+//             top:50%; 
+//             left:0;
+//             transform: translateY(-50%);
+//         }
+//         .ico-back {
+//             width:5rem;
+//         }
+//     }
+//     &-list {
+//         font-size:1.4rem;
+//         color:#3E4958;
+//         .is-active {
+//             font-weight:700;
+//         }
+//         &>li {
+//             display:flex;
+//             align-items: center;
+//             justify-content: space-between;
+//             padding:2rem 0;
+//             border-bottom:1px solid $c-gray;
+//         }
+//     }
+// }
+
+// /* 상품상세 */
+// .text-box {
+//     $root: &;
+//     .tit {
+//         margin-bottom:2.4rem;        
+//         font-size:2.4rem;
+//         font-weight: 700;;
+//         text-align: center;
+//         &>span {
+//             display: block;
+//             margin-bottom:2.4rem;        
+//             font-size: 1.6rem;
+//             color:$c-t;
+//         }
+//     }
+//     .text {
+//         font-size:1.6rem;
+//         font-weight: 500;
+//     }
+//     &-list {
+//         &>li+li {
+//             margin-top:4.8rem;
+//         }
+//     }
+// }
+
+// .box {
+//     padding:1.6rem 2rem;
+//     border-radius: $b-raduius-md;
+//     box-shadow: $b-shadow;
+//     .tit {
+
+//     }
+// }
+
+// .price {
+//     $root: &;
+//     font-weight: 700;
+//     &-dicount {
+//         font-size:2rem;
+//         color:$c-t2;
+//         text-decoration: line-through;
+//     }
+//     &-txt {
+//         position: relative;
+//         font-size:2.4rem;
+//         color:$c-red;
+//         &::after{
+//             display:block;
+//             content:"";
+//             position: absolute;
+//             bottom:0;
+//             right:0;
+//             left:0;
+//             width:100%;
+//             height:1.2rem;
+//             background-color:#FDD500;
+//             z-index: -1;
+//         }
+//     }
+// }
+
+// .card {
+//     $root: &;
+//     &-link {       
+//         >a{
+//             display:flex;
+//             align-items: center;
+//             justify-content: space-between;
+//             position:relative;
+//             padding:2.4rem 2rem;
+//             border-radius: $b-raduius-md;
+//             box-shadow: $b-shadow;
+//         }
+//         .tit {
+//             font-size:1.6rem;
+//            font-weight:700;
+//         }
+//         &+.card-link {
+//             margin-top:1/6rem;
+//         }
+//         &.option-detail {
+//             dt {
+//                 font-size:1.5rem;
+//             }
+//             dd {
+//                 font-size:2rem;
+//                 font-weight:700;
+//             }
+//         }
+//     }
+// }
+

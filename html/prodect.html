@@ -11,7 +11,7 @@
     <meta property="og:image" content="" />
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="" />
-    <title>결제 | 인픽</title>
+    <title>상품 목록 | 인픽</title>
     <link rel="stylesheet" href="./../css/style.css" />
     <script src="./../js/ui.js"></script>
 </head>
@@ -23,18 +23,19 @@
     <!--// #skipNavigation -->
 
     <!-- #wrap -->
-    <div id="wrap">
+    <div id="wrap">  
         <!-- #container -->
         <main id="container">
             <!-- #header -->
             <header id="header" class="header">
                 <div class="header-left">
-                    <button type="button" class="btn"><span>뒤로</span></button>
+                    <a href="javascript:;" class="ico-back"><span class="blind">홈</span></a>
+                    <h1 class="header-tit blind">상품 목록</h1>
                 </div>
                 <div class="header-right">
-                    <button type="button" class="btn ico-back"><span class="blind">홈</span></button>
-                    <button type="button" class="btn ico-search"><span class="blind">검색</span></button>
-                    <button type="button" class="btn ico-basket"><span class="blind">장바구니</span></button>
+                    <a href="javascript:;" class="ico-home"><span class="blind">홈</span></a>
+                    <a href="javascript:;" class="ico-search"><span class="blind">검색</span></a>
+                    <a href="javascript:;" class="ico-basket"><span class="blind">장바구니</span></a>
                 </div>
             </header>
             <!--// #header -->
@@ -42,85 +43,69 @@
             <!-- #content -->
             <div id="content" class="content">
                 <!-- section -->
-                <section class="section product">        
-                    <div class="product">
+                <section class="section">    
+                    <div class="page-tit-wrap">
+                        <h2 class="page-tit"><span class="txt">원하는 상품을<br>찾아보세요​</span></h2>
+                    </div>  
 
-                        <ul class="card">
-                            <li class="card-link">
-                                <a href="javascript:;">
-                                    <div>
-                                        <p class="tit">구매후기보기</p>
-                                    </div>
-                                    <div>
-                                        <div class="star">
-                                            <span class="star">1점</span>
-                                        </div>
-                                        <span>(16)</span>
-                                    </div>
-                                    <span class="ico-more"><em class="blind">더보기</em></span>
-                                </a>
-                            </li>
-                            <li class="card-link option-detail">
-                                <a href="javascript:;">
-                                    <dl>
-                                        <dt>색상</dt>
-                                        <dd>화이트</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>용량</dt>
-                                        <dd>1.5L</dd>
-                                    </dl>
-                                    <span class="ico-more"><em class="blind">더보기</em></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div> 
-
-                    <div class="price">
-                        <p class="price-dicount">32,900원</p>
-                        <span class="price-txt">27,000원</span>
-                    </div>
-                    
-                    <div class="text-box">  
-                        <ul class="text-box-list">
-                            <li>
-                                <h3 class="tit"><span>[특장점 01]</span>대용량 올스텐 가열식 가습기</h3>
-                                <p class="text">물을 분자 단위로 진동시켜 수증기를 발생​ 다이얼로 필요에 따라 분무량의 조절 가능​ 2L의 대용량 물통으로 오래 사용이 가능​ 물 투입구가 넓어 보충 및 세척하기에 용이​ 초음파 방식으로 분무량이 풍부한 제품</p>
-                            </li>
-                            <li>
-                                <h3 class="tit"><span>[특장점 02]</span>대용량 올스텐 가열식 가습기</h3>
-                                <p class="text">물을 분자 단위로 진동시켜 수증기를 발생​ 다이얼로 필요에 따라 분무량의 조절 가능​ 2L의 대용량 물통으로 오래 사용이 가능​ 물 투입구가 넓어 보충 및 세척하기에 용이​ 초음파 방식으로 분무량이 풍부한 제품</p>
-                            </li>
-                            <li>
-                                <h3 class="tit"><span>[특장점 02]</span>대용량 올스텐 가열식 가습기</h3>
-                                <p class="text">물을 분자 단위로 진동시켜 수증기를 발생​ 다이얼로 필요에 따라 분무량의 조절 가능​ 2L의 대용량 물통으로 오래 사용이 가능​ 물 투입구가 넓어 보충 및 세척하기에 용이​ 초음파 방식으로 분무량이 풍부한 제품</p>
-                            </li>
-                            <li>
-                                <h3 class="tit"><span>[특장점 02]</span>대용량 올스텐 가열식 가습기</h3>
-                                <p class="text">물을 분자 단위로 진동시켜 수증기를 발생​ 다이얼로 필요에 따라 분무량의 조절 가능​ 2L의 대용량 물통으로 오래 사용이 가능​ 물 투입구가 넓어 보충 및 세척하기에 용이​ 초음파 방식으로 분무량이 풍부한 제품</p>
-                            </li>
-                        </ul>
-                    </div>
-                   
-
-                    <!-- .box -->
-                    <div class="box">
-                        <h3 class="tit">연관추천상품</h3>
-                        <ul>
-                            <li>듀플릭스 초음파 가습기</li>
-                        </ul>
-                    </div>
-                    <!--// .box -->
-                    
-                    <!-- .fixed-bottom -->
-                    <div class="fixed-bottom">
-                        <div class="btn-wrap option-ratio">
-                            <button type="button" class="btn ico-call"><span class="blind">해피콜</span></button>
-                            <button type="button" class="btn disabled"><span>담기</span></button>
-                            <button type="button" class="btn primary"><span>구매</span></button>
+                    <div class="search-input">
+                        <div class="input">
+                            <input type="text" placeholder="Search" title="검색어 입력">
+                            <button type="button" class="btn-search"><span class="blind">검색 팝업 열가</span></button>
+                            <button type="button" class="btn-sort"><span class="blind">sort</span></button>
                         </div>
                     </div>
-                    <!-- //.fixed-bottom --> 
+  
+                    <ul class="product-list">
+                        <li class="product-list-link is-active">
+                            <a href="prodect-detail.html">
+                                <div class="product-list-visual">
+                                    <img src="../img/temp/@img-product01.png" alt="Cotton queen T">
+                                </div>
+                                <div class="product-list-txt">
+                                    <p class="tit">Cotton queen T</p>
+                                    <p class="price">2,700원</p>
+                                </div>
+                                <button type="button" aria-pressed="true" class="btn-favor"><span class="blind">관심상품</span></button>
+                            </a>
+                        </li>
+                        <li class="product-list-link">
+                            <a href="prodect-detail.html">
+                                <div class="product-list-visual">
+                                    <img src="../img/temp/@img-product02.png" alt="Cotton queen T">
+                                </div>
+                                <div class="product-list-txt">
+                                    <p class="tit">Cotton queen T</p>
+                                    <p class="price">2,700원</p>
+                                </div>
+                                <button type="button" aria-pressed="false" class="btn-favor"><span class="blind">관심상품</span></button>
+                            </a>
+                        </li>
+                        <li class="product-list-link">
+                            <a href="prodect-detail.html">
+                                <div class="product-list-visual">
+                                    <img src="../img/temp/@img-product02.png" alt="Cotton queen T">
+                                </div>
+                                <div class="product-list-txt">
+                                    <p class="tit">Cotton queen T</p>
+                                    <p class="price">2,700원</p>
+                                </div>
+                                <button type="button" aria-pressed="false" class="btn-favor"><span class="blind">관심상품</span></button>
+                            </a>
+                        </li>
+                        <li class="product-list-link">
+                            <a href="prodect-detail.html">
+                                <div class="product-list-visual">
+                                    <img src="../img/temp/@img-product02.png" alt="Cotton queen T">
+                                </div>
+                                <div class="product-list-txt">
+                                    <p class="tit">Cotton queen T</p>
+                                    <p class="price">2,700원</p>
+                                </div>
+                                <button type="button" aria-pressed="false" class="btn-favor"><span class="blind">관심상품</span></button>
+                            </a>
+                        </li>
+                    </ul>
                 </section>
                  <!--// section -->
                  

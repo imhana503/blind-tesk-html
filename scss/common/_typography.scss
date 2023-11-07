@@ -1,25 +1,16 @@
 /* TITLE */
-.tit {
+.page {  
     $root: &;
-    &-wrap {
-        padding:2rem;
-    }  
-    &-page {
+    &-tit {
         font-size: 2.8rem;
-        font-weight: $f-bold;
-        line-height:3.2rem;
-        em {
-            color:$c-highlight;
+        &-wrap{
+            margin-bottom:$space-24;
         }
-    }  
-    &-sub {
+        .highlight {
+            color:$c-highlight2;
+        }
+    }
+    &-txt {
         margin-top:2rem;
-        font-size:1.6rem;
-        font-weight: 300;;
     }
 }
-
-/* TEXT */
-.text {
-    font-size:1.5rem;
-}        

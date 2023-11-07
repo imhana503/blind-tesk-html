@@ -10,14 +10,61 @@ body.is-fixed {
     align-items: center;
     justify-content: space-between;
     width:100%;
-    height:5rem;
+    height:6.4rem;
     position:fixed;
     top:0;
     left:0;
-    background-color: pink;
+    padding:.8rem 2rem;
+    background-color:$c-default;
+    z-index: 2;
+    [class*=ico-] {
+        display:block;
+        width:2.4rem;
+        height:2.4rem;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .ico-back {
+        width:4.8rem;
+        height:4.8rem;
+        background-image:url('../../img/ico-back.svg');
+        // background-size: 4.8rem auto;
+    }
+    .ico-home {
+        background-image:url('../../img/ico-home.svg');
+    }
+    .ico-search {
+        background-image:url('../../img/ico-search.svg');
+    }
+    .ico-basket {
+        background-image:url('../../img/ico-basket.svg');
+        .num {
+            &>i {
+                display:inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 2rem;
+                min-height: 2rem;
+                background-color:$c-red;
+                border-radius: $b-raduius;
+            }
+            position: absolute;
+            top:-1rem;
+            right:-1rem;
+            background-color: $c-default;
+            padding:.2rem;
+            color:$c-default;
+            font-family: Work Sans;
+            font-size:1.4rem;
+            font-weight: 600;;
+            border-radius: $b-raduius;
+           
+        }
+    }
     &-tit {
-        font-size:2.6rem;
-        font-weight: 600;
+        margin-left:.8rem;
+        font-size:2.8rem;
     }
     &-left {
         display:flex;
@@ -26,76 +73,21 @@ body.is-fixed {
     &-right {
         display:flex;
         align-items: center;
+        [class*=ico-] {
+            margin-left:2.4rem;
+        }
     }
-    // .logo {
-    //     display:flex;
-    //     width:30px;
-    //     height:30px;
-    //     background-color:red;
-    // }
-    // .btn-allmenu {
-    //     display:flex;
-    //     width:30px;
-    //     height:30px;
-    //     background-color:red;
-    // }
 }
 
 /* CONTAINER */
 #container {
-    padding:5rem 0;
+    padding:6.4rem 0 0;
 }
 
-/* ALLMENU */
-// .all-menu {
-//     $root: &;  
-//     width:0;  
-//     position: absolute;
-//     top:0;      
-//     bottom:0;
-//     left:0;   
-//     right:0;
-//     background-color: pink;
-//     transform: translateX(100vh);     
-//     transition: all .5s;
-//     z-index: 10;       
-//     overflow: hidden;
-//     visibility: hidden;    
-//     &.is-active {   
-//         visibility: visible;
-//         width: 100%;
-//         transform:translateX(0);
-//     }
-//     .btn-close {
-//         display:block;
-//         width:30px;
-//         height:30px;
-//         position:absolute;
-//         top:0;
-//         right:0;
-//         background-color: red;
-//     }
-// }
-
-/* NAV */
-.nav {
-    display:flex;
-    align-items: center;
-    justify-content: space-around ;   
-    width:100%;
-    height:5rem;
-    position: fixed;
-    bottom:0;  
-    left:0;
-    background-color: pink;
-    > a {  
-        font-size:1.5rem;
-    }
-}
 
 .section {  
     $root: &;  
-    padding:0 2rem;
+    padding:2.4rem 2rem;
     &.option-bg {
         background-color:$c-primary;
         color:$c-default;
@@ -104,15 +96,77 @@ body.is-fixed {
 
 /* 하단고정 */
 .fixed-bottom {
+    $root: &;  
     position: fixed;
     bottom:0;
     left:0;
     right:0;
-    padding:0 3.6rem 4.2rem;
+    // padding:0 3.6rem 4.2rem;
     background-color:$c-default;
-    .btn-wrap {
-        .btn+.btn {
-            margin-top:1.8rem;
+    // .btn-wrap {
+    //     .btn+.btn {
+    //         margin-top:1.8rem;
+    //     }
+    // }
+    /* 하단버튼  */
+    & > .inr {
+
+    }
+    .nav-bottom {  
+        padding:0 2rem 2rem 2rem;
+        .inr {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width:100%;
+            height:6.4rem;
+            border-radius: $b-raduius-xlg;
+            box-shadow: $b-shadow;
+        }
+        [class*=ico-] {
+            display:block;
+            width:3.2rem;
+            height:3.2rem;
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .ico-home {
+            background-image:url('../../img/ico-home.svg');
+        }
+        .ico-search {
+            background-image:url('../../img/ico-search.svg');
+        }
+        .ico-request {
+            background-image:url('../../img/ico-search.svg');
+        }
+        .ico-mypage {
+            background-image:url('../../img/ico-mypage.svg');
+        }
+        .ico-basket {
+            background-image:url('../../img/ico-basket.svg');
+            .num {
+                &>i {
+                    display:inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 2rem;
+                    min-height: 2rem;
+                    background-color:$c-red;
+                    border-radius: $b-raduius;
+                }
+                position: absolute;
+                top:-1rem;
+                right:-1rem;
+                background-color: $c-default;
+                padding:.2rem;
+                color:$c-default;
+                font-family: Work Sans;
+                font-size:1.4rem;
+                font-weight: 600;;
+                border-radius: $b-raduius;
+               
+            }
         }
     }
 }

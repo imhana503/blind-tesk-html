@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'GmarketSans';
-    font-weight: 400;
+    font-weight: 300;
     src: local('GmarketSansLight'),
     url('./../fonts/GmarketSansLight.otf') format('otf'),
     url('./../fonts/GmarketSansTTFLight.ttf') format('truetype');

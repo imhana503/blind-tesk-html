@@ -1,33 +1,55 @@
 @charset "UTF-8";
 
 /* color */
-$c-primary:#0EB200;
-$c-secondary:#FDE500;
+$c-primary:#0FAD02;
+$c-secondary:#626D61;
 $c-tertiary:#2C00DE;
 $c-default :#fff;
+
+$c-kakao:#FDE500;
+$c-highlight2:#E9FD00;
+
 $c-black:#111;
 $c-lightBlack:#3E4958;
 $c-gray :#D5DDE0;;
+$c-gray2 :#EEE;;
+$c-gray3 :#F5F5F5;;
+$c-gray4 :#E8E8E8;;
+$c-gray5 :#EAEAEA;;
+$c-gray6 :#EEEEEE;;
 $c-lightGray:#F7F8F9;
-$c-highlight:#E9FD00;
+$c-highlight:#fcfcfc;
 $c-t:#0FA802;
 $c-t2:#0EAD01;;
-$c-red:#FF0707;
+$c-red:#FF2626;
+$c-price :#FF0707;
 
 
-/* font-weight */
-$f-normal:400;    
+/* font-weight */  
+$f-normal:300;    
 $f-medium:500;    
 $f-bold:700;    
 
-/* boxshadow */
-$b-shadow:0px 14px 56px 0px rgba(0, 0, 0, 0.14);
+/* space */
+$space-16:1.6rem;    
+$space-24:2.4rem;    
 
+
+/* boxshadow */
+$b-shadow:0px 14px 56px 0px rgba(0, 0, 0, 0.14);  
+
+/* raduius */
 $b-raduius-xs:.7rem;
 $b-raduius-sm:1.4rem;
 $b-raduius-md:1.6rem;
 $b-raduius-lg:2.4rem;
 $b-raduius-xlg:10rem;
+
+$b-raduius-8:.8rem;
+$b-raduius-14:1.4rem;
+$b-raduius-15:1.5rem;
+$b-raduius-24:2.4rem;
+$b-raduius:100%;
 
 
 
