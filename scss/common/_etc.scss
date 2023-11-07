@@ -9,6 +9,43 @@
     display: inline-flex;
 }
 
+/* radio */
+.radio {
+    $root: &;
+    display:inline-flex;
+    position: relative;
+    &-ico {
+         position: relative;
+         &::before {
+            display:block;
+            content: "";
+            width:100%;
+            height:100%;
+            border:1px solid red;
+         }
+    }
+    &-input:checked + &-label{
+        .radio-ico::before {
+            border:1px solid blue;
+        }
+        
+    } 
+
+    &.option-box {
+        $radio: '.radio';
+        display:block; 
+        #{$radio}-label { 
+            display: block;
+            height:100%;
+            border:2px solid blue;
+        }
+         #{$radio}-input:checked + #{$radio}-label{
+            border:2px solid red;
+         }
+    }
+}
+
+
 /* 금액 */
 .price {
     $root: &;

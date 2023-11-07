@@ -226,8 +226,20 @@
 
 /* 검색 팝업 */
 .layer-popup {
-    .search-list {
-       
+    $root: &;
+    .word {
+        &-tit {
+            font-size:2rem;
+        }
+        &-list {
+            &>li {
+                border-bottom:1px solid red;
+            }
+            a {
+                display: block;
+                padding:2rem;
+            }
+        }
     }
 }
 
@@ -235,146 +247,4 @@
 
  
 
-
-
-/* 검색창 */
-// .search {
-//     $root: &;
-//     &-head{ 
-       
-//     }
-//     &-input {
-//         display:flex;
-//         align-items: center;
-//         .input {
-//             height:6rem;
-//             position: relative;
-//             padding:2rem;
-//             background-color:$c-lightGray;
-//             border:.5px solid $c-gray;
-//             border-radius: $b-raduius-sm;
-//             color:$c-gray;
-//             flex:1;
-//             input[type="text"]::placeholder{
-//                 color:$c-gray;
-//             }
-//         }
-//         .ico-search {
-//             position:absolute;
-//             top:50%; 
-//             left:0;
-//             transform: translateY(-50%);
-//         }
-//         .ico-back {
-//             width:5rem;
-//         }
-//     }
-//     &-list {
-//         font-size:1.4rem;
-//         color:#3E4958;
-//         .is-active {
-//             font-weight:700;
-//         }
-//         &>li {
-//             display:flex;
-//             align-items: center;
-//             justify-content: space-between;
-//             padding:2rem 0;
-//             border-bottom:1px solid $c-gray;
-//         }
-//     }
-// }
-
-// /* 상품상세 */
-// .text-box {
-//     $root: &;
-//     .tit {
-//         margin-bottom:2.4rem;        
-//         font-size:2.4rem;
-//         font-weight: 700;;
-//         text-align: center;
-//         &>span {
-//             display: block;
-//             margin-bottom:2.4rem;        
-//             font-size: 1.6rem;
-//             color:$c-t;
-//         }
-//     }
-//     .text {
-//         font-size:1.6rem;
-//         font-weight: 500;
-//     }
-//     &-list {
-//         &>li+li {
-//             margin-top:4.8rem;
-//         }
-//     }
-// }
-
-// .box {
-//     padding:1.6rem 2rem;
-//     border-radius: $b-raduius-md;
-//     box-shadow: $b-shadow;
-//     .tit {
-
-//     }
-// }
-
-// .price {
-//     $root: &;
-//     font-weight: 700;
-//     &-dicount {
-//         font-size:2rem;
-//         color:$c-t2;
-//         text-decoration: line-through;
-//     }
-//     &-txt {
-//         position: relative;
-//         font-size:2.4rem;
-//         color:$c-red;
-//         &::after{
-//             display:block;
-//             content:"";
-//             position: absolute;
-//             bottom:0;
-//             right:0;
-//             left:0;
-//             width:100%;
-//             height:1.2rem;
-//             background-color:#FDD500;
-//             z-index: -1;
-//         }
-//     }
-// }
-
-// .card {
-//     $root: &;
-//     &-link {       
-//         >a{
-//             display:flex;
-//             align-items: center;
-//             justify-content: space-between;
-//             position:relative;
-//             padding:2.4rem 2rem;
-//             border-radius: $b-raduius-md;
-//             box-shadow: $b-shadow;
-//         }
-//         .tit {
-//             font-size:1.6rem;
-//            font-weight:700;
-//         }
-//         &+.card-link {
-//             margin-top:1/6rem;
-//         }
-//         &.option-detail {
-//             dt {
-//                 font-size:1.5rem;
-//             }
-//             dd {
-//                 font-size:2rem;
-//                 font-weight:700;
-//             }
-//         }
-//     }
-// }
 

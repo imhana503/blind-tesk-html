@@ -29,11 +29,15 @@
 
             <!-- #content -->
             <div id="content" class="content">
+                <a href="javascript:;" role="button" class="" aria-haspopup="dialog" data-element-btnPop="layer__popup04">FULL POPUP OPEN</a>
+
+
+
                 <!-- layer-popup -->
-                <section class="layer-popup full">
-                    <div class="inr">
+                <section class="layer-popup option-full" data-element-pop="layer__popup04" role="dialog" aria-modal="true" aria-hidden="true">
+                    <div class="inr" tabindex="0">
                         <div class="layer-head">
-                            <h2 class="blind">검색</h2>
+                            <h2 class="blind" id="layer__popup01">검색</h2>
                         </div>
 
                         <div class="layer-content">
@@ -46,13 +50,13 @@
                                     </div>
                                 </div>
 
-                                <div class="tab">
+                                <div class="tab" data-element="tab">
                                     <ul class="tab-list">
-                                        <li class="is-active"><a href="javascript:;" class="btn">검색어</a></li>
-                                        <li><a href="javascript:;" class="btn">카테고리</a></li>
+                                        <li class="is-active" role="none"><a href="javascript:;" role="tab" aria-selected="true" aria-controls="tab_01">검색어</a></li>
+                                        <li role="none"><a href="javascript:;" role="tab" aria-selected="false" aria-controls="tab_02">카테고리</a></li>
                                     </ul>
                                     <div class="tab-panel-wrap">
-                                        <div class="tab-panel is-active">
+                                        <div id="tab_01" class="tab-panel is-active" role="tabpanel" tabindex="0">
                                             <p class="word-tit">최근검색어</p>
                                             <ul class="word-list">
                                                 <li class="is-active"><a href="javascript:;">제스프리 키위</a></li>
@@ -64,14 +68,11 @@
                                                 <li><a href="javascript:;">Nike Air FT FLC Short</a></li>
                                             </ul>
                                         </div>
-                                        <div class="tab-panel">
+                                        <div id="tab_02" class="tab-panel" role="tabpanel" tabindex="0">
                                             카테고리
                                         </div>
                                     </div>
-                                    
                                 </div>
-
-                                
                             </div>
                         </div>
                     </div>

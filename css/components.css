@@ -228,6 +228,7 @@ body.is-fixed #container {
 .tab-list > li > a {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 4.8rem;
   font-size: 1.8rem;
   border-radius: 100px;
@@ -257,6 +258,36 @@ body.is-fixed #container {
 
 [class*=ico-] {
   display: inline-flex;
+}
+
+/* radio */
+.radio {
+  display: inline-flex;
+  position: relative;
+}
+.radio-ico {
+  position: relative;
+}
+.radio-ico::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+}
+.radio-input:checked + .radio-label .radio-ico::before {
+  border: 1px solid blue;
+}
+.radio.option-box {
+  display: block;
+}
+.radio.option-box .radio-label {
+  display: block;
+  height: 100%;
+  border: 2px solid blue;
+}
+.radio.option-box .radio-input:checked + .radio-label {
+  border: 2px solid red;
 }
 
 /* 금액 */
@@ -394,19 +425,33 @@ body.is-fixed #container {
 
 /* POPUP */
 .layer-popup {
+  position: fixed;
+  left: 0rem;
+  right: 0rem;
+  top: 0rem;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  visibility: hidden;
+  background-color: #fff;
+}
+.layer-popup.is-active {
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+}
+.layer-popup.is-active .inr {
+  transform: translateY(0);
+  height: 100%;
+}
+.layer-popup .inr {
   position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100vh;
-  background-color: #fff;
-}
-.layer-inr {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border-radius: 2rem 2rem 0 0;
+  transform: translateY(100vh);
+  transition: all 0.4s;
 }
 .layer-head {
   padding: 2rem;
@@ -641,4 +686,13 @@ body.is-fixed #container {
 }
 
 /* 검색 팝업 */
-/* 검색창 */
+.layer-popup .word-tit {
+  font-size: 2rem;
+}
+.layer-popup .word-list > li {
+  border-bottom: 1px solid red;
+}
+.layer-popup .word-list a {
+  display: block;
+  padding: 2rem;
+}

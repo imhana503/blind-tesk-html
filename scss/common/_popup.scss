@@ -4,20 +4,39 @@
     $root: &;
     &-popup {
         // display:none;
-        position: absolute;
-        top:0;
-        bottom:0;
-        left:0;
-        right:0;
-        height:100vh;
+        position: fixed;
+        left: 0rem;
+        right: 0rem;
+        top: 0rem;
+        bottom: 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0);
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+        visibility: hidden;
+        
         background-color:$c-default;
+        &.is-active {
+            background-color: rgba(0, 0, 0, 0.5);
+            visibility: visible;
+
+            .inr {
+                transform: translateY(0);
+                height: 100%;
+            }
+        }
+
+        .inr{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: translateY(100vh);
+            transition: all 0.4s;
+        }
     }
     &-inr { 
-        display:flex;
-        flex-direction: column;
-        position: relative;
-        
-        border-radius: 2rem 2rem 0 0;
+         
         // .section {
         //     min-height: 30rem;
         // }
