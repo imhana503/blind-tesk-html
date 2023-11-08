@@ -11,7 +11,7 @@
     <meta property="og:image" content="" />
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="" />
-    <title>결제 | 인픽</title>
+    <title>주문결제 | 인픽</title>
     <link rel="stylesheet" href="./../css/style.css" />
     <script src="./../js/ui.js"></script>
 </head>
@@ -29,51 +29,106 @@
             <!-- #header -->
             <header id="header" class="header">
                 <div class="header-left">
-                    <button type="button" class="btn ico-back"><span class="blind">이전</span></button>
-                    <h1 class="header-tit">Payment method</h1>
+                    <a href="javascript:;" role="button" class="ico-back"><span class="blind">홈</span></a>
+                    <h1 class="header-tit">결재하기</h1>
                 </div>
             </header>
             <!--// #header -->
-
             <!-- #content -->
             <div id="content" class="content">
                 <!-- section -->
-                <section class="section">         
-                    <div class="swiper">
-                        슬라이드영역
+                <section class="section">  
+                    <!-- list -->
+                    <div class="list">
+                        <ul class="list-item">
+                            <li class="list-item-link">
+                                <a href="javascript:;" role="button">
+                                    <p class="tit">이민희</p>
+                                    <p class="txt">221b Baker St, Marylebone<br>London,<br>United Kingdom</p>
+                                    <span class="ico-more"><em class="blind">더보기</em></span>
+                                </a>
+                            </li>
+                            <li class="list-item-link pay-card master">
+                                <a href="javascript:;" role="button">
+                                    <p class="tit">Master Card ending **68</p>
+                                    <span class="ico-more"><em class="blind">더보기</em></span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    
-                    <div class="form">
-                        <div class="form-item">  
-                            <input type="tel" placeholder="Card number" title="Card number 입력">
-                        </div>
-                        <div class="form-item">
-                            <input type="text" placeholder="Card holder name" title="Card holder name 입력">
-                        </div>
-                        <div class="form-item option-flex">
-                            <div class="item">
-                                <input type="tel" placeholder="Expiry date" title="Expiry date 입력">
-                            </div>
-                            <div class="item">
-                                <input type="tel" placeholder="Security code" title="Security code 입력">
-                            </div>
-                        </div>
-                        <div class="form-item">
-                            <input type="text" placeholder="CVV" title="CVV 입력">
-                        </div>
-                    </div>
-                    
-                    <!-- .fixed-bottom -->
-                    <div class="fixed-bottom">
-                        <div class="btn-wrap">
-                            <button type="button" class="btn primary"><span>Add card</span></button>
-                            <p class="or"><span>Or</span></p>
-                            <button type="button" class="btn disabled"><span>Scan card</span></button>
-                        </div>
-                    </div>
-                    <!-- //.fixed-bottom --> 
+                    <!--// list -->
 
-                   
+                    <!-- 주문내역 -->
+                    <div class="product-option-wrap">
+                        <div class="product-option">
+                            <h2 class="product-option-tit"><span class="txt">주문내역</span></h2>
+                            <div class="radio option-box">
+                                <input type="radio" id="inputRadio1" name="inputRadio1" class="radio-input" />
+                                <label for="inputRadio1" class="radio-label">
+                                    <div class="img-visual">
+                                        <img src="./../img/temp/@img-product-pay.png" alt="운동화">
+                                    </div>
+                                    <span class="radio-txt">운동화</span>
+                                </label>
+                            </div>  
+                            <div class="radio option-box">
+                                <input type="radio" id="inputRadio2" name="inputRadio1" class="radio-input" />
+                                <label for="inputRadio2" class="radio-label">
+                                    <div class="img-visual">
+                                        <img src="./../img/temp/@img-product-pay.png" alt="운동화">
+                                    </div>
+                                    <span class="radio-txt">운동화</span>
+                                </label>
+                            </div>  
+                        </div>
+                    </div>
+                    <!-- //주문내역 -->
+
+                    <!-- 유형선택 -->
+                    <div class="product-option-wrap">
+                        <div class="product-option">
+                            <h2 class="product-option-tit"><span class="txt">유형선택</span></h2>
+                            <div class="radio option-box sm">
+                                <input type="radio" id="inputRadio3" name="inputRadio3" class="radio-input" />
+                                <label for="inputRadio3" class="radio-label">
+                                    <div class="img-visual">
+                                        <img src="./../img/temp/@img-product-pay.png" alt="운동화">
+                                    </div>
+                                    <span class="radio-txt">운동화</span>
+                                </label>
+                            </div>  
+                            <div class="radio option-box sm">
+                                <input type="radio" id="inputRadio4" name="inputRadio3" class="radio-input" />
+                                <label for="inputRadio4" class="radio-label">
+                                    <div class="img-visual">
+                                        <img src="./../img/temp/@img-product-pay.png" alt="운동화">
+                                    </div>
+                                    <span class="radio-txt">운동화</span>
+                                </label>
+                            </div>  
+                        </div>
+                    </div>
+                    <!-- //유형선택 -->
+
+                    <!-- 용향선택 -->
+                    <div class="product-option-wrap">
+                        <div class="product-option">
+                            <h2 class="product-option-tit"><span class="txt">용향선택</span></h2>
+                            <div class="radio option-box sm">
+                                <input type="radio" id="inputRadio5" name="inputRadio5" class="radio-input" />
+                                <label for="inputRadio5" class="radio-label">
+                                    <span class="radio-txt">800</span>
+                                </label>
+                            </div>  
+                            <div class="radio option-box sm">
+                                <input type="radio" id="inputRadio46 name="inputRadio5" class="radio-input" />
+                                <label for="inputRadio46" class="radio-label">
+                                    <span class="radio-txt">1.2kg</span>
+                                </label>
+                            </div>  
+                        </div>
+                    </div>
+                    <!-- //용향선택 -->
                 </section>
                  <!--// section -->
                  

@@ -5,16 +5,19 @@
     align-items: center;  
     justify-content: center;      
     width: 100%; 
-    height:6rem;            
+    height:5.7rem;            
     position: relative;          
     padding:1rem; 
     font-size:1.8rem;
-    font-weight: $f-bold;
+    font-weight: $f-medium;
     text-align:center;
     color:$c-default ;
-    border-radius: $b-raduius-14;  
+    border-radius: $b-raduius-16;  
     box-sizing: border-box;  
     overflow: hidden;
+    &>span {  
+        font-weight: $f-bold;
+    }
     &.primary {
         background-color:$c-primary;    
     }
@@ -22,37 +25,44 @@
         background-color:$c-secondary;    
     }
     &.tertiary{
-        background-color:$c-tertiary;    
+        background-color:$c-tertiary;  
+        color:$c-black;  
     }
     &.default {
         background-color:$c-default;    
-        color:$c-black ;
+        color:$c-primary;
+        border:1px solid $c-primary;;
     }
     &.kakao {
         background-color:$c-kakao;    
         color:$c-black ;
     }
     &.disabled {
-        background-color:$c-gray;     
-    }
-    
-    &.ico-call {
-        width:2rem;
-        height:2rem;
-        background-color: pink;
-        border:1px solid red;
+        background-color:$c-gray;       
     }
     &-wrap {  
-        display: block !important;  
         width: 100%;
-        padding:1.6rem 2rem;  
-        .btn + .btn {  
-            margin-top:.8rem;
+        padding:1.6rem 2rem;
+        // padding:1.6rem 2rem;  
+        // &.option-flex {
+        //     display: flex;   
+        //     gap:1.9rem;
+        // } 
+        &.option-ratio { 
+            .btn:first-child {
+                // width:99rem;
+            }        
+            .btn+.btn {
+                margin-left:.8rem;
+            }
         }
-        &.option-flex {
-            display: flex;
-            gap:1.9rem;
-        }   
+        .ico-call {
+            width:5.6rem;  
+            height:5.6rem;
+            background:$c-secondary url('../../img/ico-call.svg') no-repeat center center;
+            background-size: 1.6rem 1.6rem;
+            border-radius:$b-raduius-16;
+        }
     }
     
 }      

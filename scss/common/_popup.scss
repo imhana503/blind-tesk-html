@@ -15,7 +15,7 @@
         transition: all 0.4s;
         visibility: hidden;
         
-        background-color:$c-default;
+        background-color:$c-default;  
         &.is-active {
             background-color: rgba(0, 0, 0, 0.5);
             visibility: visible;
@@ -25,14 +25,15 @@
                 height: 100%;
             }
         }
-
         .inr{
+            padding:2rem;
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
             transform: translateY(100vh);
             transition: all 0.4s;
+            background-color: $c-default;
         }
     }
     &-inr { 
@@ -59,6 +60,6 @@
     &-close {
         position:absolute;
         top:0;
-        right:0;
+        right:0; 
     }
 }

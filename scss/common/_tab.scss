@@ -13,9 +13,11 @@
                 justify-content: center;
                 height:4.8rem;
                 font-size:1.8rem;
-                border-radius: 100px;
-                background-color: $c-gray6;
+                line-height: 100%;
+                border-radius: 10rem;
+                background-color:$c-tertiary;
                 color:$c-black;
+                font-weight: $f-bold;
             }
         }  
         li.is-active{
@@ -28,7 +30,7 @@
     &-panel {
         display:none;  
         &-wrap {
-            margin-top:3.8rem;
+            margin-top:$space-24;
         }   
         &.is-active{
             display:block;
