@@ -5,6 +5,47 @@
     background-position: center center;
 }
 
+/* 수량 */
+.control-qty {
+    $root: &;
+    display:flex;
+    align-items: center;
+    background-color:$c-gray3;
+    border:1px solid $c-gray2;
+    border-radius: $b-raduius-8;
+    [class*=btn-] {
+        width:4.8rem;
+        height:4.8rem;
+        position: relative;
+        &:after {
+            display: block;
+            content:"";
+            width:1.4rem;
+            height:1.4rem;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+           
+        }
+
+    }
+    .btn-minus {
+        background-image:url('../../img/ico-minus.svg');
+    }
+    .btn-plus {
+        background-image:url('../../img/ico-plus.svg');
+    }
+    input {
+        width:4.8rem;
+        height:4rem;
+        background-color:$c-default ;
+        text-align: center;
+        border-radius: .7rem;
+       
+    }
+}
+
 /* 스크롤 */
 .scroll {
     $root: &;
@@ -191,7 +232,18 @@
                 width:9.6rem;
                 height:9.6rem;
                 border:1px solid $c-gray;
+                /* 이미지 작은사이즈 */
+                &.sm {
+                    width:4.8rem;  
+                    height:4.8rem;
+                    border-radius: .7rem;
+                }
+                &+ #{$radio}-txt {
+                    margin-left:1.2rem;
+                }
             }
+          
+           
         }
          #{$radio}-input:checked + #{$radio}-label{
             border-color: $c-primary;
@@ -202,19 +254,22 @@
         }
         #{$radio}-txt {  
             flex:1;
-            margin-left:1.2rem;
             font-size: 2rem;
-            font-weight: $f-medium;  
+            font-weight: $f-medium;    
         }
         &+#{$radio}.option-box {
             margin-top:.8rem;
         }
+    }
+    &-wrap {
+        $radio: '.radio';
+        &.flex {
+            #{$radio}+#{$radio} {
+                margin:0 0 0 .8rem;
+            }
 
-        /* 작은사이즈 */
-        &.sm {
-            .img-visual {
-                width:4.8rem;
-                height:4.8rem;
+            #{$radio}-label {
+                padding:.8rem 1.6rem;
             }
         }
     }

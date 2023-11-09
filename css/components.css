@@ -266,6 +266,43 @@ body.is-fixed #container {
   background-position: center center;
 }
 
+/* 수량 */
+.control-qty {
+  display: flex;
+  align-items: center;
+  background-color: #F5F5F5;
+  border: 1px solid #EEE;
+  border-radius: 0.8rem;
+}
+.control-qty [class*=btn-] {
+  width: 4.8rem;
+  height: 4.8rem;
+  position: relative;
+}
+.control-qty [class*=btn-]:after {
+  display: block;
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.control-qty .btn-minus {
+  background-image: url("../../img/ico-minus.svg");
+}
+.control-qty .btn-plus {
+  background-image: url("../../img/ico-plus.svg");
+}
+.control-qty input {
+  width: 4.8rem;
+  height: 4rem;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 0.7rem;
+}
+
 /* 스크롤 */
 .scroll-wrap {
   margin: 1.6rem 0;
@@ -427,7 +464,6 @@ body.is-fixed #container {
 }
 .radio.option-box {
   display: block;
-  /* 작은사이즈 */
 }
 .radio.option-box .radio-label {
   display: flex;
@@ -441,6 +477,15 @@ body.is-fixed #container {
   width: 9.6rem;
   height: 9.6rem;
   border: 1px solid #DDDDDD;
+  /* 이미지 작은사이즈 */
+}
+.radio.option-box .radio-label .img-visual.sm {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 0.7rem;
+}
+.radio.option-box .radio-label .img-visual + .radio-txt {
+  margin-left: 1.2rem;
 }
 .radio.option-box .radio-input:checked + .radio-label {
   border-color: #0FAD02;
@@ -451,16 +496,17 @@ body.is-fixed #container {
 }
 .radio.option-box .radio-txt {
   flex: 1;
-  margin-left: 1.2rem;
   font-size: 2rem;
   font-weight: 500;
 }
 .radio.option-box + .radio.option-box {
   margin-top: 0.8rem;
 }
-.radio.option-box.sm .img-visual {
-  width: 4.8rem;
-  height: 4.8rem;
+.radio-wrap.flex .radio + .radio {
+  margin: 0 0 0 0.8rem;
+}
+.radio-wrap.flex .radio-label {
+  padding: 0.8rem 1.6rem;
 }
 
 /* 금액 */
@@ -860,6 +906,9 @@ body.is-fixed #container {
 }
 .product-option-wrap {
   margin-top: 4rem;
+}
+.product-option .price-wrap {
+  margin-top: 0;
 }
 
 /* 검색 팝업 */
