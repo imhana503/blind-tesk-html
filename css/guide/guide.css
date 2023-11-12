@@ -1,0 +1,17 @@
+.g-wrap {
+
+}
+  
+.g-item + .g-item {
+    margin-top:3rem;
+}
+
+.g-title {
+    font-size:2rem;
+    font-weight:700;
+    color:red;
+}
+
+.g-item-wrap +.g-item-wrap {
+    margin-top:5rem;
+}

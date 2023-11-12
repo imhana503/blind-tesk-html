@@ -2,64 +2,128 @@
 /* POPUP */
 .layer {
     $root: &;
-    &-popup {
-        // display:none;
-        position: fixed;
+    &-inner {
+        display:flex;  
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        position:relative;
+        z-index: 101;
+        transform: translateY(100vh);
+        transition: all 0.4s;
+        .inr {
+            padding:0 2rem;
+            background-color:$c-default;
+        }
+    }
+    &-head {       
+        font-size: 2.8rem;  
+    }
+    &-head {
+        font-size: 2.8rem;  
+    }
+    &-content {
+        padding:$space-24 0 0     
+    }  
+    &-footer {
+        padding:$space-16 0;
+        .btn-wrap {
+            padding:0;
+        }
+    }  
+    &-popup {    
+        $layerInner: '.layer-inner';    
+        $layerHead: '.layer-head';    
+        display: flex;
+        position: absolute;
         left: 0rem;
         right: 0rem;
         top: 0rem;
         bottom: 0;
-        z-index: 1000;
-        background-color: rgba(0, 0, 0, 0);
-        -webkit-transition: all 0.4s;
-        transition: all 0.4s;
         visibility: hidden;
-        
-        background-color:$c-default;  
-        &.is-active {
-            background-color: rgba(0, 0, 0, 0.5);
+        &:after {
+            display: block;
+            content:"";
+            position: absolute;
+            left: 0rem;
+            right: 0rem;
+            top: 0rem;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);  
+            z-index: 100;
+            
+        }
+          &.is-active {
             visibility: visible;
-
-            .inr {
-                transform: translateY(0);
-                height: 100%;
+            #{$layerInner} {
+                transform: translateY(0);  
             }
         }
-        .inr{
-            padding:2rem;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            transform: translateY(100vh);
-            transition: all 0.4s;
-            background-color: $c-default;
+        .section {
+            padding:0;
         }
-    }
-    &-inr { 
-         
-        // .section {
-        //     min-height: 30rem;
-        // }
-        // &::before {  
-        //     display:block;
-        //     content:"";
-        //     width:100%;
-        //     background-color: rgba(0, 0, 0, 0.3);
-        //     position:absolute;
-        //     top:0;
-        //     bottom:0;
-        //     right:0;
-        //     left:0;
-        // }
-    }
-    &-head {
-        padding:2rem;  
-        font-size: 1.5rem;  
-    }
-    &-close {
-        position:absolute;
-        top:0;
-        right:0; 
-    }
+        /* 풀팝업 */
+        &.option-full {
+            .inr {
+                height:100%;
+            }
+        }
+        /* 바텀팝업 */
+        &.option-bottom {  
+            .inr {
+                max-height: calc(100vh - 2rem);
+                border-radius: $b-raduius-20 $b-raduius-20 0 0;
+            }
+
+            #{$layerHead} {
+                padding-top:4.8rem;
+            }
+        }
+        /* 검색 팝업 */  
+        #{$layerHead} {
+            $searchInput: '.search-input';
+            #{$searchInput}{  
+                margin:.8rem 0;                
+            }
+            #{$searchInput}-wrap {
+                gap:1.6rem
+            }
+        }
+        .word {
+            &-tit {
+                margin-bottom:2rem;
+                font-size:1.6rem;  
+                font-weight: $f-medium;
+            }
+            &-list {
+                &>li {
+                    border-bottom:1px solid $c-gray;
+                }
+                &>li:first-child{
+                    border-top:1px solid $c-gray;
+                }
+                a {
+                    display: block;
+                    padding:2rem 0;
+                    font-size:1.6rem;
+                    font-weight: $f-bold;
+                }
+            }
+        }
+
+        /* 옵션선택 */
+        .option-selection {
+            .product-option-wrap {
+                margin-top:0;
+            }
+            .product-option-wrap+ .product-option-wrap {
+                margin-top:2.4rem;
+                padding-top:2.4rem;
+                border-top:1px solid $c-gray2;
+            }
+        }
+        
+    }        
 }
+
+

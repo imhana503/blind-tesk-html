@@ -2,39 +2,16 @@
     color:$c-highlight !important;  
 }
 
-/* 완료페이지 */
-.complete {
-    $root: &;
-    text-align: center;
-    &:before{
-        display:inline-flex;
-        content:"";
-        width:17.2rem;
-        height:11.9rem;
-        margin-bottom: 3.8rem;
-        background-image:url('../../img/ico-complete.svg');
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-    &-tit {
-        font-size:2.4rem;
-        font-weight: $f-bold;
-    }
-    &-sub {
-        margin-top:.8rem;
-        font-size:1.6rem;
-        font-weight: $f-medium;
-    }
-}  
+.space-none {
+    padding:0 !important;
+}
 
 /* INTRO */    
 .section.intro {
     $root: &;
     display:flex;
     flex-direction: column;
-    // justify-content: space-between;
     min-height:100vh;
-    margin:-6.4rem 0;
     padding:3.2rem 3rem;
     .page-tit-wrap {
         padding:0 1rem;
@@ -56,7 +33,8 @@
             }
             &.default {
                 background-color:$c-default;    
-                 color:$c-black ;
+                color:$c-black;
+                border-color:$c-default;
             }
         } 
         &.option-full {
@@ -64,7 +42,7 @@
             .btn {
                 width :100%;
                 height:10rem;
-                font-size:2rem;
+                font-size:2rem;  
                 &+.btn{
                     margin-top:$space-16;
                 }
@@ -73,27 +51,17 @@
     }  
 }
 
-/* 상품페이지 */   
+/* 상품 페이지 */   
 .section.product {
     $root: &;
-    .tit {
-        &-wrap {
-            margin-bottom:$space-16;
-        }
-        &-product{
-            font-size: 2.4rem;;
-        }
-    }
-
     /* 상품평 */
     .product-comment {
-        margin:4rem 0;
-        &-list {
+        &-list {      
             &>li>a {
                 display:flex;
                 flex-direction: column;
                 padding:$space-16 0;  
-                border-top:1px solid $c-gray5;
+                border-top:1px solid $c-gray5;  
                 font-size:1.6rem;
                 font-weight: $f-medium;
             }
@@ -113,107 +81,8 @@
             }
         }
     }
-
-    /* 연관추천상품 */
-    .product-recommend {
+    .group {
         margin:4rem 0;
-        &-list {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            column-gap: $space-16;
-            row-gap:$space-24;
-        }
-        &-visual {
-            height:9.6rem;
-            margin-bottom:1.4rem;
-            border-radius: $b-raduius-8;
-        }
-        .tit {
-            font-size:1.4rem;
-            font-weight: $f-medium;
-        }
-        .price {
-            margin:.8rem 0;
-            font-size: 1.4rem;
-        }
-    }
-}
-
-/* 상품목록 */   
-.product-list {
-    $root: &;
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: $space-16;
-    row-gap:$space-24;
-    &-link {
-        &>a{
-            display:flex;
-            flex-direction: column;
-            position:relative;
-        }
-        &.is-active {
-            .btn-favor {
-                &:before {
-                    height:1.6rem;
-                    background-image:url('../../img/ico-heart-on.svg');
-                }
-            }
-        }
-    }
-    &-visual {
-        border-radius: $b-raduius-15;
-        height:15.2rem;
-    }
-    &-txt {
-        margin-top:1.2rem;
-        .tit {
-            font-size:1.6rem;
-            font-weight:$f-medium;
-        }  
-        .price {
-            margin-top:.4rem;
-        }
-    }
-    .btn-favor {
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        width:4rem;
-        height:4rem;
-        position: absolute;
-        top:.8rem;
-        right:.8rem;
-        background-color:$c-default;
-        border-radius:$b-raduius;
-        z-index:100;
-        &:before {
-            display:flex;
-            align-items: center;
-            content:"";
-            width:1.8rem;
-            height:1.8rem;
-            background-image:url('../../img/ico-heart.svg');
-        }
-    }
-}
-
-/* 상품상세 */
-.product-detail {
-    $root: &;
-    margin-bottom: $space-24;
-    &-visual {
-        height:21.6rem;  
-    }
-    &-txt {
-        margin-top:$space-24;
-        .tit {
-            font-size:3.2rem;
-        }
-        .txt {
-            margin-top:.8rem;
-            font-size:1.6rem;
-        }
     }
 }
 
@@ -233,34 +102,6 @@
     
 }
 
-/* 검색 팝업 */
-.layer-popup {
-    $root: &;
-    .word {
-        &-tit {
-            margin-bottom:$space-24;
-            font-size:1.6rem;
-            font-weight: $f-medium;
-        }
-        &-list {
-            &>li {
-                border-bottom:1px solid $c-gray;
-            }
-            &>li:first-child{
-                border-top:1px solid $c-gray;
-            }
-            a {
-                display: block;
-                padding:$space-24 0;
-                font-size:1.6rem;
-                font-weight: $f-bold;
-            }
-        }
-    }
-}
 
-
-
- 
 
 

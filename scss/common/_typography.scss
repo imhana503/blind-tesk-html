@@ -5,9 +5,13 @@
         font-size: 2.8rem;
         &-wrap{
             margin-bottom:$space-24;
-        }
-        .highlight {
-            //color:$c-highlight2;
+            &.option-sub {
+                margin-bottom:$space-16;
+                .page-tit {
+                    font-size: 2.4rem;
+                }  
+                
+            } 
         }
     }
     &-txt {
