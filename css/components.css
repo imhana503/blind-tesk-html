@@ -188,6 +188,7 @@
   padding: 1rem;
   font-size: 1.8rem;
   font-weight: 500;
+  line-height: 1;
   text-align: center;
   color: #fff;
   border-radius: 1.6rem;
@@ -289,7 +290,7 @@
   justify-content: center;
   height: 4.8rem;
   font-size: 1.8rem;
-  line-height: 100%;
+  line-height: 1;
   border-radius: 10rem;
   background-color: #EEE;
   color: #111;
@@ -991,6 +992,7 @@
   width: 24rem;
   height: 20rem;
   font-size: 2.4rem;
+  line-height: 1.4;
   border-radius: 2.4rem;
   box-shadow: 0px 14px 56px 0px rgba(0, 0, 0, 0.14);
 }
@@ -1047,6 +1049,7 @@
 /* 결재하기 */
 .product-option-tit {
   font-size: 2rem;
+  line-height: 1;
   margin-bottom: 0.8rem;
 }
 .product-option-wrap {
