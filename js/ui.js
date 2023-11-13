@@ -1,38 +1,23 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  //전체메뉴
-  const allMenuAction = () => {
-    const btnAllMenuOpen = document.querySelector('.btn-allmenu');
-    const btnAllMenuClose = document.querySelector('.all-menu .btn-close');
 
+  //https://codepen.io/inyoung/pen/pwBXxz
+  const layerPopupAction = () => {
+    const btnLayerOpen = document.querySelectorAll('.btn-open-popup');
 
-    //전체메뉴 열기
-    btnAllMenuOpen.addEventListener("click", function(e) {
-      const allMenu = document.querySelector('.all-menu');
-     
-      this.setAttribute('aria-expanded', true);
-      allMenu.classList.add('is-active');
-      allMenu.setAttribute('aria-hidden', false);
-    });
+    btnLayerOpen.forEach(function(_btnLayerOpens){
+      _btnLayerOpens.addEventListener('click', function(e){
+        targetId = e.target.getAttribute('data-popup-id');
+        const btnLayerClose = document.querySelector(`#${targetId}`).querySelectorAll('.btn-popup-close');
 
-    //전체메뉴 닫기
-    btnAllMenuClose.addEventListener("click", function() {
-      const allMenu = this.closest('.all-menu');
-
-      this.setAttribute('aria-expanded', false);
-      allMenu.classList.remove('is-active');
-      allMenu.setAttribute('aria-hidden', true);
-    });
-  }
-
-  const layerPopup = () => {
-    const btnLayerOpen = document.querySelectorAll('.openLayerPoup');
-
-    btnLayerOpen.forEach(function(item){
-      item.addEventListener('click', function(){
-        
-        console.log(this)
+        document.querySelector(`#${targetId}`).classList.add('is-active');
+        //팝업답기
+        btnLayerClose.forEach(function(_btnLayerCloses){
+          _btnLayerCloses.addEventListener('click', function(){
+            document.querySelector(`#${targetId}`).classList.remove('is-active');
+          })
+        })
       });
-    })
+    });
   }
 
 
@@ -43,81 +28,112 @@ document.addEventListener("DOMContentLoaded", (event) => {
     dataTabs.forEach(function(dataTab){
       const btnTabs = dataTab.querySelectorAll('.tab-list>li>a');
 
-      btnTabs.forEach(function(btnTab){
-        btnTab.addEventListener('click', function(e){
-          const target = e.target;
-          const tabPanel = target.closest('.tab').querySelectorAll('.tab-panel');
+      btnTabs.forEach(function(_btnTabs){
+        _btnTabs.addEventListener('click', function(e){    
+          if( e.target.closest('li').classList.contains('is-active') ){
+            return;
+          }
 
-          target.closest('.tab-list').querySelectorAll('li').forEach(function(li){
-            li.classList.remove('is-active');
-            li.querySelector('a').setAttribute('aria-selected', 'false');
-            li.querySelector('a').setAttribute('tabindex', -1)
-          })
-          
-          target.setAttribute('aria-selected', 'true');
-          target.closest('li').classList.add('is-active');
-          li.querySelector('a').setAttribute('tabindex', 0)
+          e.target.closest('.tab-list').querySelectorAll('li').forEach(function(_tabLists){
+           
+              if( !_tabLists.classList.contains('is-active') ){                
+                _tabLists.classList.add('is-active');
+                _tabLists.querySelector('a').setAttribute('aria-selected', true);
+                _tabLists.querySelector('a').setAttribute('tabindex', 0);
+              } else {
+                _tabLists.classList.remove('is-active');
+                _tabLists.querySelector('a').setAttribute('aria-selected', false);
+                _tabLists.querySelector('a').setAttribute('tabindex', -1);
+              }             
+          });
 
-          const nodes = [...e.target.closest('.tab-list').querySelectorAll('li')];
-          const idx = nodes.findIndex(node=>node.classList.contains('is-active'));
+          const tabPanel = e.target.closest('.tab').querySelectorAll('.tab-panel');
+          const arrayTabList = [...e.target.closest('.tab-list').querySelectorAll('li')];
+          const idx = arrayTabList.findIndex(node=>node.classList.contains('is-active'));
 
-          tabPanel.forEach(function(panel){
-            panel.classList.remove('is-active');
-          })
+          tabPanel.forEach(function(_tabPanels){
+            _tabPanels.classList.remove('is-active');
+            console.log(_tabPanels,idx)
+          });
           tabPanel[idx].classList.add('is-active');
         });
-
-
-        //탭 포커스 이동
-        let keyIdx = 0;
-        btnTab.addEventListener('keydown', function(e){
-          console.log(e.keyCode);
-
-          if( e.keyCode === 39 ){
-            const target = e.target;
-            const nodes = [...e.target.closest('.tab-list').querySelectorAll('li')];
-            nodes[keyIdx].classList.add('is-active');
-            nodes[keyIdx].querySelector('a').setAttribute('tabindex', 0);
-            nodes[keyIdx].querySelector('a').focus();
-            keyIdx = keyIdx+=1;
-
-            return;
-          } 
-
-          if( e.keyCode === 37 ){
-            const target = e.target;
-            const nodes = [...e.target.closest('.tab-list').querySelectorAll('li')];
-            nodes[keyIdx].classList.add('is-active');
-            nodes[keyIdx].querySelector('a').focus();
-            keyIdx = keyIdx-=1;
-
-            return;
-          } 
-        })
-      })
-
-     
+      });
     })
-
-
   }
 
-  const fixedBottom = () => {
-    console.log('fidxed');
+  //하단고정  
+  const fixedBottomAction = () => {  
     const fixedBot = document.querySelector('.fixed-bottom');
-    const body = document.querySelector('body');
+    const content = document.querySelector('#content');
+    const introSection = document.querySelectorAll('.section.intro');
 
-    if( fixedBot ){
-      body.classList.add('is-fixed');
+    if( fixedBot ){  
+      const fixedBotHeight = fixedBot.offsetHeight;
+      content.style.paddingBottom = fixedBotHeight+'px';
+
+      console.log(introSection.length)
+
+      if( introSection.length < 0 ){
+        content.style.paddingBottom = 0;
+        introSection.forEach(function(_introItems, _idx){
+          _introItems.style.paddingBottom = fixedBotHeight+'px';
+        })
+      }
     }
-    console.log(body);
-
   }
 
-  //allMenuAction(); //전체메뉴
-  // layerPopup();//팝업
-  tabAction();//탭메뉴
-  //fixedBottom(); //하단 고정 영역시 높이 값 설정
-  
+  //관심상품 
+  const favorAction = () => {
+    const btnFavor = document.querySelectorAll('.btn-favor');
 
+    btnFavor.forEach(function(_btnFavorItems, _idx){
+      const parentLink = _btnFavorItems.closest('.product-list-link');
+
+      _btnFavorItems.addEventListener('click', function(e){
+        e.preventDefault();
+        if( !parentLink.classList.contains('is-active') ){
+            parentLink.classList.add('is-active');
+            _btnFavorItems.setAttribute('aria-pressed', true);
+            
+        } else {
+            parentLink.classList.remove('is-active');
+            _btnFavorItems.setAttribute('aria-pressed', false);
+        }
+      });
+    })
+  } 
+
+  //수량버튼
+  const controlQtyAction = () => {
+    const controlQty = document.querySelectorAll('.control-qty');
+
+    controlQty.forEach(function(_controlQtys){
+      const btnMinus = _controlQtys.querySelector('.btn-minus');
+      const btnPlus = _controlQtys.querySelector('.btn-plus');
+      const inputNum = _controlQtys.querySelector('input');
+
+      btnMinus.addEventListener('click', function(){
+        const min = parseInt(inputNum.getAttribute('min'));
+        let value = parseInt(inputNum.getAttribute('value'));
+        min+1 < value ? value -= 1 : min;
+        inputNum.setAttribute('value', value);
+        inputNum.setAttribute('aria-label', `현재 수량 ${value}개`);
+      });
+
+      btnPlus.addEventListener('click', function(){
+        const max = parseInt(inputNum.getAttribute('max'));
+        let value = parseInt(inputNum.getAttribute('value'));
+        max > value ? value += 1 : max;
+        inputNum.setAttribute('value', value);
+        inputNum.setAttribute('aria-label', `현재 수량 ${value}개`);
+      });
+    })
+  }
+
+  
+  tabAction();//탭메뉴
+  fixedBottomAction(); //하단 고정 영역시 높이 값 설정
+  favorAction(); //관심상품
+  layerPopupAction();//팝업
+  controlQtyAction();//수량버튼
 });

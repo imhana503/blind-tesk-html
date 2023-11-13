@@ -5,6 +5,21 @@
     background-position: center center;
 }
 
+[class*=ico-] {
+    display:inline-flex;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+  
+.ico-back {  
+    width:4.8rem;
+    height:4.8rem;
+    background-image:url('../../img/ico-back.svg');
+    border-radius: $b-raduius;
+    box-shadow: $b-shadow;
+}
+
 /* 수량 */
 .control-qty {
     $root: &;
@@ -275,7 +290,6 @@
     }
 }
 
-
 /* 금액 */
 .price {
     $root: &;
@@ -294,14 +308,14 @@
     }
 }
 
-/* Flex */
+/* 분할 : Flex */
 .flex {
     $root: &;
     display:flex;
     align-items: center;
-    &-between {
-        justify-content: space-between;
-    }
+    // &-between {
+    //     justify-content: space-between;
+    // }
     &-top {
         align-items: flex-start;
     }
@@ -315,6 +329,11 @@
     }
     &-none {
         flex:none;
+    }
+    &-end {
+        display:flex;
+        justify-content: flex-end;
+        text-align: right;
     }
 }
 
@@ -335,45 +354,6 @@
     .txt {
         font-size:1.6rem;
         font-weight: $f-medium;
-    }
-}
-
-
-/* 인풋 검색 */
-.search-input {
-    $root: &;
-    position: relative;
-    margin:$space-24 0;
-    .input {
-        display: flex;
-        height:5rem;
-        background-color: $c-gray2;
-        padding:1.3rem 1.7rem;
-        font-size:1.4rem;
-        font-weight: $f-medium;
-        border-radius: $b-raduius-15;
-        input{
-            padding:0 0 0 3.8rem;
-            color:$c-black2;
-            &::placeholder{
-              
-            }
-        }
-    }
-    [class*=btn-] {
-        width:2.4rem;
-        height:2.4rem;
-    }
-    .btn {  
-        &-search{
-            position:absolute;
-            top:1.3rem;
-            left:1.7rem;
-            background-image:url('../../img/ico-search.svg');
-        }
-        &-sort {
-            background-image:url('../../img/ico-sort.svg');
-        }
     }
 }
 
@@ -419,7 +399,6 @@
             }
         }
         &.info {
-         
             .tit {
                 font-weight: $f-bold;
             }
@@ -431,3 +410,197 @@
         }
     }
 }
+
+
+/* 상품목록 */   
+.product-list {
+    $root: &;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: $space-16;
+    row-gap:$space-24;
+    &-link {
+        &>a{
+            display:flex;
+            flex-direction: column;
+            position:relative;
+        }
+        &.is-active {
+            .btn-favor {
+                &:before {
+                    height:1.6rem;
+                    background-image:url('../../img/ico-heart-on.svg');
+                }
+            }
+        }
+    }
+    &-visual {
+        border-radius: $b-raduius-15;
+        height:15.2rem;
+    }
+    &-txt {
+        margin-top:1.2rem;
+        .tit {
+            font-size:1.6rem;
+            font-weight:$f-medium;
+        }  
+        .price {
+            margin-top:.4rem;
+        }
+    }
+    .btn-favor {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width:4rem;
+        height:4rem;
+        position: absolute;
+        top:.8rem;
+        right:.8rem;
+        background-color:$c-default;
+        border-radius:$b-raduius;
+        z-index:100;
+        &:before {
+            display:flex;
+            align-items: center;
+            content:"";
+            width:1.8rem;
+            height:1.8rem;
+            background-image:url('../../img/ico-heart.svg');
+        }
+    }
+    /* 연관추천상품 */
+    &.option-recommend {
+        $productList: '.product-list';
+        grid-template-columns: auto auto auto;
+        #{$productList}-link { 
+            .img-visual {
+                height:9.6rem;
+                margin-bottom:1.4rem;
+                border-radius: $b-raduius-8;
+            }
+
+            .tit {
+                font-size:1.4rem;
+                font-weight: $f-medium;
+            }
+            .price {
+                margin:.8rem 0;
+                font-size: 1.4rem;
+            }
+            }
+      
+    }  
+
+    /* 연관추천상품 */
+    .product-recommend {
+      
+        &-list {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: $space-16;
+            row-gap:$space-24;
+        }
+        &-visual {
+            height:9.6rem;
+            margin-bottom:1.4rem;
+            border-radius: $b-raduius-8;
+        }
+        .tit {
+            font-size:1.4rem;
+            font-weight: $f-medium;
+        }
+        .price {
+            margin:.8rem 0;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+/* 상품상세 */
+.product-detail {
+    $root: &;
+    margin-bottom: $space-24;
+    &-visual {
+        height:21.6rem;  
+    }
+    &-txt {
+        margin-top:$space-24;
+        .tit {
+            font-size:3.2rem;
+        }
+        .txt {
+            margin-top:.8rem;
+            font-size:1.6rem;
+        }
+    }
+
+    &.option-info {
+        .product-detail-visual {
+            margin-bottom:3.2rem;
+        }
+    }
+}
+
+/* 블릿 */
+.list {
+    $root: &;
+    &-number {
+        font-size:1.6rem;
+        font-weight: $f-medium;
+    }
+} 
+
+/* 타이틀 + 텍스트 */
+.list-info {
+    $root: &;
+    &-tit {
+        font-size:1.6rem;
+        font-weight: $f-bold;
+    }
+    &-txt {
+        font-size:1.6rem;
+        font-weight: $f-medium;
+    }
+    &-item+.list-info-item {
+        margin-top:2rem;
+    }
+    &-box {
+        .tit {
+            margin-bottom:1.6rem;
+            font-size:2.4rem;
+            color:$c-primary;
+        }
+    }
+}
+
+/* 완료페이지 */
+.complete {
+    $root: &;
+    padding-top:4rem;
+    text-align: center;
+    &:before{
+        display:inline-flex;
+        content:"";
+        width:17.2rem;
+        height:11.9rem;
+        margin:2.5rem 0;
+        background-image:url('../../img/ico-complete.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &-tit {
+        font-size:2.4rem;
+        font-weight: $f-bold;
+    }
+    &-sub {
+        margin-top:.8rem;
+        font-size:1.6rem;
+        font-weight: $f-medium;
+        word-break: break-word;
+    }
+}  
+
+
+
+

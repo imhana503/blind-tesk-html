@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../css/reset.css">
+    <style>
+        #data-filter {display: flex; align-items: center; justify-content: flex-end; gap:10px; padding:10px 0;}
+        #data-table{width:100%; background-color:#fff; border:1px solid gray; border-radius:5px;}
+        #data-table thead th {background-color:#0EB200; padding:10px 0;}
+        #data-table td:first-child,
+        #data-table td:last-child {text-align:center;}
+    </style>
+</head>
+<body>
+
+    <div id="data-filter">
+        <span class="total">전체 페이지 : <em></em></span>
+        <span class="state">완료 : <em>10</em></span>
+        <span class="progress">진척률 : <em>10</em></span>
+    </div>
+
+    <!-- #data-table -->
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th scope="col">NO</th>
+                <th scope="col">메뉴</th>
+                <th scope="col">화면ID</th>
+                <th scope="col">링크</th>
+                <th scope="col">상태</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <!--// #data-table -->
+    <script src="../js/dataHtml.js"></script>
+    <script src="../js/dataPub.js"></script>
+</body>
+</html>

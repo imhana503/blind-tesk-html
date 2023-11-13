@@ -1,27 +1,37 @@
-@charset "UTF-8";
-
-// .form {
-//     $root: &;
-//     input[type="text"],
-//     input[type="tel"] {
-//         padding:.8rem;
-//         font-size:1.4rem;
-//         font-weight: 600;
-//         color:$c-lightBlack;
-//         border-bottom:1px solid $c-gray;
-//     }
-//     &-item {
-//         &+.form-item{  
-//             margin-top:3rem;
-//         }  
-//         &.option-flex {
-//             display: flex;  
-//             gap:1.9rem;
-//             width: 100%;
-//             .item{
-//                 flex:1;
-//             }
-//         }  
-//     }
-   
-// }
+/* 검색영역 */
+.search-input {
+    $root: &;
+    position: relative;
+    margin:$space-24 0;
+    .input {
+        display: flex;
+        height:5rem;
+        background-color: $c-gray2;
+        padding:1.3rem 1.7rem;
+        font-size:1.4rem;
+        font-weight: $f-medium;
+        border-radius: $b-raduius-15;
+        input{
+            padding:0 0 0 3.8rem;
+            color:$c-black2;
+            &::placeholder{
+                color:$c-black2;
+            }
+        }
+    }
+    [class*=btn-] {
+        width:2.4rem;
+        height:2.4rem;
+    }
+    .btn {  
+        &-search{
+            position:absolute;
+            top:1.3rem;
+            left:1.7rem;
+            background-image:url('../../img/ico-search.svg');
+        }
+        &-sort {
+            background-image:url('../../img/ico-sort.svg');
+        }
+    }
+}

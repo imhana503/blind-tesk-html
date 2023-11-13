@@ -1,8 +1,3 @@
-body.is-fixed {
-    #container{
-        padding-bottom:10.2rem; //높이값 설정
-    }
-}
 
 /* HEADER */
 .header {
@@ -11,7 +6,7 @@ body.is-fixed {
     justify-content: space-between;
     width:100%;
     height:6.4rem;
-    position:fixed;
+    position:sticky;
     top:0;
     left:0;
     padding:.8rem 2rem;
@@ -19,28 +14,36 @@ body.is-fixed {
     z-index: 2;
     [class*=ico-] {
         display:block;
-        width:2.4rem;
-        height:2.4rem;
+        // width:2.4rem;
+        // height:2.4rem;
         position: relative;
         background-repeat: no-repeat;
         background-position: center center;
     }
-    .ico-back {
-        width:4.8rem;
-        height:4.8rem;
-        background-image:url('../../img/ico-back.svg');
-        border-radius: $b-raduius;
-        box-shadow: $b-shadow;
-    }
+    // .ico-back {
+    //     width:4.8rem;
+    //     height:4.8rem;
+    //     background-image:url('../../img/ico-back.svg');
+    //     border-radius: $b-raduius;
+    //     box-shadow: $b-shadow;
+    // }
     .ico-home {
+        width:1.8rem;
+        height:2rem;
         background-image:url('../../img/ico-home.svg');
-        
+        background-size:1.8rem 2rem;
     }
-    .ico-search {  
-        background-image:url('../../img/ico-search.svg');
+    .ico-search { 
+        width:2rem;
+        height:2rem;
+        background-image:url('../../img/ico-search.svg');  
+        background-size:2rem 2rem;      
     }
     .ico-basket {
+        width:2.5rem;
+        height:2rem;
         background-image:url('../../img/ico-basket.svg');
+        background-size:2.5rem 2rem;
         .num {
             &>i {
                 display:inline-flex;
@@ -65,8 +68,7 @@ body.is-fixed {
         }
     }
     &-tit {
-       
-        margin-left:.8rem;
+        margin:.8rem 0 0 .8rem;
         font-size:2.8rem;
     }
     &-left {
@@ -85,7 +87,7 @@ body.is-fixed {
 
 /* CONTAINER */
 #container {
-    padding:6.4rem 0 0;
+    // padding:6.4rem 0 0;
 }
 
 
@@ -102,17 +104,33 @@ body.is-fixed {
 .fixed-bottom {
     $root: &;  
     position: fixed;
-    bottom:0;
+    bottom:0;  
     left:0;
-    right:0;
-    background-color:$c-default;
-   
-    /* 하단버튼  */
-    & > .inr {
-
+    right:0;   
+    &>.btn-wrap {
+        background-color: $c-default;
     }
-
-    /* 하단 네비게이션 */
+    
+    /* 하단 랍계  */
+    .footnote {
+        background-color:$c-default;
+        padding:$space-16 20px;
+        border-radius:$b-raduius-20 $b-raduius-20 0 0;
+        box-shadow:$b-shadow;
+        
+        .btn-wrap {  
+            padding:.8rem 0 0;
+        }
+        .product-option-tit {
+            margin-bottom:0;
+        }
+        .price {
+            font-size:2.8rem
+        }  
+    }   
+        
+  
+    /* 하단 네비게이션 */    
     .navigation {
         &-bottom {
             padding:0 2rem 2rem 2rem;
@@ -122,6 +140,7 @@ body.is-fixed {
                 justify-content: center;
                 width:100%;
                 height:6.4rem;
+                background-color:$c-default;  
                 border-radius:$b-raduius-24;
                 box-shadow: $b-shadow;
                 &>a+a {
