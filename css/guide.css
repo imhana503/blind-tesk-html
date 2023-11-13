@@ -1,0 +1,27 @@
+.g-wrap {
+
+}
+  
+.g-item + .g-item {
+    margin-top:3rem;
+}
+
+.g-title {
+    font-size:2rem;
+    font-weight:700;
+    color:red;
+}
+
+.g-item-wrap +.g-item-wrap {
+    margin-top:5rem;
+}
+
+/*
+http://krasset.com/front/guide/index.html
+*/
+/* guide : header */
+.guide-wrapper .guide-header {display:flex; align-items:center; height:6rem; position: sticky; padding:2rem; border-bottom:1px solid gray }
+.guide-wrapper .guide-header .guide-header-tit { font-size:2.2rem; line-height: 1;}
+
+/* guide : container */
+#guide-container {display:flex; min-height: 100vh;}
