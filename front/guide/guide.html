@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="인픽" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <title>컴포넌트 | 인픽 </title>
+    <link rel="stylesheet" href="./guide.css" />
+    <link rel="stylesheet" href="./../css/style.css" />
+    
+    <script src="./../js/ui.js"></script>  
+</head>
+<body>
+    <!-- #wrap -->
+    <div id="wrap">
+        <div class="guide-wrapper">
+            <!-- #header -->
+            <header class="guide-header">
+                <h1 class="tit"><span>인픽</span></h1>
+            </header>
+            <!--// #header -->
+
+            <!-- #container -->
+            <main id="guide-container">  
+                <!-- .guide-aside -->  
+                <aside class="guide-aside">
+                    <div class="inr">
+                        <ul class="list">
+                            <li class="is-active">
+                                <strong>샘플링</strong>
+                                <ul class="list-sub bullet">
+                                    <li><a href="#guideHeader">HEADER</a></li>
+                                    <li><a href="#guideTitle">타이틀</a></li>
+                                    <li><a href="#guideButton">버튼</a></li>
+                                    <li><a href="#guideImg">이미지</a></li>
+                                    <li><a href="#guideSearch">검색</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn-menu"><span class="blind">메뉴 닫기</span></button>
+                    </div>
+                </aside>  
+                <!--// .guide-aside --> 
+                
+                <div class="guide-content">  
+                    <!-- #guideHeader -->
+                    <section id="guideHeader" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit">HEADER - 이전버튼 + 오른쪽아이콘</h2>
+                            <!-- #header -->
+                            <header id="header" class="header">
+                                <div class="header-left">
+                                    <a href="javascript:;" role="button" class="ico-back"><span class="blind">이전</span></a>
+                                    <h1 class="header-tit blind">상품 목록</h1>
+                                </div>
+                                <div class="header-right">
+                                    <a href="javascript:;" role="button" class="ico-home"><span class="blind">홈</span></a>
+                                    <a href="javascript:;" role="button" class="ico-search"><span class="blind">검색</span></a>
+                                    <a href="javascript:;" role="button" class="ico-basket"><span class="blind">장바구니</span></a>
+                                </div>
+                            </header>
+                            <!--// #header -->
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">HEADER -  버튼+타이틀</h2>
+                            <!-- #header -->
+                            <header id="header" class="header">
+                               <div class="header-left">
+                                   <a href="javascript:;" role="button" class="ico-back"><span class="blind">이전</span></a>
+                                   <h1 class="header-tit">결재하기</h1>
+                               </div>
+                           </header>
+                           <!--// #header -->
+                        </div>
+                    </section>
+                    <!--// #guideHeader -->
+
+                    <!-- #guideTitle-->
+                    <section id="guideTitle" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit">타이틀</h2>
+                            <h1 class="page-tit"><span class="txt">쇼핑의 어려움을 해소해드려요​</span></h1>
+                        </div>
+
+                      
+                        <div class="guite-item">
+                            <h2 class="tit">타이틀 서브</h2>
+                            <div class="page-tit-wrap option-sub flex">
+                                <div class="flex-item"><h3 class="page-tit"><span class="txt">상품평</span></h3></div>
+                                <div class="flex-item flex-end">
+                                    <div class="grade-wrap">
+                                        <div class="grade">
+                                            <span class="blind">구매후기 평점</span>
+                                            <!-- 
+                                                평점 1~5점
+                                                <span class="grade-star score1" aria-label="5점 만점에 1점"></span>
+                                                <span class="grade-star score2" aria-label="5점 만점에 2점"></span>
+                                                <span class="grade-star score3" aria-label="5점 만점에 3점"></span>
+                                                <span class="grade-star score4" aria-label="5점 만점에 4점"></span>
+                                                <span class="grade-star score5" aria-label="5점 만점에 5점"></span>
+                                             -->
+                                            <span class="grade-star score5" aria-label="5점 만점에 5점"></span>                                           
+                                          </div>
+                                          <span class="grade-txt" aria-label="리뷰">(16)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="guide-item">
+                            <h2 class="tit">타이틀+본문 텍스트</h2>
+                            <div class="page-tit-wrap">
+                                <h1 class="page-tit"><span class="txt">인픽서비스에<br>가입하세요​</span></h1>
+                                <p class="page-txt">쇼핑 의 어려움을 해소해드려요</p>
+                            </div>  
+                        </div>
+                    </section>
+                    <!--// #guideTitle -->
+
+                    <!-- #guideButton -->
+                    <section id="guideButton" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit">버튼</h2>
+                            <button type="button" class="btn tertiary">상품평 더보기</button>
+                            <button type="button" class="btn default"><span>담기</span></button>
+                            <button type="button" class="btn primary"><span>구매</span></button>
+                        </div>
+                    </section>
+                    <!--// #guideButton -->
+
+                    <!-- #guideImg -->
+                    <section id="guideImg" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit">이미지</h2>
+                            <div class="img-visual">
+                                <img src="../img/temp/@img-product-detail01.png" alt="">
+                            </div>
+                        </div>
+                    </section>
+                    <!--// #guideImg -->
+
+                    <!-- #guideButton -->
+                    <section id="guideSearch" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit">검색</h2>
+                            <div class="search-input">
+                                <div class="input">
+                                    <input type="text" placeholder="Search" title="검색어 입력">
+                                    <button type="button" class="btn-search"><span class="blind">검색 팝업 열가</span></button>
+                                    <button type="button" class="btn-sort"><span class="blind">sort</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--// #guideButton -->
+
+
+                    <!-- #guideButton -->
+                    <section id="guideButton" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit"></h2>
+                        </div>
+                    </section>
+                    <!--// #guideButton -->
+                    <!-- #guideButton -->
+                    <section id="guideButton" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit"></h2>
+                        </div>
+                    </section>
+                    <!--// #guideButton -->
+                    <!-- #guideButton -->
+                    <section id="guideButton" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit"></h2>
+                        </div>
+                    </section>
+                    <!--// #guideButton -->
+                    <!-- #guideButton -->
+                    <section id="guideButton" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit"></h2>
+                        </div>
+                    </section>
+                    <!--// #guideButton -->
+                    <!-- #guideButton -->
+                    <section id="guideButton" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit"></h2>
+                        </div>
+                    </section>
+                    <!--// #guideButton -->
+
+
+                   
+                    
+                </div>
+                <!--// #content -->
+            </main>
+            <!--// #container -->        
+        </div>
+        
+    </div>
+    <!--// #wrap -->
+</body>
+</html>    
