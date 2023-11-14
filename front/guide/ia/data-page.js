@@ -37,8 +37,8 @@ const dataHtmlList = [
     {
        
         menuName:'팝업(바텀) 상품상세',
-        menuNames:'popup-bottom-optionSelect',
-        menuUrl:'./../../html/popup-bottom-optionSelect',
+        menuNames:'popup-bottom-recipe',
+        menuUrl:'./../../html/popup-bottom-recipe.html',
         menuState:'팝업 접근성 수정'
     },
     {
@@ -66,7 +66,7 @@ const dataHtmlList = [
        
         menuName:'팝업(풀) 검색하기',
         menuNames:'popup-full-search',
-        menuUrl:'popup-full-search.html',
+        menuUrl:'./../../html/popup-full-search.html',
         menuState:'팝업 접근성 수정'
     },
 ];

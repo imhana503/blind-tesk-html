@@ -27,19 +27,19 @@
 .header .ico-home {
   width: 1.8rem;
   height: 2rem;
-  background-image: url("../../img/ico-home.svg");
+  background-image: url("./../../front/img/ico-home.svg");
   background-size: 1.8rem 2rem;
 }
 .header .ico-search {
   width: 2rem;
   height: 2rem;
-  background-image: url("../../img/ico-search.svg");
+  background-image: url("./../../front/img/ico-search.svg");
   background-size: 2rem 2rem;
 }
 .header .ico-basket {
   width: 2.5rem;
   height: 2rem;
-  background-image: url("../../img/ico-basket.svg");
+  background-image: url("./../../front/img/ico-basket.svg");
   background-size: 2.5rem 2rem;
 }
 .header .ico-basket .num {
@@ -140,19 +140,19 @@
   background-position: center center;
 }
 .fixed-bottom .navigation-bottom .ico-home {
-  background-image: url("../../img/ico-home.svg");
+  background-image: url("./../../front/img/ico-home.svg");
 }
 .fixed-bottom .navigation-bottom .ico-search {
-  background-image: url("../../img/ico-search.svg");
+  background-image: url("./../../front/img/ico-search.svg");
 }
 .fixed-bottom .navigation-bottom .ico-request {
-  background-image: url("../../img/ico-request.svg");
+  background-image: url("./../../front/img/ico-request.svg");
 }
 .fixed-bottom .navigation-bottom .ico-mypage {
-  background-image: url("../../img/ico-mypage.svg");
+  background-image: url("./../../front/img/ico-mypage.svg");
 }
 .fixed-bottom .navigation-bottom .ico-basket {
-  background-image: url("../../img/ico-basket.svg");
+  background-image: url("./../../front/img/ico-basket.svg");
 }
 .fixed-bottom .navigation-bottom .ico-basket .num {
   position: absolute;
@@ -235,13 +235,14 @@
   flex: none;
   width: 5.6rem;
   height: 5.6rem;
-  background: #2C00DE url("../../img/ico-call.svg") no-repeat center center;
+  background: #2C00DE url("././../../front/img/ico-call.svg") no-repeat center center;
   background-size: 2.8rem 2.4rem;
   border-radius: 1.6rem;
 }
 
 /* 검색영역 */
 .search-input {
+  width: 100%;
   position: relative;
   margin: 2.4rem 0;
 }
@@ -269,10 +270,10 @@
   position: absolute;
   top: 1.3rem;
   left: 1.7rem;
-  background-image: url("../../img/ico-search.svg");
+  background-image: url("./../../front/img/ico-search.svg");
 }
 .search-input .btn-sort {
-  background-image: url("../../img/ico-sort.svg");
+  background-image: url("./../../front/img/ico-sort.svg");
 }
 
 /* TAB */
@@ -327,7 +328,7 @@
 .ico-back {
   width: 4.8rem;
   height: 4.8rem;
-  background-image: url("../../img/ico-back.svg");
+  background-image: url("./../../front/img/ico-back.svg");
   border-radius: 100%;
   box-shadow: 0px 14px 56px 0px rgba(0, 0, 0, 0.14);
 }
@@ -356,10 +357,10 @@
   transform: translate(-50%, -50%);
 }
 .control-qty .btn-minus {
-  background-image: url("../../img/ico-minus.svg");
+  background-image: url("./../../front/img/ico-minus.svg");
 }
 .control-qty .btn-plus {
-  background-image: url("../../img/ico-plus.svg");
+  background-image: url("./../../front/img/ico-plus.svg");
 }
 .control-qty input {
   width: 4.8rem;
@@ -444,14 +445,14 @@
   align-items: center;
   width: 9.8rem;
   height: 1.8rem;
-  background-image: url("../../img/ico-star-full.svg");
+  background-image: url("./../../front/img/ico-star-full.svg");
   background-position: 0 0;
 }
 .grade-star {
   display: inline-flex;
   width: 100%;
   height: 100%;
-  background-image: url("../../img/ico-star.svg");
+  background-image: url("./../../front/img/ico-star.svg");
   background-repeat: repeat-x;
   background-position: 0 0;
 }
@@ -481,11 +482,11 @@
 .grade-sm {
   width: 6.53rem;
   height: 1.2rem;
-  background-image: url("../../img/ico-star-full-sm.svg");
+  background-image: url("./../../front/img/ico-star-full-sm.svg");
   background-position: 0 0;
 }
 .grade-sm .grade-star {
-  background-image: url("../../img/ico-star-sm.svg");
+  background-image: url("./../../front/img/ico-star-sm.svg");
   background-repeat: repeat-x;
   background-position: 0 -0.2rem;
 }
@@ -697,7 +698,7 @@
 }
 .product-list-link.is-active .btn-favor:before {
   height: 1.6rem;
-  background-image: url("../../img/ico-heart-on.svg");
+  background-image: url("./../../front/img/ico-heart-on.svg");
 }
 .product-list-visual {
   border-radius: 1.5rem;
@@ -732,7 +733,7 @@
   content: "";
   width: 1.8rem;
   height: 1.8rem;
-  background-image: url("../../img/ico-heart.svg");
+  background-image: url("./../../front/img/ico-heart.svg");
 }
 .product-list.option-recommend {
   grid-template-columns: auto auto auto;
@@ -826,7 +827,7 @@
   width: 17.2rem;
   height: 11.9rem;
   margin: 2.5rem 0;
-  background-image: url("../../img/ico-complete.svg");
+  background-image: url("./../../front/img/ico-complete.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }

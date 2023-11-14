@@ -309,8 +309,10 @@ h1,h2,h3 {font-weight:600;}
 .guide-aside .list-sub  {margin-bottom:2rem;}
 .guide-aside strong {display:block; margin-bottom:1rem; font-size:1.8rem;}
 .guide-aside .btn-menu {display:block; width:2.5rem; height:8rem; position:absolute; top:50%; right:-2.4rem; transform: translateY(-50%); background-color:#fff; border:1px solid #f3f3f3}
-.guide-aside .btn-menu::before {display:block; content:">"; font-size:1.7rem; font-weight:600; color:#626262}
-.guide-aside.is-active .btn-menu::before{transform: rotate(-180deg);}
+.guide-aside .btn-menu::before {display:block; content:">"; font-size:1.7rem; font-weight:600; color:#626262; transform: rotate(-180deg);}
+.guide-aside.is-active {margin-left:-21rem;}
+.guide-aside.is-active .btn-menu {position: fixed; top:22rem; left:0; z-index:1003;}
+.guide-aside.is-active .btn-menu::before{transform: rotate(0deg);}
 
 /* guide : content */
 .guide-content {width:100%; }

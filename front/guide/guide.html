@@ -34,13 +34,16 @@
                     <div class="inr">
                         <ul class="list">
                             <li class="is-active">
-                                <strong>샘플링</strong>
+                                <strong>컴포넌트</strong>
                                 <ul class="list-sub bullet">
                                     <li><a href="#guideHeader">HEADER</a></li>
                                     <li><a href="#guideTitle">타이틀</a></li>
                                     <li><a href="#guideButton">버튼</a></li>
                                     <li><a href="#guideImg">이미지</a></li>
                                     <li><a href="#guideSearch">검색</a></li>
+                                    <li><a href="#guideFlex">분할</a></li>
+                                    <li><a href="#guideRadio">radio</a></li>
+                                    <li><a href="#guideEtc">ETC</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -162,46 +165,584 @@
                         </div>
                     </section>
                     <!--// #guideButton -->
+                  
+                    <!-- #guideButton -->
+                    <section id="guideFlex" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit">분할</h2>
+                            <div class="flex">
+                                <div class="flex-item">요소1</div>
+                                <div class="flex-item">요소2</div>
+                            </div>
+                        </div>
 
+                        <div class="guide-item">
+                            <h2 class="tit">분할 - flex-end</h2>
+                            <div class="flex flex-top">
+                                <div class="flex-item">요소1</div>
+                                <div class="flex-item flex-end">요소2</div>
+                            </div>
+                        </div>
 
-                    <!-- #guideButton -->
-                    <section id="guideButton" class="guide-section">
                         <div class="guide-item">
-                            <h2 class="tit"></h2>
-                        </div>
-                    </section>
-                    <!--// #guideButton -->
-                    <!-- #guideButton -->
-                    <section id="guideButton" class="guide-section">
-                        <div class="guide-item">
-                            <h2 class="tit"></h2>
-                        </div>
-                    </section>
-                    <!--// #guideButton -->
-                    <!-- #guideButton -->
-                    <section id="guideButton" class="guide-section">
-                        <div class="guide-item">
-                            <h2 class="tit"></h2>
-                        </div>
-                    </section>
-                    <!--// #guideButton -->
-                    <!-- #guideButton -->
-                    <section id="guideButton" class="guide-section">
-                        <div class="guide-item">
-                            <h2 class="tit"></h2>
-                        </div>
-                    </section>
-                    <!--// #guideButton -->
-                    <!-- #guideButton -->
-                    <section id="guideButton" class="guide-section">
-                        <div class="guide-item">
-                            <h2 class="tit"></h2>
+                            <h2 class="tit">분할 - flex-top</h2>
+                            <div class="flex flex-top">
+                                <div class="flex-item">요소1</div>
+                                <div class="flex-item">요소2요소2요소2<br>요소2요소2<br>요소2요소2</div>
+                            </div>
                         </div>
                     </section>
                     <!--// #guideButton -->
 
+                    <!-- #guideRadio -->
+                    <section id="guideRadio" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit">radio - 박스형식</h2>
+                            <div class="radio-wrap flex">
+                                <div class="radio option-box">
+                                    <input type="radio" id="inputRadio5" name="inputRadio5" class="radio-input" />
+                                    <label for="inputRadio5" class="radio-label">
+                                        <span class="radio-txt">800g</span>
+                                    </label>  
+                                </div>  
+                                <div class="radio option-box">
+                                    <input type="radio" id="inputRadio6" name="inputRadio5" class="radio-input" />
+                                    <label for="inputRadio6" class="radio-label">
+                                        <span class="radio-txt">1.2kg</span>
+                                    </label>
+                                </div>  
+                                <div class="radio option-box">
+                                    <input type="radio" id="inputRadio7" name="inputRadio5" class="radio-input" />
+                                    <label for="inputRadio7" class="radio-label">
+                                        <span class="radio-txt">1.5kg</span>
+                                    </label>
+                                </div> 
+                            </div>
+                        </div>
 
-                   
+                        <div class="guide-item">
+                            <h2 class="tit">radio - 박스형식(이미지)</h2>
+                            <div class="radio option-box">
+                                <input type="radio" id="inputRadio1" name="inputRadio1" class="radio-input" />
+                                <label for="inputRadio1" class="radio-label">
+                                    <div class="img-visual">
+                                        <img src="./../img/temp/@img-product-pay.png" alt="운동화">
+                                    </div>
+                                    <span class="radio-txt">운동화</span>
+                                </label>
+                            </div>  
+                            <div class="radio option-box">
+                                <input type="radio" id="inputRadio2" name="inputRadio1" class="radio-input" />
+                                <label for="inputRadio2" class="radio-label">
+                                    <div class="img-visual">
+                                        <img src="./../img/temp/@img-product-pay.png" alt="운동화">
+                                    </div>
+                                    <span class="radio-txt">운동화</span>
+                                </label>
+                            </div>  
+
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">radio - 박스형식(이미지 작은사이즈)</h2>
+                            <div class="radio option-box">
+                                <input type="radio" id="inputRadio3" name="inputRadio3" class="radio-input" />
+                                <label for="inputRadio3" class="radio-label">
+                                    <div class="img-visual sm">
+                                        <img src="./../img/temp/@img-product-pay.png" alt="운동화">
+                                    </div>
+                                    <span class="radio-txt">운동화</span>
+                                </label>
+                            </div>  
+                            <div class="radio option-box">
+                                <input type="radio" id="inputRadio4" name="inputRadio3" class="radio-input" />
+                                <label for="inputRadio4" class="radio-label">
+                                    <div class="img-visual sm">
+                                        <img src="./../img/temp/@img-product-pay.png" alt="운동화">
+                                    </div>
+                                    <span class="radio-txt">운동화</span>
+                                </label>
+                            </div>  
+                        </div>
+                    </section>
+                    <!--// #guideRadio -->
+
+                    <!-- #guideEtc -->
+                    <section id="guideEtc" class="guide-section">
+                        <div class="guide-item">
+                            <h2 class="tit">별점</h2>
+                            <div class="grade-wrap">
+                                <div class="grade">
+                                    <span class="blind">구매후기 평점</span>
+                                    <!-- 
+                                        평점 1~5점
+                                        <span class="grade-star score1" aria-label="5점 만점에 1점"></span>
+                                        <span class="grade-star score2" aria-label="5점 만점에 2점"></span>
+                                        <span class="grade-star score3" aria-label="5점 만점에 3점"></span>
+                                        <span class="grade-star score4" aria-label="5점 만점에 4점"></span>
+                                        <span class="grade-star score5" aria-label="5점 만점에 5점"></span>
+                                     -->
+                                    <span class="grade-star score5" aria-label="5점 만점에 5점"></span>                                           
+                                  </div>
+                                  <span class="grade-txt" aria-label="구매후기 총 갯수">(16)</span>
+                            </div>
+                            <div class="grade-wrap">
+                                <div class="grade">
+                                    <span class="blind">구매후기 평점</span>
+                                     <span class="grade-star score1" aria-label="5점 만점에 1점"></span>
+                                  </div>
+                                  <span class="grade-txt" aria-label="구매후기 총 갯수">(16)</span>
+                            </div>
+                            <div class="grade-wrap">
+                                <div class="grade">
+                                    <span class="blind">구매후기 평점</span>
+                                     <span class="grade-star score2" aria-label="5점 만점에 2점"></span>
+                                  </div>
+                                  <span class="grade-txt" aria-label="구매후기 총 갯수">(16)</span>
+                            </div>
+                            <div class="grade-wrap">
+                                <div class="grade">
+                                    <span class="blind">구매후기 평점</span>
+                                     <span class="grade-star score3" aria-label="5점 만점에 3점"></span>
+                                  </div>
+                                  <span class="grade-txt" aria-label="구매후기 총 갯수">(16)</span>
+                            </div>
+                            <div class="grade-wrap">
+                                <div class="grade">
+                                    <span class="blind">구매후기 평점</span>
+                                     <span class="grade-star score4" aria-label="5점 만점에 4점"></span>
+                                  </div>
+                                  <span class="grade-txt" aria-label="구매후기 총 갯수">(16)</span>
+                            </div>
+
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">별점 - 작은 사이즈</h2>
+                            <div class="grade-wrap">
+                                <div class="grade-sm">
+                                    <span class="blind">구매후기 평점</span>
+                                    <!-- 
+                                        평점 1~5점
+                                        <span class="grade-star score1" aria-label="5점 만점에 1점"></span>
+                                        <span class="grade-star score2" aria-label="5점 만점에 2점"></span>
+                                        <span class="grade-star score3" aria-label="5점 만점에 3점"></span>
+                                        <span class="grade-star score4" aria-label="5점 만점에 4점"></span>
+                                        <span class="grade-star score5" aria-label="5점 만점에 5점"></span>
+                                        -->
+                                    <span class="grade-star score1" aria-label="5점 만점에 1점"></span>                                           
+                                </div>
+                                <span class="grade-txt" aria-label="리뷰">(16)</span>
+                            </div>
+                            <div class="grade-wrap">
+                                <div class="grade-sm">
+                                    <span class="blind">구매후기 평점</span>
+                                    <span class="grade-star score2" aria-label="5점 만점에 2점"></span>                                           
+                                </div>
+                                <span class="grade-txt" aria-label="리뷰">(16)</span>
+                            </div>
+                            <div class="grade-wrap">
+                                <div class="grade-sm">
+                                    <span class="blind">구매후기 평점</span>
+                                    <span class="grade-star score3" aria-label="5점 만점에 3점"></span>                                           
+                                </div>
+                                <span class="grade-txt" aria-label="리뷰">(16)</span>
+                            </div>
+                            <div class="grade-wrap">
+                                <div class="grade-sm">
+                                    <span class="blind">구매후기 평점</span>
+                                    <span class="grade-star score4" aria-label="5점 만점에 4점"></span>                                           
+                                </div>
+                                <span class="grade-txt" aria-label="리뷰">(16)</span>
+                            </div>
+                            <div class="grade-wrap">
+                                <div class="grade-sm">
+                                    <span class="blind">구매후기 평점</span>
+                                    <span class="grade-star score5" aria-label="5점 만점에 5점"></span>                                           
+                                </div>
+                                <span class="grade-txt" aria-label="리뷰">(16)</span>
+                            </div>
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">금액</h2>
+                            <div class="price-wrap">
+                                <p class="price-dicount">32,900원</p>
+                                <p class="price">27,000원</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">박스</h2>
+                            <div class="box">
+                                <ul class="flex-box">
+                                    <li class="flex flex-top">
+                                        <div class="flex-item"><p class="tit">품목 또는 명칭</p></div>
+                                        <div class="flex-item flex-end"><p class="txt">그린키위</p></div>
+                                    </li>
+                                    <li class="flex flex-top">
+                                        <div class="flex-item"><p class="tit">상품구성</p></div>
+                                        <div class="flex-item flex-end"><p class="txt">1.7kg(18입) x<br>2팩,1개</p></div>
+                                    </li>
+                                    <li class="flex flex-top">
+                                        <div class="flex-item"><p class="tit">생산자(수입자)</p></div>
+                                        <div class="flex-item flex-end"><p class="txt">알 수 없음(업체미제공)</p></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">박스 - 회색(option-gray)</h2>
+                            <div class="box option-gray">
+                                <ul class="flex-box">
+                                    <li class="flex flex-top">
+                                        <div class="flex-item"><p class="tit">품목 또는 명칭</p></div>
+                                        <div class="flex-item flex-end"><p class="txt">그린키위</p></div>
+                                    </li>
+                                    <li class="flex flex-top">
+                                        <div class="flex-item"><p class="tit">상품구성</p></div>
+                                        <div class="flex-item flex-end"><p class="txt">1.7kg(18입) x<br>2팩,1개</p></div>
+                                    </li>
+                                    <li class="flex flex-top">
+                                        <div class="flex-item"><p class="tit">생산자(수입자)</p></div>
+                                        <div class="flex-item flex-end"><p class="txt">알 수 없음(업체미제공)</p></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">리스트 형식(데이터)</h2>
+                            <ul class="list-item">
+                                <li class="list-item-link">
+                                    <a href="javascript:;" role="button">
+                                        <p class="tit">이민희</p>
+                                        <p class="txt">221b Baker St, Marylebone<br>London,<br>United Kingdom</p>
+                                        <span class="ico-more"><em class="blind">더보기</em></span>
+                                    </a>
+                                </li>
+                                <li class="list-item-link pay-card master">
+                                    <a href="javascript:;" role="button">
+                                        <p class="tit">Master Card ending **68</p>
+                                        <span class="ico-more"><em class="blind">더보기</em></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">리스트 (넘버-ol)</h2>
+                            <ol class="list-number">
+                                <li>1. 먹기 좋게 후숙된 키위를 깨끗하게 씻어주세요.</li>
+                                <li>2. 껍질을 벗기고 얇게 잘라 접시에 올려주세요.</li>
+                                <li>3. 블루베리, 루꼴라, 래디쉬를 올려주세요.</li>
+                            </ol>
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">정보 - 리스트</h2>
+                            <div class="list-info-box">
+                                <h3 class="tit">키위샐러드</h3>
+                                <div class="list-info-item">  
+                                    <p class="list-info-tit">재료</p>
+                                    <p class="list-info-txt">골드키위 1개, 그린키위 1개, 블루베리, 래디쉬, 루꼴라, 오렌지제스트</p>
+                                </div>
+    
+                                <div class="list-info-item">
+                                    <p class="list-info-tit">레시피</p>
+                                    <ol class="list-number">
+                                        <li>1. 먹기 좋게 후숙된 키위를 깨끗하게 씻어주세요.</li>
+                                        <li>2. 껍질을 벗기고 얇게 잘라 접시에 올려주세요.</li>
+                                        <li>3. 블루베리, 루꼴라, 래디쉬를 올려주세요.</li>
+                                        <li>4. 오렌지제스트를 더하면 향긋하고 상큼해요.</li>
+                                        <li>5. 취향에 맞는 드레싱을 뿌려주면 완성입니다.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">카드 - 구매후기 & 유형</h2>
+                            <div class="card">
+                                <ul class="card-item">
+                                    <li class="card-item-link review"> 
+                                        <a href="javascript:;" role="button" class="flex">  
+                                            <div class="flex-item">
+                                                <p class="tit">구매후기보기</p>  
+                                            </div>
+                                            <div class="flex-item flex-end">
+                                                <div class="grade-wrap">
+                                                    <div class="grade">
+                                                        <span class="blind">구매후기 평점</span>
+                                                        <!-- 
+                                                            평점 1~5점
+                                                            <span class="grade-star score1" aria-label="5점 만점에 1점"></span>
+                                                            <span class="grade-star score2" aria-label="5점 만점에 2점"></span>
+                                                            <span class="grade-star score3" aria-label="5점 만점에 3점"></span>
+                                                            <span class="grade-star score4" aria-label="5점 만점에 4점"></span>
+                                                            <span class="grade-star score5" aria-label="5점 만점에 5점"></span>
+                                                         -->
+                                                        <span class="grade-star score5" aria-label="5점 만점에 5점"></span>                                           
+                                                      </div>
+                                                      <span class="grade-txt" aria-label="구매후기 총 갯수">(16)</span>
+                                                </div>
+                                            </div>                                    
+                                            <span class="ico-more"><em class="blind">더보기</em></span>
+                                        </a>
+                                    </li>
+                                    <li class="card-item-link info">
+                                        <a href="javascript:;" role="button" class="flex">  
+                                            <div class="flex-item">
+                                                <dl class="info-list">
+                                                    <dt class="txt">유형</dt>
+                                                    <dd class="tit">그린키위</dd>
+                                                </dl>  
+                                            </div>
+                                            <div class="flex-item">
+                                                <dl class="info-list">
+                                                    <dt class="txt">용량</dt>
+                                                    <dd class="tit">1.7kg</dd>
+                                                </dl>
+                                            </div>                                   
+                                            <span class="ico-more"><em class="blind">더보기</em></span>
+                                        </a>
+                                    </li>
+                                    <li class="card-item-link">
+                                        <a href="javascript:;" role="button">
+                                            <p class="tit">보관방법</p>
+                                            <span class="ico-more"><em class="blind">팝업 열기</em></span>
+                                        </a>
+                                    </li>
+                                    <li class="card-item-link" role="button" >
+                                        <a href="javascript:;" class="flex">
+                                            <div class="flex-item"><p class="tit">레시피</p></div>
+                                            <div class="flex-item flex-end"><span class="tit-sub">키위샐러드</span></div>
+                                            <span class="ico-more"><em class="blind">팝업 열기</em></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">상품 - 리스트</h2>
+                            <ul class="product-list">
+                                <li class="product-list-link is-active">
+                                    <a href="prodect-detail.html" role="button">
+                                        <div class="product-list-visual img-visual">
+                                            <img src="../img/temp/@img-product01.png" alt="Cotton queen T">
+                                        </div>
+                                        <div class="product-list-txt">
+                                            <p class="tit">Cotton queen T</p>
+                                            <p class="price">2,700원</p>
+                                        </div>
+                                        <button type="button" aria-pressed="true" class="btn-favor"><span class="blind">관심상품</span></button>
+                                    </a>
+                                </li>
+                                <li class="product-list-link">
+                                    <a href="prodect-detail.html" role="button">
+                                        <div class="product-list-visual img-visual">
+                                            <img src="../img/temp/@img-product02.png" alt="Cotton queen T">
+                                        </div>
+                                        <div class="product-list-txt">
+                                            <p class="tit">Cotton queen T</p>
+                                            <p class="price">2,700원</p>
+                                        </div>
+                                        <button type="button" aria-pressed="false" class="btn-favor"><span class="blind">관심상품</span></button>
+                                    </a>
+                                </li>
+                                <li class="product-list-link">
+                                    <a href="prodect-detail.html" role="button">
+                                        <div class="product-list-visual img-visual">
+                                            <img src="../img/temp/@img-product02.png" alt="Cotton queen T">
+                                        </div>
+                                        <div class="product-list-txt">
+                                            <p class="tit">Cotton queen T</p>
+                                            <p class="price">2,700원</p>
+                                        </div>
+                                        <button type="button" aria-pressed="false" class="btn-favor"><span class="blind">관심상품</span></button>
+                                    </a>
+                                </li>
+                                <li class="product-list-link">
+                                    <a href="prodect-detail.html" role="button">
+                                        <div class="product-list-visual img-visual">
+                                            <img src="../img/temp/@img-product02.png" alt="Cotton queen T">
+                                        </div>
+                                        <div class="product-list-txt">
+                                            <p class="tit">Cotton queen T</p>
+                                            <p class="price">2,700원</p>
+                                        </div>
+                                        <button type="button" aria-pressed="false" class="btn-favor"><span class="blind">관심상품</span></button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">연관추천상품</h2>
+                            <ul class="product-list option-recommend">
+                                <li class="product-list-link">
+                                    <a href="javascript:;" role="button">
+                                        <div class="product-recommend-visual img-visual">
+                                            <img src="./../../front/img/temp/@img-product-info01.png" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="tit">제주참다래<br>그린키위</p>
+                                            <p class="price">7,000원</p>
+                                            <div class="grade-wrap">
+                                                <div class="grade-sm">
+                                                    <span class="blind">구매후기 평점</span>
+                                                    <!-- 
+                                                        평점 1~5점
+                                                        <span class="grade-star score1" aria-label="5점 만점에 1점"></span>
+                                                        <span class="grade-star score2" aria-label="5점 만점에 2점"></span>
+                                                        <span class="grade-star score3" aria-label="5점 만점에 3점"></span>
+                                                        <span class="grade-star score4" aria-label="5점 만점에 4점"></span>
+                                                        <span class="grade-star score5" aria-label="5점 만점에 5점"></span>
+                                                    -->
+                                                    <span class="grade-star score1" aria-label="5점 만점에 1점"></span>                                           
+                                                </div>
+                                                <span class="grade-txt" aria-label="리뷰">(16)</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="product-list-link">
+                                    <a href="javascript:;" role="button">
+                                        <div class="product-recommend-visual img-visual">
+                                            <img src="./../../front/img/temp/@img-product-info01.png" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="tit">제주참다래<br>그린키위</p>
+                                            <p class="price">7,000원</p>
+                                            <div class="grade-wrap">
+                                                <div class="grade-sm">
+                                                    <span class="blind">구매후기 평점</span>
+                                                    <!-- 
+                                                        평점 1~5점
+                                                        <span class="grade-star score1" aria-label="5점 만점에 1점"></span>
+                                                        <span class="grade-star score2" aria-label="5점 만점에 2점"></span>
+                                                        <span class="grade-star score3" aria-label="5점 만점에 3점"></span>
+                                                        <span class="grade-star score4" aria-label="5점 만점에 4점"></span>
+                                                        <span class="grade-star score5" aria-label="5점 만점에 5점"></span>
+                                                    -->
+                                                    <span class="grade-star score1" aria-label="5점 만점에 1점"></span>                                           
+                                                </div>
+                                                <span class="grade-txt" aria-label="리뷰">(16)</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="product-list-link">
+                                    <a href="javascript:;" role="button">
+                                        <div class="product-recommend-visual img-visual">
+                                            <img src="./../../front/img/temp/@img-product-info01.png" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="tit">제주참다래<br>그린키위</p>
+                                            <p class="price">7,000원</p>
+                                            <div class="grade-wrap">
+                                                <div class="grade-sm">
+                                                    <span class="blind">구매후기 평점</span>
+                                                    <!-- 
+                                                        평점 1~5점
+                                                        <span class="grade-star score1" aria-label="5점 만점에 1점"></span>
+                                                        <span class="grade-star score2" aria-label="5점 만점에 2점"></span>
+                                                        <span class="grade-star score3" aria-label="5점 만점에 3점"></span>
+                                                        <span class="grade-star score4" aria-label="5점 만점에 4점"></span>
+                                                        <span class="grade-star score5" aria-label="5점 만점에 5점"></span>
+                                                    -->
+                                                    <span class="grade-star score1" aria-label="5점 만점에 1점"></span>                                           
+                                                </div>
+                                                <span class="grade-txt" aria-label="리뷰">(16)</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">상품 상세</h2>
+                            <!-- product-detail  -->
+                            <div class="product-detail">
+                                <div class="product-detail-visual img-visual">
+                                    <img src="./../../front/img/temp/@img-product-detail01.png" alt="">
+                                </div>
+                                <div class="product-detail-txt">
+                                    <h2 class="tit">제스프리 그린키위</h2>
+                                    <p class="txt">껍질의 갈색빛이 뚜렷하고 과육이 탄력 있는 신선한 키위만을 담았어요. 키위 특유의 향긋함과 부드러운 과육까지. 어느 것 하나 놓치지 않았지요.</p>
+                                </div>
+                            </div>
+                            <!--// product-detail  -->
+                        </div>
+
+                         <div class="guide-item">
+                            <h2 class="tit">완료 페이지</h2>
+                            <div class="complete">
+                                <h1 class="complete-tit"><span class="txt">주문완료</span></h1>
+                                <p class="complete-sub">Your order has been placed successfully!<br>For more details, go to my orders.</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">하단 고정 - 인라인스타일 삭제</h2>
+                            <h2 class="tit">하단 고정 - 네비게이션</h2>
+                            <!-- .fixed-bottom -->
+                            <div class="fixed-bottom" style="position: static;">
+                                <!-- .nav-bottom -->
+                                <nav class="navigation-bottom">
+                                    <div class="inr">
+                                        <a href="javascript:;" role="button" class="ico-home"><span class="blind">홈</span></a>
+                                        <a href="javascript:;" role="button" class="ico-search"><span class="blind">검색</span></a>
+                                        <a href="javascript:;" role="button" class="ico-request"><span class="blind">요청</span></a>
+                                        <a href="javascript:;" role="button" class="ico-mypage"><span class="blind">마이페이지</span></a>
+                                        <a href="javascript:;" role="button" class="ico-basket">
+                                            <span class="blind">장바구니</span>
+                                            <em class="num"><i>2</i></em>
+                                        </a>
+                                    </div>
+                                </nav>
+                                <!--// .nav-bottom -->
+                            </div>
+                            <!--// .fixed-bottom -->
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">하단 고정 - 버튼</h2>
+                            <!-- .fixed-bottom -->
+                            <div class="fixed-bottom" style="position: static;">
+                                <div class="btn-wrap option-split">
+                                    <button type="button" class="btn default"><span>담기</span></button>
+                                    <button type="button" class="btn primary"><span>구매</span></button>
+                                    <button type="button" class="btn ico-call"><span class="blind">해피콜</span></button>
+                                </div>
+                            </div>
+                            <!--// .fixed-bottom -->
+                        </div>
+
+                        <div class="guide-item">
+                            <h2 class="tit">하단 고정 - 정보</h2>
+                            <!-- .fixed-bottom -->
+                            <div class="fixed-bottom" style="position: static;">
+                                <div class="footnote">
+                                    <div class="product-option flex">
+                                        <div class="flex-item"><h2 class="product-option-tit"><span class="txt">합계</span></h2></div>
+                                        <div class="flex-item flex-end">
+                                            <p class="price">27,000원</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="btn primary"><span>쇼핑계속하기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--// .fixed-bottom -->
+                        </div>
+                    </section>
+                    <!--// #guideEtc -->
                     
                 </div>
                 <!--// #content -->
@@ -211,5 +752,6 @@
         
     </div>
     <!--// #wrap -->
+    <script src="./ia/guide.js"></script>
 </body>
 </html>    

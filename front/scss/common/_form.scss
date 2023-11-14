@@ -1,6 +1,7 @@
 /* 검색영역 */
 .search-input {
     $root: &;
+    width:100%;
     position: relative;
     margin:$space-24 0;
     .input {
@@ -28,10 +29,10 @@
             position:absolute;
             top:1.3rem;
             left:1.7rem;
-            background-image:url('../../img/ico-search.svg');
+            background-image:url('./../../front/img/ico-search.svg');
         }
         &-sort {
-            background-image:url('../../img/ico-sort.svg');
+            background-image:url('./../../front/img/ico-sort.svg');
         }
     }
 }

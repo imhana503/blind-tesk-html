@@ -23,19 +23,19 @@
     .ico-home {
         width:1.8rem;
         height:2rem;
-        background-image:url('../../img/ico-home.svg');
+        background-image:url('./../../front/img/ico-home.svg');
         background-size:1.8rem 2rem;
     }
     .ico-search { 
         width:2rem;
         height:2rem;
-        background-image:url('../../img/ico-search.svg');  
+        background-image:url('./../../front/img/ico-search.svg');  
         background-size:2rem 2rem;      
     }
     .ico-basket {
         width:2.5rem;
         height:2rem;
-        background-image:url('../../img/ico-basket.svg');
+        background-image:url('./../../front/img/ico-basket.svg');
         background-size:2.5rem 2rem;
         .num {
             &>i {
@@ -150,19 +150,19 @@
                 background-position: center center;
             }
             .ico-home {
-                background-image:url('../../img/ico-home.svg');
+                background-image:url('./../../front/img/ico-home.svg');
             }
             .ico-search {
-                background-image:url('../../img/ico-search.svg');
+                background-image:url('./../../front/img/ico-search.svg');
             }
             .ico-request {
-                background-image:url('../../img/ico-request.svg');
+                background-image:url('./../../front/img/ico-request.svg');
             }
             .ico-mypage {
-                background-image:url('../../img/ico-mypage.svg');
+                background-image:url('./../../front/img/ico-mypage.svg');
             }
             .ico-basket {
-                background-image:url('../../img/ico-basket.svg');
+                background-image:url('./../../front/img/ico-basket.svg');
                 .num {
                     &>i {
                         display:inline-flex;

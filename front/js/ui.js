@@ -3,21 +3,52 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //https://codepen.io/inyoung/pen/pwBXxz
   const layerPopupAction = () => {
     const btnLayerOpen = document.querySelectorAll('.btn-open-popup');
+    const btnLayerClose = document.querySelectorAll('.btn-popup-close');
+
+    let targetId;
 
     btnLayerOpen.forEach(function(_btnLayerOpens){
       _btnLayerOpens.addEventListener('click', function(e){
         targetId = e.target.getAttribute('data-popup-id');
-        const btnLayerClose = document.querySelector(`#${targetId}`).querySelectorAll('.btn-popup-close');
-
         document.querySelector(`#${targetId}`).classList.add('is-active');
-        //팝업답기
-        btnLayerClose.forEach(function(_btnLayerCloses){
-          _btnLayerCloses.addEventListener('click', function(){
-            document.querySelector(`#${targetId}`).classList.remove('is-active');
-          })
-        })
+
+         document.querySelector('.layer-popup').setAttribute('tabindex', -1);
+        document.querySelector('.layer-inner').setAttribute('tabindex', -1);
+        
       });
     });
+
+    //팝업답기
+    btnLayerClose.forEach(function(_btnLayerCloses){
+      _btnLayerCloses.addEventListener('click', function(e){
+        const layPopup = e.target.closest('.layer-popup');
+        layPopup.classList.remove('is-active');
+        targetId = layPopup.getAttribute('id');
+
+        btnLayerOpen.forEach(function(_btnLayerOpens){
+          console.log(_btnLayerOpens)
+          if( _btnLayerOpens.getAttribute('data-popup-id') ===  targetId ){
+            console.log('같음')
+            _btnLayerOpens.setAttribute('tabindx', 0)
+            _btnLayerOpens.focus();
+          }
+        })
+        
+
+       
+        
+
+        //data-popup-id
+        console.log( btnLayerOpen)
+      });
+      
+    });
+
+    console.log(targetId)
+
+
+
+
   }
 
 
@@ -64,15 +95,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //하단고정  
   const fixedBottomAction = () => {  
     const fixedBot = document.querySelector('.fixed-bottom');
-    const content = document.querySelector('#content');
-    const introSection = document.querySelectorAll('.section.intro');
 
-    if( fixedBot ){  
+    if( fixedBot != null ){  
+      const content = document.querySelector('#content');
+      const introSection = document.querySelectorAll('.section.intro');
       const fixedBotHeight = fixedBot.offsetHeight;
-      content.style.paddingBottom = fixedBotHeight+'px';
-
-      console.log(introSection.length)
-
+      
       if( introSection.length < 0 ){
         content.style.paddingBottom = 0;
         introSection.forEach(function(_introItems, _idx){
