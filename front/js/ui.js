@@ -7,14 +7,78 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     let targetId;
 
+    const content = document.querySelector('#content');
+    const allTag = content.querySelectorAll('a, button, input, textarea');
+    console.log(allTag)
+
+
     btnLayerOpen.forEach(function(_btnLayerOpens){
       _btnLayerOpens.addEventListener('click', function(e){
         targetId = e.target.getAttribute('data-popup-id');
         document.querySelector(`#${targetId}`).classList.add('is-active');
+        document.querySelector(`#${targetId}`).setAttribute('aria-hidden', false);
+        document.querySelector(`#${targetId}`).setAttribute('tabindex', 1);
 
-         document.querySelector('.layer-popup').setAttribute('tabindex', -1);
-        document.querySelector('.layer-inner').setAttribute('tabindex', -1);
+        const layerAch = document.querySelector(`#${targetId}`).querySelectorAll('a, button, input, textarea');
+        for( let j =0; j<layerAch.length; j++ ){
+
+        }
+
+
+
         
+
+        console.log(layerAch[layerAch.length-1])
+       
+      
+
+
+        
+       // document.querySelector(`#${targetId}`).querySelector('.layer-inner').setAttribute('tabindex', 1);
+        // document.querySelector(`#${targetId}`).querySelector('.layer-inner').focus();
+        // document.querySelector(`#${targetId}`).focus();
+
+        //  document.querySelector('.layer-popup').setAttribute('tabindex', -1);
+        // document.querySelector('.layer-inner').setAttribute('tabindex', -1);
+        // let targetButton = document.body.getElementsByTagName("button");
+        // let targetInput = document.body.getElementsByTagName("input");
+        // let targetTextarea = document.body.getElementsByTagName("textarea");
+        // console.log(targetA, targetButton, targetInput, targetTextarea)
+        // console.log(targetA.length)
+
+
+        //탭 포커스 이동 접근성
+        for( let i =0; i<allTag.length; i++ ){
+          allTag[i].setAttribute('tabindex', -1)
+        }
+        document.querySelector('#skipNavigation>a').setAttribute('tabindex', -1);
+
+
+
+
+        layerAch[layerAch.length-1].addEventListener('blur', function(e){
+
+          console.log(e.keycode)
+         
+            console.log(e.target.closest('.layer-popup').querySelector('.aa'))
+         
+
+            e.target.closest('.layer-popup').setAttribute('tabindex',0)
+            //e.target.closest('.layer-popup').querySelector('.aa').setAttribute('tabindex',1);
+            e.target.closest('.layer-popup').querySelector('.aa').focus();
+            
+            
+
+            setTimeout(() => {
+             
+            }, 100);
+     
+         
+        })
+
+       
+        
+
       });
     });
 
@@ -28,9 +92,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         btnLayerOpen.forEach(function(_btnLayerOpens){
           console.log(_btnLayerOpens)
           if( _btnLayerOpens.getAttribute('data-popup-id') ===  targetId ){
-            console.log('같음')
-            _btnLayerOpens.setAttribute('tabindx', 0)
-            _btnLayerOpens.focus();
+            //_btnLayerOpens.setAttribute('tabindx', 0)
+           // _btnLayerOpens.focus();
           }
         })
         

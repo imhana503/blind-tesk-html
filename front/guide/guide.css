@@ -286,21 +286,28 @@ input[type=checkbox]:focus-visible + label {
           box-shadow: 0 0 0 2px rgba(77, 77, 77, 0.5);
 }
 
+table{border-collapse:collapse;border-spacing:0;}
 
 .blind { position: absolute; width: 1px; height: 1px; margin: -1px;  padding: 0; overflow: hidden; border: 0;white-space: nowrap;clip: rect(0, 0, 0, 0);}
 .highlight {font-weight:600; color:#0FAD02}
 
+/* 정렬 */
+.align-left { text-align: left  !important} 
+.align-center { text-align: center !important} 
+.align-right { text-align: right !important } 
+
 h1,h2,h3 {font-weight:600;}
 
 /* guide : header */
-.guide-wrapper .guide-header {display:flex; align-items:center; height:7rem; position: sticky; top:0; right:0; left:0; padding:2rem; background-color:#fff; border-bottom:1px solid gray; z-index:1000; }
-.guide-wrapper .guide-header .tit { font-size:2.5rem; font-weight: 600; line-height: 1;}
+.guide-wrapper .guide-header {display:flex; align-items:center; height:7rem; position: sticky; top:0; right:0; left:0; padding:2rem; background-color:#fff; border-bottom:1px solid #eaeaea; z-index:1000; }
+.guide-wrapper .guide-header .tit { font-size:2.5rem; font-weight: 600; line-height: 1; color:#3c3c3c}
+.guide-wrapper .guide-header .tit em {font-weight:400;color:#a9a9a9}
 
 /* guide : container */
 #guide-container {display:flex; min-height: 100vh; padding:2rem;}
   
 /* guide : aside */
-.guide-aside {min-width:22rem; padding-right:3rem;}
+.guide-aside {min-width:22rem; padding-right:3rem; transition: all .2s;}
 .guide-aside .inr {position:relative;}
 .guide-aside .list {padding:1.4rem; border-radius: 10px; border:1px solid #f3f3f3;}
 .guide-aside .list>li+li {margin-top:1.3rem}
@@ -316,9 +323,15 @@ h1,h2,h3 {font-weight:600;}
 
 /* guide : content */
 .guide-content {width:100%; }
+
 .guide-section .tit {margin-bottom:1rem; font-size:2rem; font-weight: 600;}
+.guide-section .tit-sub {margin-bottom:1rem; font-size:1.7rem;;}
 .guide-section .guide-box {background-color:#f3f3f3; padding:2rem; font-size:1.2rem; border-radius: 10px;}
+.guide-section .guide-box .tit-sub {font-size:1.6rem; font-weight: 600;}
+.guide-section .guide-box+.tit-sub {margin-top:2rem;}
+.guide-section .guide-box .guide-txt {font-size:1.4rem}
 .guide-section + .guide-section  {margin-top:5rem;}
+.guide-wrapper .btn {display:inline-flex; padding:.3rem .5rem; margin:.3rem 0; background-color:#0FAD02; color:#fff; font-weight:600; border-radius: .6rem;}
 .guide-wrapper .bullet>li {position:relative; padding-left:.8rem; font-size: 1.4rem;}
 .guide-wrapper .bullet>li + li {margin-top:.6rem}
 .guide-wrapper .bullet>li:after {display:block; content:""; width:.3rem; height:.3rem; position:absolute; top:.8rem; left:0; background-color:#b3b3b3; border-radius: 100%;}
@@ -335,42 +348,19 @@ h1,h2,h3 {font-weight:600;}
 
 .guide-wrapper #data-filter {display: flex; align-items: center; justify-content: flex-end; gap:1rem; padding:1rem 0; font-size:1.4rem}
 .guide-wrapper #data-filter em {font-weight: 600;}
-.guide-wrapper #data-table{width:100%; background-color:#fff; border:1px solid #cbcbcb; border-radius:5px;}
-.guide-wrapper #data-table thead th {background-color:#f3f3f3; padding:1rem 0; font-weight:600; font-size:1.4rem}
-.guide-wrapper #data-table td {padding:1rem; font-size:1.3rem; border-top:1px solid #cbcbcb;}
-.guide-wrapper #data-table th + th,
-.guide-wrapper #data-table td + td { border-left:1px solid #cbcbcb}
-.guide-wrapper #data-table td:first-child,
-.guide-wrapper #data-table td:last-child {text-align:center;}
-.guide-wrapper #data-table td:first-child+td {font-weight: 600;}
-.guide-wrapper #data-table a {text-decoration: underline;}  
-    
+.guide-wrapper table{width:100%; background-color:#fff; border:1px solid #cbcbcb; border-radius:5px;}
+.guide-wrapper table thead th {background-color:#f3f3f3; padding:1rem 0; font-weight:600; font-size:1.4rem}
+.guide-wrapper table thead tr+tr>th {border-top:1px solid #cbcbcb;}
+.guide-wrapper table thead tr+tr>th:first-child {border-left:1px solid #cbcbcb;}
+.guide-wrapper table td {padding:1rem; font-size:1.3rem; text-align:center; border-top:1px solid #cbcbcb;}
+.guide-wrapper table th + th,
+.guide-wrapper table td + td { border-left:1px solid #cbcbcb}
+/* .guide-wrapper table td:first-child,
+.guide-wrapper table td:last-child {text-align:center;}
+.guide-wrapper table td:first-child+td {font-weight: 600;} */
+.guide-wrapper table a {text-decoration: underline;}  
 .guide-wrapper .guide-item+.guide-item {margin-top:3rem}  
 
+.guide-wrapper table {}
 
-.g-wrap {
 
-}
-  
-.g-item + .g-item {
-    margin-top:3rem;
-}
-
-.g-title {
-    font-size:2rem;
-    font-weight:700;
-    color:red;
-}
-
-.g-item-wrap +.g-item-wrap {
-    margin-top:5rem;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/*
-http://krasset.com/front/guide/index.html
-*/

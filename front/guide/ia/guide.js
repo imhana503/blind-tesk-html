@@ -33,7 +33,19 @@ function iaListAction(){
 
             
             targetTr[_idx].insertAdjacentHTML('afterbegin', `<td>${_idx+1}</td>`);
+
+            //td태그 클래스 'align-left' 정렬 추가  
+            const dataTh = document.querySelectorAll('#data-table thead th');
+            
+            dataTh.forEach(function(_dataThs, _dIdx){
+                if( _dataThs.textContent == '메뉴' || _dataThs.textContent == '화면ID' ||   _dataThs.textContent == '링크' ){
+                    targetTr[_idx].querySelectorAll('td')[_dIdx].classList.add('align-left')
+                }
+            })
         });
+
+        
+        
     }
 
     

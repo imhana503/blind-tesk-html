@@ -12,8 +12,10 @@
         transform: translateY(100vh);
         transition: all 0.4s;
         .inr {
+            position: relative;
             padding:0 2rem;
             background-color:$c-default;
+            overflow-y: auto;
         }
     }
     &-head {       
@@ -78,6 +80,17 @@
             #{$layerHead} {
                 padding-top:4.8rem;
             }
+        }
+
+        .btn-touch{
+            width:13rem;
+            height:.4rem;
+            background-color: $c-gray;
+            position:absolute;
+            top:1.8rem;
+            left:50%;
+            transform: translateX(-50%);
+
         }
         /* 검색 팝업 */  
         #{$layerHead} {

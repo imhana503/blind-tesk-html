@@ -1,25 +1,25 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: 'GmarketSans';
+    font-family: 'SCDream';
     font-weight: 300;
-    src: local('GmarketSansLight'),
-    url('./../fonts/GmarketSansLight.otf') format('otf'),
-    url('./../fonts/GmarketSansTTFLight.ttf') format('truetype');
+    src: local('SCDreamLight'),
+    url('./../fonts/SCDreamLight.otf') format('otf'),
+    url('./../fonts/SCDreamLight.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'GmarketSans';
+    font-family: 'SCDream';
     font-weight: 500;
-    src: local('GmarketSansMedium'),
-    url('./../fonts/GmarketSansMedium.otf') format('otf'),
-    url('./../fonts/GmarketSansTTFMedium.ttf') format('truetype');
+    src: local('SCDreamMedium'),
+    url('./../fonts/SCDreamMedium.otf') format('otf'),
+    url('./../fonts/SCDreamMedium.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'GmarketSans';
+    font-family: 'SCDream';
     font-weight: 700;
-    src: local('GmarketSansBold'),
-    url('./../fonts/GmarketSansBold.otf') format('otf'),
-    url('./../fonts/GmarketSansTTFBold.ttf') format('truetype');
+    src: local('SCDreamBold'),
+    url('./../fonts/SCDreamBold.otf') format('otf'),
+    url('./../fonts/SCDreamBold.ttf') format('truetype');
 }
