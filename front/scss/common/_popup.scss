@@ -1,3 +1,8 @@
+/* 
+    - 파일명 : _popup.scss
+    - 포함내용 : 팝업 스타일 : 바텀시트, 풀팝업
+*/
+
 
 /* POPUP */
 .layer {
@@ -37,12 +42,13 @@
         $layerInner: '.layer-inner';    
         $layerHead: '.layer-head';    
         display: flex;
-        position: absolute;
+        position: fixed;
         left: 0rem;
         right: 0rem;
         top: 0rem;
         bottom: 0;
         visibility: hidden;
+        z-index:1002;
         &:after {
             display: block;
             content:"";
@@ -64,6 +70,17 @@
         .section {
             padding:0;
         }
+        .btn-touch{
+            width:13rem;
+            height:.4rem;
+            background-color: $c-gray;
+            position:absolute;
+            top:1.8rem;
+            left:50%;
+            transform: translateX(-50%);
+
+        }
+
         /* 풀팝업 */
         &.option-full {
             .inr {
@@ -79,60 +96,6 @@
 
             #{$layerHead} {
                 padding-top:4.8rem;
-            }
-        }
-
-        .btn-touch{
-            width:13rem;
-            height:.4rem;
-            background-color: $c-gray;
-            position:absolute;
-            top:1.8rem;
-            left:50%;
-            transform: translateX(-50%);
-
-        }
-        /* 검색 팝업 */  
-        #{$layerHead} {
-            $searchInput: '.search-input';
-            #{$searchInput}{  
-                margin:.8rem 0;                
-            }
-            #{$searchInput}-wrap {
-                gap:1.6rem
-            }
-        }
-        .word {
-            &-tit {
-                margin-bottom:2rem;
-                font-size:1.6rem;  
-                font-weight: $f-medium;
-            }
-            &-list {
-                &>li {
-                    border-bottom:1px solid $c-gray;
-                }
-                &>li:first-child{
-                    border-top:1px solid $c-gray;
-                }
-                a {
-                    display: block;
-                    padding:2rem 0;
-                    font-size:1.6rem;
-                    font-weight: $f-bold;
-                }
-            }
-        }
-
-        /* 옵션선택 */
-        .option-selection {
-            .product-option-wrap {
-                margin-top:0;
-            }
-            .product-option-wrap+ .product-option-wrap {
-                margin-top:2.4rem;
-                padding-top:2.4rem;
-                border-top:1px solid $c-gray2;
             }
         }
         

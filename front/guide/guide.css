@@ -291,6 +291,35 @@ table{border-collapse:collapse;border-spacing:0;}
 .blind { position: absolute; width: 1px; height: 1px; margin: -1px;  padding: 0; overflow: hidden; border: 0;white-space: nowrap;clip: rect(0, 0, 0, 0);}
 .highlight {font-weight:600; color:#0FAD02}
 
+/* skipNavigation */
+#skipNavigation {
+  width: 100%;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  margin: 0 auto;
+  z-index: 9999;
+}
+#skipNavigation a {
+  display: block;
+  height: 35px;
+  color: #fff;
+  text-align: center;
+  background-color: #705d58;
+}
+#skipNavigation a:active,
+#skipNavigation a:focus-visible {
+  width: 100%;
+      position: absolute;
+      left: 0;
+      top: 200px;
+      color: #fff;
+      line-height: 35px;
+      text-align: center;
+      background: #705d58;
+      border-bottom: 1px solid #d8d8d8;
+}
+
 /* 정렬 */
 .align-left { text-align: left  !important} 
 .align-center { text-align: center !important} 
@@ -299,7 +328,7 @@ table{border-collapse:collapse;border-spacing:0;}
 h1,h2,h3 {font-weight:600;}
 
 /* guide : header */
-.guide-wrapper .guide-header {display:flex; align-items:center; height:7rem; position: sticky; top:0; right:0; left:0; padding:2rem; background-color:#fff; border-bottom:1px solid #eaeaea; z-index:1000; }
+.guide-wrapper .guide-header {display:flex; align-items:center; height:9rem; position: sticky; top:0; right:0; left:0; padding:2rem; background-color:#fff; border-bottom:1px solid #eaeaea; z-index:1000; }
 .guide-wrapper .guide-header .tit { font-size:2.5rem; font-weight: 600; line-height: 1; color:#3c3c3c}
 .guide-wrapper .guide-header .tit em {font-weight:400;color:#a9a9a9}
 
@@ -307,9 +336,9 @@ h1,h2,h3 {font-weight:600;}
 #guide-container {display:flex; min-height: 100vh; padding:2rem;}
   
 /* guide : aside */
-.guide-aside {min-width:22rem; padding-right:3rem; transition: all .2s;}
+.guide-aside {min-width:23rem; height:auto; /*background-color:#fff;*/ padding-right:3rem; transition: all .2s; position: fixed; top:11rem; left:0; z-index:100;}
 .guide-aside .inr {position:relative;}
-.guide-aside .list {padding:1.4rem; border-radius: 10px; border:1px solid #f3f3f3;}
+.guide-aside .list {padding:2.4rem; border-radius: 10px; border:1px solid #f3f3f3;}
 .guide-aside .list>li+li {margin-top:1.3rem}
 .guide-aside .list>li strong {font-weight:600;}
 .guide-aside .list>li.is-active strong{color:#0FAD02}
@@ -317,20 +346,20 @@ h1,h2,h3 {font-weight:600;}
 .guide-aside strong {display:block; margin-bottom:1rem; font-size:1.8rem;}
 .guide-aside .btn-menu {display:block; width:2.5rem; height:8rem; position:absolute; top:50%; right:-2.4rem; transform: translateY(-50%); background-color:#fff; border:1px solid #f3f3f3}
 .guide-aside .btn-menu::before {display:block; content:">"; font-size:1.7rem; font-weight:600; color:#626262; transform: rotate(-180deg);}
-.guide-aside.is-active {margin-left:-21rem;}
-.guide-aside.is-active .btn-menu {position: fixed; top:22rem; left:0; z-index:1003;}
-.guide-aside.is-active .btn-menu::before{transform: rotate(0deg);}
 
 /* guide : content */
-.guide-content {width:100%; }
-
-.guide-section .tit {margin-bottom:1rem; font-size:2rem; font-weight: 600;}
-.guide-section .tit-sub {margin-bottom:1rem; font-size:1.7rem;;}
+.guide-content {width:100%; transition: all .2s;}
+.guide-section>.tit,
+.guide-section .guide-item>.tit {margin-bottom:1rem; font-size:2rem; font-weight: 600;}
+.guide-section>.tit-sub,
+.guide-section .guide-item>.tit-sub {margin-bottom:1rem; font-size:1.7rem;;}
 .guide-section .guide-box {background-color:#f3f3f3; padding:2rem; font-size:1.2rem; border-radius: 10px;}
 .guide-section .guide-box .tit-sub {font-size:1.6rem; font-weight: 600;}
 .guide-section .guide-box+.tit-sub {margin-top:2rem;}
 .guide-section .guide-box .guide-txt {font-size:1.4rem}
+.guide-section .guide-box +.tit-sub {margin-top:2rem;}
 .guide-section + .guide-section  {margin-top:5rem;}
+.guide-wrapper {overflow:hidden;}
 .guide-wrapper .btn {display:inline-flex; padding:.3rem .5rem; margin:.3rem 0; background-color:#0FAD02; color:#fff; font-weight:600; border-radius: .6rem;}
 .guide-wrapper .bullet>li {position:relative; padding-left:.8rem; font-size: 1.4rem;}
 .guide-wrapper .bullet>li + li {margin-top:.6rem}
@@ -346,6 +375,9 @@ h1,h2,h3 {font-weight:600;}
 .guide-wrapper .guide-tree .list2>li strong {color:#0FAD02}
 .guide-wrapper .guide-tree .list li.ico-doc:after {width:.9rem; height:1.1rem;background: url('./img/ico_paper.gif');}
 
+.guide-wrapper .guide-img+.guide-img{margin-top:2rem;}
+
+
 .guide-wrapper #data-filter {display: flex; align-items: center; justify-content: flex-end; gap:1rem; padding:1rem 0; font-size:1.4rem}
 .guide-wrapper #data-filter em {font-weight: 600;}
 .guide-wrapper table{width:100%; background-color:#fff; border:1px solid #cbcbcb; border-radius:5px;}
@@ -355,12 +387,27 @@ h1,h2,h3 {font-weight:600;}
 .guide-wrapper table td {padding:1rem; font-size:1.3rem; text-align:center; border-top:1px solid #cbcbcb;}
 .guide-wrapper table th + th,
 .guide-wrapper table td + td { border-left:1px solid #cbcbcb}
-/* .guide-wrapper table td:first-child,
-.guide-wrapper table td:last-child {text-align:center;}
-.guide-wrapper table td:first-child+td {font-weight: 600;} */
 .guide-wrapper table a {text-decoration: underline;}  
 .guide-wrapper .guide-item+.guide-item {margin-top:3rem}  
 
-.guide-wrapper table {}
+
+#guide-container.is-active .guide-aside {margin-left:-20rem;}
+#guide-container.is-active .guide-content {padding-left:0;}
+.guide-aside.is-active .btn-menu {position: fixed; top:22rem; left:0; z-index:1003;}
+.guide-aside.is-active .btn-menu::before{transform: rotate(0deg);}
+.guide-aside+.guide-content{ padding-left:22rem}
+.guide-content img {max-width:100%; height:auto;}
+
+/* 가이드 컴포넌트  */
+.guide-wrapper .component .guide-section .guide-item>.tit {margin-bottom:2rem; padding:2rem; background-color:#f1f1f1; font-weight:400;}
+.guide-wrapper .component .guide-item + .guide-item {margin-top:6rem}
+
+/* 가이드 작업의도  */
+.guide-wrapper .guide-work .bullet li {font-size:1.5rem;}
+.guide-wrapper .guide-work .bullet li+li,
+.guide-wrapper .guide-work .guide-img {margin-top:2rem;}
+.guide-wrapper .guide-work .guide-box+.guide-box {margin-top:2rem;}
 
 
+
+  

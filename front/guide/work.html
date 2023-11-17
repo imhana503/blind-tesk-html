@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="아이샵"/>
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <title>작업설명서 | 아이샵</title>
+    <link rel="stylesheet" href="./guide.css" />
+</head>
+<body>
+    <!-- #skipNavigation -->  
+    <div id="skipNavigation">
+        <a href="#guide-containe">본문 바로가기</a> 
+    </div>
+    <!--// #skipNavigation -->
+
+    <!-- #wrap -->
+    <div id="wrap">
+        <div class="guide-wrapper">
+            <!-- #header -->
+            <header class="guide-header">
+                <h1 class="tit"><a href="./index.html"><span>아이샵</span> <em>작업설명서</em></a></h1>
+            </header>
+            <!--// #header -->
+
+            <!-- #container -->
+            <main id="guide-container">   
+                <!-- .guide-aside -->
+                <aside class="guide-aside">
+                    <div class="inr">
+                        <ul class="list">
+                            <li class="is-active">
+                                <strong>작업설명서</strong>
+                                <ul class="list-sub bullet">
+                                    <li><a href="javascript:;" data-id="guidWha">웹 접근성</a></li>
+                                    <li><a href="javascript:;" data-id="guidMarkup">시멘틱 마크업</a></li>
+                                    <li><a href="javascript:;" data-id="guideScss">SCSS 사용</a></li>
+                                    <li><a href="javascript:;" data-id="guideJavascript">JAVASCRIPT 사용</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn-menu"><span class="blind">메뉴 닫기</span></button>
+                    </div>
+                </aside>  
+                <!--// .guide-aside --> 
+
+                <!-- #content --> 
+                <div class="guide-content guide-work">  
+                    <!-- #guidWha -->
+                    <section id="guidWha" class="guide-section">
+                        <h2 class="tit">작업설명서</h2>
+                        <h3 class="tit-sub">웹 접근성</h3>                       
+                        <div class="guide-box">
+                            <ul class="bullet">  
+                                <li>건너띄기 링크(skip navigation) 제공
+                                    <div class="guide-img"><img src="./img/work03.JPG" alt="건너띄기 링크(skip navigation) 제공 이미지"></div>
+                                </li>
+                            </ul>
+                           
+                        </div>
+                        <div class="guide-box">
+                            <ul class="bullet">  
+                                <li>제목 제공 : 페이지, 프레임, 콘텐츠 블록에 적절한 제목을 제공
+                                    <div class="guide-img"><img src="./img/work01.JPG" alt="제목 제공 이미지1"></div>
+                                    <div class="guide-img"><img src="./img/work02.JPG" alt="제목 제공 이미지2"></div>
+                                </li>
+                            </ul>
+                           
+                        </div>  
+                        <div class="guide-box">
+                            <ul class="bullet">  
+                                <li>링크 텍스트는 용도나 목적을 이해할 수 있도록 제공</li>
+                            </ul>
+                            <div class="guide-img"><img src="./img/work04.JPG" alt="링크 텍스트는 용도나 목적을 이해할 수 있도록 제공 이미지"></div>
+                        </div>  
+                        <div class="guide-box">
+                            <ul class="bullet">  
+                                <li>input이나 select, textarea와 같은 입력서식에 레이블을 지정</li>
+                                <div class="guide-img"><img src="./img/work05.JPG" alt="input이나 select, textarea와 같은 입력서식에 레이블을 지정 이미지"></div>
+                            </ul>
+                            
+                        </div>  
+                        <div class="guide-box">
+                            <ul class="bullet">  
+                                <li>적절한 대체 텍스트
+                                    <div class="guide-img"><img src="./img/work06.JPG" alt="적절한 대체 텍스트 이미지"></div>
+                                    <div class="guide-img"><img src="./img/work07.JPG" alt="적절한 대체 텍스트 이미지"></div>
+                                </li>
+                            </ul>
+                        </div>  
+                        <div class="guide-box">
+                            <ul class="bullet">  
+                                <li>이동 가능한 개체들에 키보드로 이용할 때 초점을 인지할 수 있어야 하고, 논리적인 순서로 이동
+                                    <div class="guide-img"><img src="./img/work01.gif" alt=" 이동 가능한 개체들에 키보드로 이용할 때 초점을 인지할 수 있어야 하고, 논리적인 순서로 이동< 이미지"></div>
+                                </li>
+                            </ul>
+                        </div>  
+                    </section>
+                    <!--// #guidWha -->
+
+                     <!-- #guidMarkup -->
+                     <section id="guidMarkup" class="guide-section">
+                        <h2 class="tit">시멘틱 마크업</h2>
+                        <h3 class="tit-sub">시멘틱 레이아웃</h3>
+                        <div class="guide-box">
+                            <ul class="bullet">  
+                                <li>큰 골격은 	&#8249;header&rsaquo;, &#8249;main&rsaquo; 태그 사용( 해당 쇼핑몰은 footer가 없음으로 제외 )
+                                    <div class="guide-img"><img src="./img/work08.JPG" alt="시멘틱 마크업 이미지"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="guide-box">
+                            <ul class="bullet"> 
+                                <li>h1 태그는 각 페이지에 하나만 써준다. (검색엔진 최적화(SEO)) 
+                                    <div class="guide-img"><img src="./img/work09.JPG" alt="시멘틱 마크업 이미지2"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="guide-box">
+                            <ul class="bullet"> 
+                                <li>heading태그 세분화 구분. (검색엔진 최적화(SEO)) 
+                                    <div class="guide-img"><img src="./img/work10.JPG" alt="시멘틱 마크업 이미지3"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!--// #guidMarkup -->
+
+                    <!-- #guideScss -->
+                    <section id="guideScss" class="guide-section">
+                        <h2 class="tit">SCSS 사용</h2>
+                        <h3 class="tit-sub">변수 활용</h3>
+                        <div class="guide-box">
+                            <ul class="bullet">  
+                                <li>자주 쓰는 컬러값이나, 간격을 변수로 사용하여, 공통으로 작업한다.
+                                    <div class="guide-img"><img src="./img/work11.JPG" alt="변수 활용 이미지"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3 class="tit-sub">scss 파일별로 컴포넌트화</h3>
+                        <div class="guide-box">
+                            <ul class="bullet">  
+                                <li>자주 쓰는 컬러값이나, 간격을 변수로 사용하여, 공통으로 작업한다.
+                                    <div class="guide-img"><img src="./img/work12.JPG" alt="scss 파일별로 컴포넌트화 이미지"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </section>
+                    <!--// #guideScss -->
+
+                     <!-- #guideJavascript -->
+                     <section id="guideJavascript" class="guide-section">
+                        <h2 class="tit">JAVASCRIPT 사용</h2>
+                        <div class="guide-box">
+                            <ul class="bullet">  
+                                <li>해당 쇼핑몰 작업시, jquery를 지양하고, javascript 사용</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!--// #guideJavascript -->
+
+                
+
+               
+                </div>
+                <!--// #content -->
+            </main>
+            <!--// #container -->        
+        </div>
+    </div>
+    <!--// #wrap -->
+
+    <script src="./ia/guide.js"></script>
+</body>
+</html>    

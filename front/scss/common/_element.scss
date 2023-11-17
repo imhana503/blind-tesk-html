@@ -1,0 +1,332 @@
+/* 
+    - 파일명 : _element.scss
+    - 포함내용 : 단일요소 : skipNavigation, btn-,ico-요소 공통, 타이틀, 블릿, 별점, 이미지공통, 스크롤, 박스, 수량
+*/
+
+
+/* skipNavigation */
+#skipNavigation {
+    width: 100%;
+    position: absolute;
+    top: -200px;
+    left: 0;
+    margin: 0 auto;
+    z-index: 9999;
+    a {
+        display: block;
+        height: 35px;
+        color: #fff;
+        text-align: center;
+        background-color: #705d58;
+        &:active, 
+        &:focus-visible {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 200px;
+            color: #fff;
+            line-height: 35px;
+            text-align: center;
+            background: #705d58;
+            border-bottom: 1px solid #d8d8d8;
+        }
+    }
+}
+
+/* 기타 */
+.highlight {
+    color:$c-highlight !important;  
+}
+
+.space-none {
+    padding:0 !important;
+}
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+}
+
+.fc-normal {
+  font-weight: 300 !important;
+}
+
+.align-right {
+  text-align: right;
+}
+
+
+/* btn- 요소 공통 */
+[class*=btn-] {
+  display:inline-flex;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* ico- 요소 공통 */
+[class*=ico-] {
+  display:inline-flex;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.ico-back {  
+    width:4.8rem;
+    height:4.8rem;
+    background-image:url('./../../front/img/ico-back.svg');
+    border-radius: $b-raduius;
+    box-shadow: $b-shadow;
+}
+
+/* TITLE */
+.page {  
+    $root: &;
+    &-tit {
+        font-size: 2.8rem;
+        &-wrap{
+            margin-bottom:$space-24;
+            &.option-sub {
+                margin-bottom:$space-16;
+                .page-tit {
+                    font-size: 2.4rem;
+                }  
+                
+            } 
+        }
+    }
+    &-txt {
+        margin-top:2rem;
+    }
+}
+
+/* 블릿 */
+.list {
+    $root: &;
+    &-number {
+        font-size:1.6rem;
+        font-weight: $f-medium;
+    }
+} 
+
+/* 타이틀 + 텍스트 */
+.list-info {
+    $root: &;
+    &-tit {
+        font-size:1.6rem;
+        font-weight: $f-bold;
+    }
+    &-txt {
+        font-size:1.6rem;
+        font-weight: $f-medium;
+    }
+    &-item+.list-info-item {
+        margin-top:2rem;
+    }
+    &-box {
+        .tit {
+            margin-bottom:1.6rem;
+            font-size:2.4rem;
+            color:$c-primary;
+        }
+    }
+}
+
+/* 완료페이지 */
+.complete {
+    $root: &;
+    padding-top:4rem;
+    text-align: center;
+    &:before{
+        display:inline-flex;
+        content:"";
+        width:17.2rem;
+        height:11.9rem;
+        margin:2.5rem 0;
+        background-image:url('./../../front/img/ico-complete.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &-tit {
+        font-size:2.4rem;
+        font-weight: $f-bold;
+    }
+    &-sub {
+        margin-top:.8rem;
+        font-size:1.6rem;
+        font-weight: $f-medium;
+        word-break: break-word;
+    }
+}  
+
+/* 별점 */
+.grade {
+    $root: &;
+    display: flex;
+    align-items: center;
+    width:9.8rem;    
+    height:1.8rem;
+    background-image:url('./../../front/img/ico-star-full.svg');
+    background-position: 0 0;
+    &-star {
+        display:inline-flex;  
+        width:100%;     
+        height:100%;
+        background-image:url('./../../front/img/ico-star.svg');
+        background-repeat: repeat-x;
+        background-position: 0 0;
+        &.score1 {
+            width: 2rem;  
+        }
+        &.score2 {
+            width: calc(2 * 2rem);
+        }
+        &.score3 {
+            width: calc(2 * 3rem);
+        }  
+        &.score4 {
+            width: calc(2 * 4rem);
+        }
+        &.score5 {
+            width: calc(2 * 5rem);
+        }
+    }
+    &-txt {
+        margin-left:.4rem;
+    }
+    &-wrap {
+        display: flex;
+        font-size:1.6rem;
+        font-weight: $f-medium;
+    }  
+    &-sm {
+        width:6.53rem;
+        height:1.2rem;
+        background-image:url('./../../front/img/ico-star-full-sm.svg');
+        background-position: 0 0;
+        .grade-star {  
+            background-image:url('./../../front/img/ico-star-sm.svg');
+            background-repeat: repeat-x;
+            background-position: 0 -.2rem;
+            &.score1 {
+                width: 1.4rem;  
+            }
+            &.score2 {
+                width: calc(1.4 * 2rem);
+            }
+            &.score3 {
+                width: calc(1.4 * 3rem);
+            }  
+            &.score4 {
+                width: calc(1.4 * 4rem);
+            }
+            &.score5 {
+                width: calc(1.4 * 5rem);
+            }
+        }
+        &+.grade-txt {
+            max-width: 3rem;
+            margin-left:.2rem;
+            font-size:1rem;
+        }
+    }
+}
+
+/* 이미지 공통 */
+.img-visual {
+    display: inline-flex;;
+    width: 100%;
+    // height: 9.6rem;
+    border-radius: $b-raduius-15;
+    overflow: hidden;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* 스크롤 */
+.scroll {
+    $root: &;
+    &-wrap {
+        margin:$space-16 0;
+        overflow-y: auto;
+    }
+    &-list {
+        display: flex;
+        width:max-content;
+        &>li+li {
+            margin-left:.4rem;
+        }
+    }
+}
+
+/* 박스 */
+.box {
+    $root: &;
+    padding:$space-24;
+    margin:$space-24 0;
+    border-radius:$b-raduius-24;
+    box-shadow:$b-shadow;
+    &.option-gray {
+        border:1px solid $c-gray4;
+        background-color:$c-gray3;
+    }
+    .tit {
+        font-size:1.6rem;
+    }
+    .txt {
+        font-size:1.6rem;
+        font-weight: $f-medium;
+    }
+}
+
+
+/* 수량 */
+.control-qty {
+    $root: &;
+    display:flex;
+    align-items: center;
+    background-color:$c-gray3;
+    border:1px solid $c-gray2;
+    border-radius: $b-raduius-8;
+    [class*=btn-] {
+        width:4.8rem;
+        height:4.8rem;
+        position: relative;
+        &:after {
+            display: block;
+            content:"";
+            width:1.4rem;
+            height:1.4rem;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+           
+        }
+
+    }
+    .btn-minus {
+        background-image:url('./../../front/img/ico-minus.svg');
+    }
+    .btn-plus {
+        background-image:url('./../../front/img/ico-plus.svg');
+    }
+    input {
+        width:4.8rem;
+        height:4rem;
+        background-color:$c-default ;
+        text-align: center;
+        border-radius: .7rem;
+       
+    }
+}

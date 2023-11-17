@@ -25,27 +25,17 @@
     <!-- #wrap -->
     <div id="wrap">  
         <!-- #container -->
-        <main id="container">  
+        <main id="container" role="main">  
           
             <!-- #content -->
             <div id="content" class="content">  
-                
-                <a href="javascript:;" role="button" class="btn-open-popup" aria-haspopup="dialog" data-popup-id="layer-popup-ex02" aria-controls="ayer-popup-ex02" >F123123</a>
-                <a href="javascript:;" role="button" class="btn-open-popup" aria-haspopup="dialog" data-popup-id="layer-popup-ex02" aria-controls="ayer-popup-ex02" >F123123</a>
-                
-                <a href="javascript:;" role="button" class="btn-open-popup" aria-haspopup="dialog" data-popup-id="layer-popup-ex01" aria-controls="ayer-popup-ex01">FULL POPUP OPEN</a>
-                
-                <a href="javascript:;" role="button" class="btn-open-popup" aria-haspopup="dialog" data-popup-id="layer-popup-ex02" aria-controls="ayer-popup-ex02" >F123123</a>
-                <a href="javascript:;" role="button" class="btn-open-popup" aria-haspopup="dialog" data-popup-id="layer-popup-ex02" aria-controls="ayer-popup-ex02" >F123123</a>
-                <a href="javascript:;" role="button" class="btn-open-popup" aria-haspopup="dialog" data-popup-id="layer-popup-ex02" aria-controls="ayer-popup-ex02" >F123123</a>
-                <a href="javascript:;" role="button" class="btn-open-popup" aria-haspopup="dialog" data-popup-id="layer-popup-ex02" aria-controls="ayer-popup-ex02" >F123123</a>
+                <a href="javascript:;" role="button" class="btn-open-popup btn secondary" aria-haspopup="dialog" data-popup-id="layer-popup-ex01" aria-controls="layer-popup-ex01">레시피 상품상세 팝업</a>
             </div>
             <!--// #content -->
-
       
             <!-- layer-popup -->
             <section class="layer-popup option-bottom" id="layer-popup-ex01" role="dialog" aria-modal="true" aria-labelledby="layer-popup-ex01Title" aria-hidden="true">
-                <div class="layer-inner" tabindex="0">
+                <div class="layer-inner">
                     <div class="inr">
                         <!-- layer-head -->
                         <div class="layer-head">
@@ -76,47 +66,11 @@
                                             <li>5. 취향에 맞는 드레싱을 뿌려주면 완성입니다.</li>
                                         </ol>
                                     </div>
-
-                                    <div class="list-info-item">
-                                        <p class="list-info-tit">레시피</p>
-                                        <ol class="list-number">
-                                            <li>1. 먹기 좋게 후숙된 키위를 깨끗하게 씻어주세요.</li>
-                                            <li>2. 껍질을 벗기고 얇게 잘라 접시에 올려주세요.</li>
-                                            <li>3. 블루베리, 루꼴라, 래디쉬를 올려주세요.</li>
-                                            <li>4. 오렌지제스트를 더하면 향긋하고 상큼해요.</li>
-                                            <li>5. 취향에 맞는 드레싱을 뿌려주면 완성입니다.</li>
-                                        </ol>
-                                    </div>
-
-                                    <div class="list-info-item">
-                                        <p class="list-info-tit">레시피</p>
-                                        <ol class="list-number">
-                                            <li>1. 먹기 좋게 후숙된 키위를 깨끗하게 씻어주세요.</li>
-                                            <li>2. 껍질을 벗기고 얇게 잘라 접시에 올려주세요.</li>
-                                            <li>3. 블루베리, 루꼴라, 래디쉬를 올려주세요.</li>
-                                            <li>4. 오렌지제스트를 더하면 향긋하고 상큼해요.</li>
-                                            <li>5. 취향에 맞는 드레싱을 뿌려주면 완성입니다.</li>
-                                        </ol>
-                                    </div>
-
-                                    <div class="list-info-item">
-                                        <p class="list-info-tit">레시피</p>
-                                        <ol class="list-number">
-                                            <li>1. 먹기 좋게 후숙된 키위를 깨끗하게 씻어주세요.</li>
-                                            <li>2. 껍질을 벗기고 얇게 잘라 접시에 올려주세요.</li>
-                                            <li>3. 블루베리, 루꼴라, 래디쉬를 올려주세요.</li>
-                                            <li>4. 오렌지제스트를 더하면 향긋하고 상큼해요.</li>
-                                            <li>5. 취향에 맞는 드레싱을 뿌려주면 완성입니다.</li>
-                                        </ol>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--'' layer-content -->
-                        <div class="btn-wrap">
-                            <button type="button" class="btn primary btn-popup-close aa"><span>확인</span></button>
-                        </div>
-
+                        <!--' layer-content -->
+                      
                         <!-- layer-footer -->
                         <div class="layer-footer">
                             <div class="btn-wrap">
@@ -124,8 +78,7 @@
                             </div>
                         </div>
                         <!-- layer-footer -->
-
-                        <button type="button" class="btn-touch"><span class="blind">팝업 닫기</span></button>
+                        <button type="button" class="btn-touch btn-popup-close"><span class="blind">팝업 닫기</span></button>
                     </div>
                 </div>
             </section>
@@ -134,6 +87,11 @@
         </main>
         <!--// #container -->        
     </div>
-    <!--// #wrap -->
+    <!--// #wrap -->  
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelector('.btn-open-popup').click();
+    });
+</script>
 </html>    

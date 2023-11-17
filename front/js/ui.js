@@ -1,83 +1,39 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
-  //https://codepen.io/inyoung/pen/pwBXxz
+  //팝업
   const layerPopupAction = () => {
     const btnLayerOpen = document.querySelectorAll('.btn-open-popup');
     const btnLayerClose = document.querySelectorAll('.btn-popup-close');
 
     let targetId;
 
-    const content = document.querySelector('#content');
-    const allTag = content.querySelectorAll('a, button, input, textarea');
-    console.log(allTag)
-
+    const allTag = document.body.querySelectorAll('a, button, input, textarea'); //바닥페이지 포커스 요소
 
     btnLayerOpen.forEach(function(_btnLayerOpens){
       _btnLayerOpens.addEventListener('click', function(e){
-        targetId = e.target.getAttribute('data-popup-id');
+        targetId = e.currentTarget.getAttribute('data-popup-id');
+        const layerAch = document.querySelector(`#${targetId}`).querySelectorAll('a, button, input, textarea'); //팝업 안 포커스 요소 찾기
+
         document.querySelector(`#${targetId}`).classList.add('is-active');
         document.querySelector(`#${targetId}`).setAttribute('aria-hidden', false);
         document.querySelector(`#${targetId}`).setAttribute('tabindex', 1);
-
-        const layerAch = document.querySelector(`#${targetId}`).querySelectorAll('a, button, input, textarea');
-        for( let j =0; j<layerAch.length; j++ ){
-
-        }
-
-
-
-        
-
-        console.log(layerAch[layerAch.length-1])
-       
-      
-
-
-        
-       // document.querySelector(`#${targetId}`).querySelector('.layer-inner').setAttribute('tabindex', 1);
-        // document.querySelector(`#${targetId}`).querySelector('.layer-inner').focus();
-        // document.querySelector(`#${targetId}`).focus();
-
-        //  document.querySelector('.layer-popup').setAttribute('tabindex', -1);
-        // document.querySelector('.layer-inner').setAttribute('tabindex', -1);
-        // let targetButton = document.body.getElementsByTagName("button");
-        // let targetInput = document.body.getElementsByTagName("input");
-        // let targetTextarea = document.body.getElementsByTagName("textarea");
-        // console.log(targetA, targetButton, targetInput, targetTextarea)
-        // console.log(targetA.length)
-
+        document.querySelector(`#${targetId}`).focus();
+        document.querySelector(`#${targetId}`).setAttribute('tabindex',1)
 
         //탭 포커스 이동 접근성
         for( let i =0; i<allTag.length; i++ ){
           allTag[i].setAttribute('tabindex', -1)
         }
+        for( let j =0; j<layerAch.length; j++ ){
+          layerAch[j].setAttribute('tabindex', 1)
+        }
+
         document.querySelector('#skipNavigation>a').setAttribute('tabindex', -1);
-
-
-
-
-        layerAch[layerAch.length-1].addEventListener('blur', function(e){
-
-          console.log(e.keycode)
-         
-            console.log(e.target.closest('.layer-popup').querySelector('.aa'))
-         
-
-            e.target.closest('.layer-popup').setAttribute('tabindex',0)
-            //e.target.closest('.layer-popup').querySelector('.aa').setAttribute('tabindex',1);
-            e.target.closest('.layer-popup').querySelector('.aa').focus();
-            
-            
-
-            setTimeout(() => {
-             
-            }, 100);
-     
-         
-        })
-
-       
-        
+        layerAch[layerAch.length-1].addEventListener('keyup', function(e){
+            e.target.closest('.layer-popup').focus();
+            e.target.closest('.layer-popup').setAttribute('tabindex',1)
+           
+        });
 
       });
     });
@@ -88,30 +44,29 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const layPopup = e.target.closest('.layer-popup');
         layPopup.classList.remove('is-active');
         targetId = layPopup.getAttribute('id');
+        const layerAch = document.querySelector(`#${targetId}`).querySelectorAll('a, button, input, textarea'); //팝업 안 포커스 요소 찾기
 
         btnLayerOpen.forEach(function(_btnLayerOpens){
-          console.log(_btnLayerOpens)
           if( _btnLayerOpens.getAttribute('data-popup-id') ===  targetId ){
-            //_btnLayerOpens.setAttribute('tabindx', 0)
-           // _btnLayerOpens.focus();
+            _btnLayerOpens.focus();
           }
-        })
-        
+        });
 
-       
-        
+        //탭 포커스 이동 접근성
+        for( let i =0; i<allTag.length; i++ ){
+          allTag[i].setAttribute('tabindex', 0)
+        }
+        for( let j =0; j<layerAch.length; j++ ){  
+          layerAch[j].setAttribute('tabindex', 0)
+        }
 
-        //data-popup-id
-        console.log( btnLayerOpen)
+        _btnLayerCloses.closest('.layer-popup').setAttribute('aria-hidden', true);
+        _btnLayerCloses.closest('.layer-popup').setAttribute('tabindex', 0);
+        document.querySelector('#skipNavigation>a').setAttribute('tabindex', 0);
+
+    
       });
-      
     });
-
-    console.log(targetId)
-
-
-
-
   }
 
 
@@ -158,19 +113,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
   //하단고정  
   const fixedBottomAction = () => {  
     const fixedBot = document.querySelector('.fixed-bottom');
-
     if( fixedBot != null ){  
       const content = document.querySelector('#content');
       const introSection = document.querySelectorAll('.section.intro');
       const fixedBotHeight = fixedBot.offsetHeight;
       
-      if( introSection.length < 0 ){
+      if( introSection.length > 0 ){
         content.style.paddingBottom = 0;
         introSection.forEach(function(_introItems, _idx){
           _introItems.style.paddingBottom = fixedBotHeight+'px';
         })
+      } else {
+        content.style.paddingBottom = fixedBotHeight+'px';
       }
+
     }
+    
   }
 
   //관심상품 
@@ -227,4 +185,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   favorAction(); //관심상품
   layerPopupAction();//팝업
   controlQtyAction();//수량버튼
+
+  
 });

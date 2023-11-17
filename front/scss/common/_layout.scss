@@ -1,3 +1,8 @@
+/* 
+    - 파일명 : _layout.scss
+    - 포함내용 : 전체레이아웃
+*/
+
 
 /* HEADER */
 .header {
@@ -61,7 +66,7 @@
         }
     }
     &-tit {
-        margin:.8rem 0 0 .8rem;
+        margin:0 0 0 .8rem;
         font-size:2.8rem;
     }
     &-left {
@@ -80,9 +85,8 @@
 
 /* CONTAINER */
 #container {
-    // padding:6.4rem 0 0;
+   
 }
-
 
 .section {  
     $root: &;  
@@ -192,3 +196,4 @@
     }
   
 }
+

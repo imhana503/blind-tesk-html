@@ -39,7 +39,7 @@
         <!--// #header -->
         
         <!-- #container -->
-        <main id="container">
+        <main id="container" role="main">
             <!-- #content -->
             <div id="content" class="content">
                 <!-- section -->
@@ -140,25 +140,25 @@
                     <div class="card">
                         <ul class="card-item">  
                             <li class="card-item-link">
-                                <a href="javascript:;" role="button" >
+                                <a href="javascript:;" role="button">
                                     <p class="tit">상품상세내용보기</p>
                                     <span class="ico-more"><em class="blind">팝업 열기</em></span>
                                 </a>
                             </li>
                             <li class="card-item-link">
-                                <a href="javascript:;" role="button" >
+                                <a href="javascript:;" role="button">
                                     <p class="tit">맛잇는 키위 고르는 방법</p>
                                     <span class="ico-more"><em class="blind">팝업 열기</em></span>
                                 </a>
                             </li>
                             <li class="card-item-link">
-                                <a href="javascript:;" role="button" >
+                                <a href="javascript:;" role="button">
                                     <p class="tit">보관방법</p>
                                     <span class="ico-more"><em class="blind">팝업 열기</em></span>
                                 </a>
                             </li>
-                            <li class="card-item-link" role="button" >
-                                <a href="javascript:;" class="flex">
+                            <li class="card-item-link">
+                                <a href="javascript:;" role="button" class="btn-open-popup flex" aria-haspopup="dialog" data-popup-id="layer-popup-ex01" aria-controls="layer-popup-ex01">
                                     <div class="flex-item"><p class="tit">레시피</p></div>
                                     <div class="flex-item flex-end"><span class="tit-sub">키위샐러드</span></div>
                                     <span class="ico-more"><em class="blind">팝업 열기</em></span>
@@ -235,7 +235,7 @@
                             <li class="product-list-link">
                                 <a href="javascript:;" role="button">
                                     <div class="product-recommend-visual img-visual">
-                                        <img src="./../../front/img/temp/@img-product-info01.png" alt="">
+                                        <img src="./../../front/img/temp/@img-product-info01.png" alt="제주참다래 그린키위">
                                     </div>
                                     <div>
                                         <p class="tit">제주참다래<br>그린키위</p>
@@ -261,7 +261,7 @@
                             <li class="product-list-link">
                                 <a href="javascript:;" role="button">
                                     <div class="product-recommend-visual img-visual">
-                                        <img src="./../../front/img/temp/@img-product-info01.png" alt="">
+                                        <img src="./../../front/img/temp/@img-product-info01.png" alt="제주참다래 그린키위">
                                     </div>
                                     <div>
                                         <p class="tit">제주참다래<br>그린키위</p>
@@ -287,7 +287,7 @@
                             <li class="product-list-link">
                                 <a href="javascript:;" role="button">
                                     <div class="product-recommend-visual img-visual">
-                                        <img src="./../../front/img/temp/@img-product-info01.png" alt="">
+                                        <img src="./../../front/img/temp/@img-product-info01.png" alt="제주참다래 그린키위">
                                     </div>
                                     <div>
                                         <p class="tit">제주참다래<br>그린키위</p>
@@ -329,6 +329,56 @@
             </div>
             <!--// #content -->
 
+             <!-- layer-popup -->
+             <section class="layer-popup option-bottom" id="layer-popup-ex01" role="dialog" aria-modal="true" aria-labelledby="layer-popup-ex01Title" aria-hidden="true">
+                <div class="layer-inner">
+                    <div class="inr">
+                        <!-- layer-head -->
+                        <div class="layer-head">
+                            <h2 id="layer-popup-ex01Title">레시피</h2>
+                        </div>
+                        <!--// layer-head -->  
+
+                        <!-- layer-content -->
+                        <div class="layer-content">
+                            <div class="product-detail option-info">
+                                <div class="product-detail-visual img-visual">  
+                                    <img src="./../../front/img/temp/@img-recipe.png" alt="키위샐러드">
+                                </div>
+                                <div class="list-info-box">
+                                    <h3 class="tit">키위샐러드</h3>
+                                    <div class="list-info-item">  
+                                        <p class="list-info-tit">재료</p>
+                                        <p class="list-info-txt">골드키위 1개, 그린키위 1개, 블루베리, 래디쉬, 루꼴라, 오렌지제스트</p>
+                                    </div>
+        
+                                    <div class="list-info-item">
+                                        <p class="list-info-tit">레시피</p>
+                                        <ol class="list-number">
+                                            <li>1. 먹기 좋게 후숙된 키위를 깨끗하게 씻어주세요.</li>
+                                            <li>2. 껍질을 벗기고 얇게 잘라 접시에 올려주세요.</li>
+                                            <li>3. 블루베리, 루꼴라, 래디쉬를 올려주세요.</li>
+                                            <li>4. 오렌지제스트를 더하면 향긋하고 상큼해요.</li>
+                                            <li>5. 취향에 맞는 드레싱을 뿌려주면 완성입니다.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--' layer-content -->
+                      
+                        <!-- layer-footer -->
+                        <div class="layer-footer">
+                            <div class="btn-wrap">
+                                <button type="button" class="btn primary btn-popup-close"><span>확인</span></button>
+                            </div>
+                        </div>
+                        <!-- layer-footer -->
+                        <button type="button" class="btn-touch btn-popup-close"><span class="blind">팝업 닫기</span></button>
+                    </div>
+                </div>
+            </section>
+            <!--// layer-popup -->
         </main>
         <!--// #container -->        
     </div> 

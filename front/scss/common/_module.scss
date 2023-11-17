@@ -1,0 +1,327 @@
+/* 
+    - 파일명 : _module.scss
+    - 포함내용 : 그룹화된 스타일 수량, 리스트형태, 상품목록, 상품상세, 카드목록
+*/
+
+/* 리스트 형태 */
+.list {
+    $root: &;
+    &-item {
+        border-bottom:1px solid $c-gray;
+        &-link {
+            border-top:1px solid $c-gray;
+            font-size:1.8rem;
+            &>a {
+                display:flex;
+                flex-direction: column;
+                position: relative;
+                padding:$space-16 2rem $space-16 0;
+            }
+            .ico-more {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 1.6rem;
+                height: 2.4rem;
+                background: url("./../img/ico-more.svg");
+            }
+            .tit {
+                font-weight: $f-bold;
+            }
+            .txt {
+                margin-top:.5rem;
+                font-size:1.4rem; 
+                font-weight: $f-medium; 
+            }
+            &.pay-card {
+                font-size:1.4rem;
+                .tit {
+                    display: flex;
+                    align-items: center;
+                    min-height: 3.2rem;
+                    padding-left:6rem;
+                }
+                &.master {
+                    .tit{
+                        background: url("./../img/ico-card.svg") no-repeat 0 0 ;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 금액 */
+.price {
+    $root: &;
+    font-size:2rem;
+    font-weight:$f-bold;
+    color:$c-price;
+    &-dicount {
+        margin-bottom:.5rem;
+        font-size:2rem;
+        font-weight:$f-bold;
+        color:$c-black;
+        text-decoration: line-through;
+    }
+    &-wrap {
+        margin:$space-24 0;
+    }
+}
+
+/* 분할 : Flex */
+.flex {
+    $root: &;
+    display:flex;
+    align-items: center;
+    // &-between {
+    //     justify-content: space-between;
+    // }
+    &-top {
+        align-items: flex-start;
+    }
+    &-item {
+        flex:1;
+    }
+    &-box {  
+       .flex+.flex{
+        margin-top:$space-16;
+       } 
+    }
+    &-none {
+        flex:none;
+    }
+    &-end {
+        display:flex;
+        justify-content: flex-end;
+        text-align: right;
+    }
+}
+
+/* TAB */
+.tab {
+    $root: &;
+    &-list {
+        display:flex;
+        justify-content: space-around;
+        gap:.8rem;
+        >li{
+            flex:1;
+            >a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height:4.8rem;
+                font-size:1.8rem;
+                line-height: 1;
+                border-radius: 10rem;
+                background-color:$c-tertiary;
+                color:$c-black;
+                font-weight: $f-bold;
+            }
+        }  
+        li.is-active{
+            >a {
+                background-color: $c-primary;
+                color:$c-default;
+            }
+        }
+    }
+    &-panel {
+        display:none;  
+        &-wrap {
+            margin-top:$space-24;
+        }   
+        &.is-active{
+            display:block;
+        }
+    }
+}  
+
+.card {
+    $root: &;
+    &-item-link {
+        &+.card-item-link {
+            margin-top:$space-16;
+        }
+        >a{
+            display:flex;
+            position: relative;
+            padding:$space-24;
+            border-radius:$b-raduius-24;
+            box-shadow:$b-shadow;
+        }
+        .tit {
+            font-size:2rem;
+            font-weight: $f-medium;
+            &-sub{
+                font-size:2rem;
+                font-weight: $f-bold;
+                color:$c-primary;
+            }
+        }
+        .flex-item+.flex-item{
+            margin-right:$space-24;
+        }
+        .ico-more { 
+            position: absolute;
+            top:50%;
+            right:2.4rem;
+            transform: translateY(-50%);
+            width:1.6rem;
+            height:2.4rem;
+            background:url('./../img/ico-more.svg');
+        }
+        &.review {
+            min-height: 2.2rem;
+            .tit {
+                font-size:1.6rem;
+                font-weight: $f-bold;
+            }
+            .flex-end{
+                flex:none;
+            }
+        }
+        &.info {
+            .tit {
+                font-weight: $f-bold;
+            }
+            .txt {
+                margin-bottom:.8rem;
+                font-size: 1.5rem;
+                font-weight: $f-medium;
+            }
+        }
+    }
+}
+
+/* 상품목록 */   
+.product-list {
+    $root: &;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: $space-16;
+    row-gap:$space-24;
+    &-link {
+        &>a{
+            display:flex;
+            flex-direction: column;
+            position:relative;
+        }
+        &.is-active {
+            .btn-favor {
+                &:before {
+                    height:1.6rem;
+                    background-image:url('./../../front/img/ico-heart-on.svg');
+                }
+            }
+        }
+    }
+    &-visual {
+        border-radius: $b-raduius-15;
+        height:15.2rem;
+    }
+    &-txt {
+        margin-top:1.2rem;
+        .tit {
+            font-size:1.6rem;
+            font-weight:$f-medium;
+        }  
+        .price {
+            margin-top:.4rem;
+        }
+    }
+    .btn-favor {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width:4rem;
+        height:4rem;
+        position: absolute;
+        top:.8rem;
+        right:.8rem;
+        background-color:$c-default;
+        border-radius:$b-raduius;
+        z-index:100;
+        &:before {
+            display:flex;
+            align-items: center;
+            content:"";
+            width:1.8rem;
+            height:1.8rem;
+            background-image:url('./../../front/img/ico-heart.svg');
+        }
+    }
+    /* 연관추천상품 */
+    &.option-recommend {
+        $productList: '.product-list';
+        grid-template-columns: auto auto auto;
+        #{$productList}-link { 
+            .img-visual {
+                height:9.6rem;
+                margin-bottom:1.4rem;
+                border-radius: $b-raduius-8;
+            }
+
+            .tit {
+                font-size:1.4rem;
+                font-weight: $f-medium;
+            }
+            .price {
+                margin:.8rem 0;
+                font-size: 1.4rem;
+            }
+            }
+      
+    }  
+
+    /* 연관추천상품 */
+    .product-recommend {
+      
+        &-list {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: $space-16;
+            row-gap:$space-24;
+        }
+        &-visual {
+            height:9.6rem;
+            margin-bottom:1.4rem;
+            border-radius: $b-raduius-8;
+        }
+        .tit {
+            font-size:1.4rem;
+            font-weight: $f-medium;
+        }
+        .price {
+            margin:.8rem 0;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+/* 상품상세 */
+.product-detail {
+    $root: &;
+    margin-bottom: $space-24;
+    &-visual {
+        height:21.6rem;  
+    }
+    &-txt {
+        margin-top:$space-24;
+        .tit {
+            font-size:3.2rem;
+        }
+        .txt {
+            margin-top:.8rem;
+            font-size:1.6rem;
+        }
+    }
+
+    &.option-info {
+        .product-detail-visual {
+            margin-bottom:3.2rem;
+        }
+    }
+}

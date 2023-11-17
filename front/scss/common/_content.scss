@@ -1,10 +1,7 @@
-.highlight {
-    color:$c-highlight !important;  
-}
-
-.space-none {
-    padding:0 !important;
-}
+/* 
+    - 파일명 : _content.scss
+    - 포함내용 : 공통 제외 페이지 스타일
+*/
 
 /* INTRO */    
 .section.intro {
@@ -105,5 +102,53 @@
 }
 
 
+/* 팝업 */
+.layer-popup {
+    $layerInner: '.layer-inner';    
+    $layerHead: '.layer-head';  
+    /* 검색 팝업 */  
+    #{$layerHead} {
+        $searchInput: '.search-input';
+        #{$searchInput}{  
+            margin:.8rem 0;                
+        }
+        #{$searchInput}-wrap {
+            gap:1.6rem
+        }
+    }
+    .word {
+        &-tit {
+            margin-bottom:2rem;
+            font-size:1.6rem;  
+            font-weight: $f-medium;
+        }
+        &-list {
+            &>li {
+                border-bottom:1px solid $c-gray;
+            }
+            &>li:first-child{
+                border-top:1px solid $c-gray;
+            }
+            a {
+                display: block;
+                padding:2rem 0;
+                font-size:1.6rem;
+                font-weight: $f-bold;
+            }
+        }
+    }  
+
+     /* 옵션선택 */
+    .option-selection {
+        .product-option-wrap {
+            margin-top:0;
+        }
+        .product-option-wrap+ .product-option-wrap {
+            margin-top:2.4rem;
+            padding-top:2.4rem;
+            border-top:1px solid $c-gray2;
+        }
+    }
+}
 
 

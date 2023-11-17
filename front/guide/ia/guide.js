@@ -38,7 +38,7 @@ function iaListAction(){
             const dataTh = document.querySelectorAll('#data-table thead th');
             
             dataTh.forEach(function(_dataThs, _dIdx){
-                if( _dataThs.textContent == '메뉴' || _dataThs.textContent == '화면ID' ||   _dataThs.textContent == '링크' ){
+                if( _dataThs.textContent == '메뉴' || _dataThs.textContent == '화면ID' ||   _dataThs.textContent == '링크' ||  _dataThs.textContent == '비고' ){
                     targetTr[_idx].querySelectorAll('td')[_dIdx].classList.add('align-left')
                 }
             })
@@ -73,16 +73,34 @@ function progressAction(){
     }
 } 
 
-
-//aside menu open/close
+//aside menu
 function asideMenuAction(){
     const btnAside = document.querySelector('.guide-aside .btn-menu');
 
     if( btnAside !== null ){
+       
         btnAside.addEventListener('click', function(e){
-            const aside = e.target.closest('.guide-aside');
-            aside.classList.toggle('is-active');
+            const container = e.target.closest('#guide-container');            
+            container.classList.toggle('is-active');
         });
+
+        const btnMenu = document.querySelectorAll('.guide-aside .list-sub>li>a');
+        const headerHeight = document.querySelector('.guide-header').offsetHeight;
+
+        btnMenu.forEach(function(_btnMenus){
+            _btnMenus.addEventListener('click', function(e){
+                targetSection = e.target.getAttribute('data-id');
+                targetPso = document.querySelector(`#${targetSection}`).offsetTop;
+               
+                window.scroll({
+                    left: 0,
+                    top: targetPso - headerHeight,
+                    behavior: "smooth"
+                });
+            })
+        })
+
+      
     }
 }  
 

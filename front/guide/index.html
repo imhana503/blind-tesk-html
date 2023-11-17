@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="./guide.css" />
 </head>
 <body>
+    <!-- #skipNavigation -->  
+    <div id="skipNavigation">
+        <a href="#guide-containe">본문 바로가기</a> 
+    </div>
+    <!--// #skipNavigation -->
+
     <!-- #wrap -->
     <div id="wrap">
         <div class="guide-wrapper">
@@ -26,29 +32,30 @@
 
             <!-- #container -->
             <main id="guide-container">   
-                <!-- .guide-aside -->
+                <!-- .guide-aside -->  
                 <aside class="guide-aside">
                     <div class="inr">
                         <ul class="list">
                             <li class="is-active">
                                 <strong>가이드</strong>
                                 <ul class="list-sub bullet">
-                                    <li><a href="#guideProject">프로젝트 환경</a></li>
-                                    <li><a href="#guideFolder">폴더구조</a></li>
+                                    <li><a href="javascript:;" data-id="guideProject">프로젝트 환경</a></li>
+                                    <li><a href="javascript:;" data-id="guideFolder">폴더구조</a></li>
                                 </ul>
                             </li>
+                            <li><strong><a href="./work.html" target="_blank" title="새창 열림">작업설명서</a></strong></li>
                             <li><strong><a href="./ia/ia-list.html" target="_blank" title="새창 열림">메뉴리스트</a></strong></li>
                             <li><strong><a href="./guide.html" target="_blank" title="새창 열림">컴포넌트</a></strong></li>
-                            <li><strong><a href="./whaGuide.html" target="_blank" title="새창 열림">작업의도</a></strong></li>
-                            <li><strong><a href="./whaGuide.html" target="_blank" title="새창 열림">WAH가이드라인</a></strong></li>
+                            <li><strong><a href="./waiGuide.html" target="_blank" title="새창 열림">WAI가이드라인</a></strong></li>
                         </ul>
                         <button type="button" class="btn-menu"><span class="blind">메뉴 닫기</span></button>
                     </div>
                 </aside>  
                 <!--// .guide-aside --> 
 
-                <!-- #content -->
-                <div class="guide-content">
+                <!-- #content --> 
+                <div class="guide-content">  
+
                     <section id="guideProject" class="guide-section">
                         <h2 class="tit">프로젝트 환경</h2>
                         <div class="guide-box">
@@ -57,7 +64,7 @@
                                 <li>인코딩 : UTF-8</li>
                                 <li>서비스 기기 : 모바일</li>
                                 <li>크로스 브라우징 : Chrome, Edge, Firefox, Safari</li>
-                                <li>웹접근성(WHA) : 한국형 웹 콘텐츠 접근성 지침 2.2 기준<br>
+                                <li>웹접근성 : 한국형 웹 콘텐츠 접근성 지침 2.2 기준<br>
                                     <a href="./download/한국형 웹 콘텐츠 접근성 지침 2.2.pdf" class="btn" title="다운로드" target="_blank">한국형 웹 콘텐츠 접근성 지침 2.2 다운로드</a>
                                 </li>
                             </ul>
@@ -99,9 +106,9 @@
                                     <li>
                                         <strong>fonts</strong>
                                         <ul class="list2">
-                                            <li class="ico-doc">GmarketSansLight</li>
-                                            <li class="ico-doc">GmarketSansBold</li>
-                                            <li class="ico-doc">GmarketSansMedium</li>
+                                            <li class="ico-doc">SCDreamLight - 300</li>
+                                            <li class="ico-doc">SCDreamMedium - 500</li>
+                                            <li class="ico-doc">SCDreamBold - 700</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -137,6 +144,34 @@
                             </div>
 
                             <div class="guide-tree">
+                                <h3>SCSS</h3>
+                                <ul class="list">
+                                    <li>
+                                        <strong>scss</strong>
+                                        <ul class="list2">
+                                            <li>
+                                                <strong>common</strong>
+                                                <ul class="list2">
+                                                    <li class="ico-doc"><strong>_var</strong> : 변수 컬러, 폰트굵기, 간격, boxshadow, raduius</li>
+                                                    <li class="ico-doc"><strong>_popup</strong> : 팝업 스타일 : 바텀시트, 풀팝업</li>
+                                                    <li class="ico-doc"><strong>_module</strong> : 그룹화된 스타일 수량, 리스트형태, 상품목록, 상품상세, tab, 카드목록</li>
+                                                    <li class="ico-doc"><strong>_layout</strong> : 전체레이아웃</li>
+                                                    <li class="ico-doc"><strong>_form</strong> : 데이터관련 요소 : 버튼, radio, 검색영역</li>
+                                                    <li class="ico-doc"><strong>_element</strong> : 단일요소 : skipNavigation, btn-,ico-요소 공통, 타이틀, 블릿, 별점, 이미지공통, 스크롤, 박스, 수량</li>
+                                                    <li class="ico-doc"><strong>_content</strong> : 공통 제외 페이지 스타일</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>import</strong>
+                                                <ul class="list2">
+                                                    <li class="ico-doc"><strong>components</strong> : common폴더 scss 파일 import</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="guide-tree">
                                 <h3>JS</h3>
                                 <ul class="list">
                                     <li>
@@ -154,11 +189,12 @@
                                     <li>
                                         <strong>guide</strong>
                                         <ul class="list2">
-                                            <li><strong>ia</strong> : IA 리스트</li>
+                                            <li><strong>download</strong> : 다운로드 파일 폴더</li>
+                                            <li><strong>ia</strong> : IA 리스트, guide js</li>
                                             <li><strong>img</strong> : guide 이미지</li>
                                             <li class="ico-doc"><strong>index</strong> : UI/UX 공통 가이트</li>
                                             <li class="ico-doc"><strong>guide</strong> : 컴포넌트</li>
-                                            <li class="ico-doc"><strong>whaGuide</strong> : WAH가이드라인</li>
+                                            <li class="ico-doc"><strong>wAIGuide</strong> : WAi가이드라인</li>
                                         </ul>
                                     </li>
                                 </ul>

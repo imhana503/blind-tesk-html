@@ -25,21 +25,21 @@
     <!-- #wrap -->
     <div id="wrap">
         <!-- #container -->
-        <main id="container">
+        <main id="container" role="main">
           
             <!-- #content -->
             <div id="content" class="content">
-                <a href="javascript:;" role="button" class="btn-open-popup" aria-haspopup="dialog" data-popup-id="layer-popup-ex01">FULL POPUP OPEN</a>
+                <a href="javascript:;" role="button" class="btn-open-popup btn primary" aria-haspopup="dialog" data-popup-id="layer-popup-ex01" aria-controls="layer-popup-ex01">옵션 선택 팝업</a>
             </div>
             <!--// #content -->
 
              <!-- layer-popup -->
-             <section class="layer-popup option-bottom is-active" id="layer-popup-ex01" role="dialog" aria-modal="true" aria-labelledby="pop-insurcalc-title" tabindex="0" aria-hidden="true">
-                <div class="layer-inner" tabindex="0">
+             <section class="layer-popup option-bottom" id="layer-popup-ex01" role="dialog" aria-modal="true" aria-labelledby="layer-popup-ex01Title" aria-hidden="true">
+                <div class="layer-inner">
                     <div class="inr">
                         <!-- layer-head -->
                         <div class="layer-head">
-                            <h2 class="blind" id="">옵션선택</h2>
+                            <h2 class="blind" id="layer-popup-ex01Title">옵션선택</h2>
                         </div>
                         <!--// layer-head -->
 
@@ -107,7 +107,7 @@
                                         <div class="flex-item flex-none">
                                             <div class="control-qty">
                                                 <button type="button" class="btn-minus"><span class="blind">수량 감소</span></button>
-                                                <input type="tel" aria-label="현재 수량 1개" value="1" min="0" max="10"/><!-- aria-label 현재 수량 값 변경 -->
+                                                <input type="tel" aria-label="현재 수량 1개" value="1" min="0" max="10" title="수량 입력"/><!-- aria-label 현재 수량 값 변경 -->
                                                 <button type="button" class="btn-plus"><span class="blind">수량 증가</span></button>
                                             </div>
                                         </div>
@@ -140,7 +140,9 @@
                             </div>
                         </div>
                         <!-- layer-footer -->
+                        <button type="button" class="btn-touch btn-popup-close"><span class="blind">팝업 닫기</span></button>
                     </div>
+                   
                 </div>
             </section>
             <!--// layer-popup -->
@@ -149,5 +151,10 @@
         <!--// #container -->        
     </div>
     <!--// #wrap -->
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            document.querySelector('.btn-open-popup').click();
+        });
+    </script>
 </body>
 </html>    
